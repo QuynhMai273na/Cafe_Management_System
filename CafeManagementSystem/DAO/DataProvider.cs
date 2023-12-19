@@ -73,7 +73,7 @@ namespace CafeManagementSystem.DAO
             }
             return data;
         }
-        public object ExecuteScaler(string query, object[] parameter = null) // tra ve so dong thanh cong
+        public object ExecuteScalar(string query, object[] parameter = null) // tra ve so dong thanh cong
         {
             object data = 0;
 
