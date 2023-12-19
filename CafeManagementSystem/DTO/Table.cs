@@ -54,5 +54,6 @@ namespace CafeManagementSystem.DTO
             this.status = (TableStatus)row["Status"];
             this.location = row["Location"].ToString();
         }
+        //cmment
     }
 }
