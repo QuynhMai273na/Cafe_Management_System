@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\asus\Downloads\Guna.UI2\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -149,7 +152,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UI\CoffeeManagerApplication\CoffeeManagerApplication.csproj">
+      <Project>{03b0e79c-73b5-42c0-848c-cb66df4dd550}</Project>
+      <Name>CoffeeManagerApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ModelEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
