@@ -13,5 +13,16 @@ namespace CafeManagementSystem.Enums
         Free, // bàn trống
         Occupied // bàn đang có khách
     }
-    /////hcmt
+    public enum TypeAccount
+    {
+        Staff,
+        Admin
+    }
+    public enum LevelCustomer
+    {
+        Member,
+        Silver,
+        Gold,
+        Diamond
+    }
 }
