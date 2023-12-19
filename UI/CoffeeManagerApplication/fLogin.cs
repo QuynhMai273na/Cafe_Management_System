@@ -49,5 +49,10 @@ namespace CoffeeManagerApplication
         {
             mouseDown = false;
         }
+
+        private void guna2ButtonShutDown_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

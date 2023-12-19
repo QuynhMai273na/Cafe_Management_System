@@ -275,6 +275,7 @@
             this.guna2ButtonShutDown.Name = "guna2ButtonShutDown";
             this.guna2ButtonShutDown.Size = new System.Drawing.Size(36, 30);
             this.guna2ButtonShutDown.TabIndex = 14;
+            this.guna2ButtonShutDown.Click += new System.EventHandler(this.guna2ButtonShutDown_Click);
             // 
             // fLogin
             // 
