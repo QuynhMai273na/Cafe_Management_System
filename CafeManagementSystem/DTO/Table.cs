@@ -39,7 +39,7 @@ namespace CafeManagementSystem.DTO
         }
 
 
-        public Table(int id, string name, int numPeople, TableStatus status, TableColor color, string location)
+        public Table(int id, string name, int numPeople, TableStatus status, string location)
         {
             this.id = id;
             this.name = name;
@@ -54,5 +54,6 @@ namespace CafeManagementSystem.DTO
             this.status = (TableStatus)row["Status"];
             this.location = row["Location"].ToString();
         }
+        //cmment
     }
 }
