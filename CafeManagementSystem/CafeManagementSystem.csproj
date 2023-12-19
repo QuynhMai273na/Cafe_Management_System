@@ -96,6 +96,12 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTableManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="TableFood.cs">
       <DependentUpon>ModelEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fTableManagement.resx">
       <DependentUpon>fTableManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="ModelEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -159,12 +169,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UI\CoffeeManagerApplication\CoffeeManagerApplication.csproj">
-      <Project>{03b0e79c-73b5-42c0-848c-cb66df4dd550}</Project>
-      <Name>CoffeeManagerApplication</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ModelEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelEntity.Context.cs</LastGenOutput>
@@ -175,9 +179,15 @@
       <DependentUpon>ModelEntity.edmx</DependentUpon>
       <LastGenOutput>ModelEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

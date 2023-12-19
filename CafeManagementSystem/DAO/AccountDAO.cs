@@ -20,7 +20,7 @@ namespace CafeManagementSystem.DAO
             private set { instance = value; }
         }
         private AccountDAO() { }
-        public bool login(string username, string password)
+        public bool Login(string username, string password)
         {
             string query = "USP_Login @userName , @password";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username , password});

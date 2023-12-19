@@ -13,7 +13,8 @@ namespace CafeManagementSystem.DAO
         private static DataProvider instance;
         private string connectionSTR = @"Data Source=.\sqlexpress;Initial Catalog=CafeManagement;Integrated Security=True";
 
-        public static DataProvider Instance {
+        public static DataProvider Instance
+        {
             get
             {
                 if (instance == null) instance = new DataProvider();
@@ -33,14 +34,17 @@ namespace CafeManagementSystem.DAO
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                if(parameter != null)
+                if (parameter != null)
                 {
                     string[] listParameter = query.Split(' ');// vi tach theo khoang trang nen khi viet query phai them khoang trang truoc dau phay
                     int i = 0;
-                    foreach(string item in listParameter)
+                    foreach (string item in listParameter)
                     {
-                        command.Parameters.AddWithValue(item, parameter[i]);
-                        i++;
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);// trung gian thuc hien cau truy van
