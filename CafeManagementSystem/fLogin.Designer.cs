@@ -1,4 +1,4 @@
-﻿namespace CoffeeManagerApplication
+﻿namespace CafeManagementSystem
 {
     partial class fLogin
     {
@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.guna2PanelBackGround = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2PictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +45,7 @@
             this.forgotPW = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2ButtonShutDown = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PanelBackGround.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +53,7 @@
             // guna2PanelBackGround
             // 
             this.guna2PanelBackGround.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2PanelBackGround.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PanelBackGround.BackgroundImage")));
+            this.guna2PanelBackGround.BackgroundImage = global::CafeManagementSystem.Properties.Resources.background;
             this.guna2PanelBackGround.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2PanelBackGround.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelBackGround.BorderThickness = 3;
@@ -75,17 +74,6 @@
             this.label4.Size = new System.Drawing.Size(163, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Contact: +84 6666 8888";
-            // 
-            // guna2PictureBoxLogo
-            // 
-            this.guna2PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxLogo.Image")));
-            this.guna2PictureBoxLogo.ImageRotate = 0F;
-            this.guna2PictureBoxLogo.Location = new System.Drawing.Point(573, 30);
-            this.guna2PictureBoxLogo.Name = "guna2PictureBoxLogo";
-            this.guna2PictureBoxLogo.Size = new System.Drawing.Size(125, 109);
-            this.guna2PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxLogo.TabIndex = 1;
-            this.guna2PictureBoxLogo.TabStop = false;
             // 
             // guna2TextBoxUsername
             // 
@@ -190,7 +178,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label2.Location = new System.Drawing.Point(505, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 16);
@@ -271,12 +259,23 @@
             this.guna2ButtonShutDown.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonShutDown.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.guna2ButtonShutDown.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonShutDown.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonShutDown.Image")));
+            this.guna2ButtonShutDown.Image = global::CafeManagementSystem.Properties.Resources.exit;
             this.guna2ButtonShutDown.Location = new System.Drawing.Point(812, 19);
             this.guna2ButtonShutDown.Name = "guna2ButtonShutDown";
             this.guna2ButtonShutDown.Size = new System.Drawing.Size(36, 30);
             this.guna2ButtonShutDown.TabIndex = 14;
             this.guna2ButtonShutDown.Click += new System.EventHandler(this.guna2ButtonShutDown_Click);
+            // 
+            // guna2PictureBoxLogo
+            // 
+            this.guna2PictureBoxLogo.Image = global::CafeManagementSystem.Properties.Resources.logo;
+            this.guna2PictureBoxLogo.ImageRotate = 0F;
+            this.guna2PictureBoxLogo.Location = new System.Drawing.Point(573, 30);
+            this.guna2PictureBoxLogo.Name = "guna2PictureBoxLogo";
+            this.guna2PictureBoxLogo.Size = new System.Drawing.Size(125, 109);
+            this.guna2PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxLogo.TabIndex = 1;
+            this.guna2PictureBoxLogo.TabStop = false;
             // 
             // fLogin
             // 
@@ -301,6 +300,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.fLogin_Load);
