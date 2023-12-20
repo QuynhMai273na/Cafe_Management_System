@@ -101,6 +101,7 @@
             this.guna2TextBoxPassWord.Tag = "";
             this.guna2TextBoxPassWord.TextOffset = new System.Drawing.Point(8, 0);
             this.guna2TextBoxPassWord.UseSystemPasswordChar = true;
+            this.guna2TextBoxPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxPassWord_KeyDown);
             // 
             // guna2ButtonLogin
             // 
