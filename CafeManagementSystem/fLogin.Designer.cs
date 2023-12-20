@@ -88,7 +88,7 @@
             this.guna2TextBoxUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxUsername.Location = new System.Drawing.Point(494, 185);
+            this.guna2TextBoxUsername.Location = new System.Drawing.Point(494, 197);
             this.guna2TextBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxUsername.Name = "guna2TextBoxUsername";
             this.guna2TextBoxUsername.PasswordChar = '\0';
