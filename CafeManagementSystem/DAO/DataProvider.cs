@@ -40,11 +40,13 @@ namespace CafeManagementSystem.DAO
                     int i = 0;
                     foreach (string item in listParameter)
                     {
+                        // fix lỗi 
                         if (item.Contains('@'))
                         {
                             command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
+                        
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);// trung gian thuc hien cau truy van

@@ -24,6 +24,17 @@ namespace CafeManagementSystem.DAO
         {
             string query = "USP_Login @userName , @password";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username , password});
+            /*Them vao sql để fix lỗi log in chữ hoa chữ thường
+             ALTER PROCEDURE USP_Login @userName NVARCHAR(100), @passWord NVARCHAR(100)
+            AS
+            BEGIN
+        	SELECT * FROM dbo.Account 
+        	WHERE Account.userName COLLATE SQL_Latin1_General_CP1_CS_AS = @userName 
+        	AND Account.passWord COLLATE SQL_Latin1_General_CP1_CS_AS = @passWord
+            END
+            GO
+            chú ý: nhớ reload lại connection trước khi chạy
+             */
             //kiểm tra xem biến "result" có chứa dữ liệu không.
             //Nếu số hàng (rows) trong "result" > 0, tức là có ít nhất một hàng dữ liệu, thì trả về true. Ngược lại thì trả về false.
             return result.Rows.Count > 0;

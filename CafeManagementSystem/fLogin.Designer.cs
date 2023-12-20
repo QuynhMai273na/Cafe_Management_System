@@ -73,6 +73,7 @@
             this.guna2TextBoxUsername.Size = new System.Drawing.Size(308, 40);
             this.guna2TextBoxUsername.TabIndex = 2;
             this.guna2TextBoxUsername.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2TextBoxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxUsername_KeyDown);
             // 
             // guna2TextBoxPassWord
             // 
@@ -100,6 +101,7 @@
             this.guna2TextBoxPassWord.Tag = "";
             this.guna2TextBoxPassWord.TextOffset = new System.Drawing.Point(8, 0);
             this.guna2TextBoxPassWord.UseSystemPasswordChar = true;
+            this.guna2TextBoxPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxPassWord_KeyDown);
             // 
             // guna2ButtonLogin
             // 
@@ -193,6 +195,7 @@
             // 
             // labelForgotPW
             // 
+
             this.labelForgotPW.AutoSize = true;
             this.labelForgotPW.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelForgotPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
@@ -201,6 +204,17 @@
             this.labelForgotPW.Size = new System.Drawing.Size(108, 13);
             this.labelForgotPW.TabIndex = 19;
             this.labelForgotPW.Text = "Forgot Password?";
+
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.label5.Location = new System.Drawing.Point(588, 458);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(176, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Don\'t Have Account? Sign up";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+
             // 
             // guna2ButtonShutDown
             // 
