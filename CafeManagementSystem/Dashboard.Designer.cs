@@ -56,6 +56,44 @@
             this.guna2PanelShowBill.SuspendLayout();
             this.SuspendLayout();
             // 
+            // guna2ShadowPanelShowBill
+            // 
+            this.guna2ShadowPanelShowBill.BackColor = System.Drawing.Color.MistyRose;
+            this.guna2ShadowPanelShowBill.Controls.Add(this.guna2TextBoxShowBill);
+            this.guna2ShadowPanelShowBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ShadowPanelShowBill.Location = new System.Drawing.Point(566, 4);
+            this.guna2ShadowPanelShowBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ShadowPanelShowBill.Name = "guna2ShadowPanelShowBill";
+            this.guna2ShadowPanelShowBill.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanelShowBill.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.guna2ShadowPanelShowBill.Size = new System.Drawing.Size(512, 594);
+            this.guna2ShadowPanelShowBill.TabIndex = 0;
+            // 
+            // guna2TextBoxShowBill
+            // 
+            this.guna2TextBoxShowBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2TextBoxShowBill.BorderThickness = 2;
+            this.guna2TextBoxShowBill.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxShowBill.DefaultText = "Bill";
+            this.guna2TextBoxShowBill.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxShowBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxShowBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxShowBill.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxShowBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2TextBoxShowBill.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxShowBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBoxShowBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2TextBoxShowBill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxShowBill.Location = new System.Drawing.Point(3, 4);
+            this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBoxShowBill.Name = "guna2TextBoxShowBill";
+            this.guna2TextBoxShowBill.PasswordChar = '\0';
+            this.guna2TextBoxShowBill.PlaceholderText = "";
+            this.guna2TextBoxShowBill.SelectedText = "";
+            this.guna2TextBoxShowBill.Size = new System.Drawing.Size(98, 32);
+            this.guna2TextBoxShowBill.TabIndex = 21;
+            this.guna2TextBoxShowBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // labelTotalBill
             // 
             this.labelTotalBill.AutoSize = true;
