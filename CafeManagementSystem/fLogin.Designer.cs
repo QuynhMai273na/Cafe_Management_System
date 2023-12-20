@@ -204,17 +204,6 @@
             this.labelForgotPW.Size = new System.Drawing.Size(108, 13);
             this.labelForgotPW.TabIndex = 19;
             this.labelForgotPW.Text = "Forgot Password?";
-
-           // this.label5.AutoSize = true;
-           // this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-          //  this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-           // this.label5.Location = new System.Drawing.Point(588, 458);
-           // this.label5.Name = "label5";
-         //   this.label5.Size = new System.Drawing.Size(176, 13);
-         //   this.label5.TabIndex = 13;
-         //   this.label5.Text = "Don\'t Have Account? Sign up";
-          //  this.label5.Click += new System.EventHandler(this.label5_Click);
-
             // 
             // guna2ButtonShutDown
             // 
