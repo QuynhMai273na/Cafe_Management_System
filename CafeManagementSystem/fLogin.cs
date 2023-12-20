@@ -90,13 +90,7 @@ namespace CafeManagementSystem
 
         }
 
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-            fSignup signup = new fSignup();
-            this.Hide();
-            signup.ShowDialog();
-            this.Close();
-        }
+   
     }
 }
     
