@@ -58,7 +58,7 @@
             // 
             // guna2ShadowPanelShowBill
             // 
-            this.guna2ShadowPanelShowBill.BackColor = System.Drawing.Color.MistyRose;
+/*            this.guna2ShadowPanelShowBill.BackColor = System.Drawing.Color.MistyRose;
             this.guna2ShadowPanelShowBill.Controls.Add(this.guna2TextBoxShowBill);
             this.guna2ShadowPanelShowBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2ShadowPanelShowBill.Location = new System.Drawing.Point(566, 4);
@@ -67,11 +67,11 @@
             this.guna2ShadowPanelShowBill.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanelShowBill.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.guna2ShadowPanelShowBill.Size = new System.Drawing.Size(512, 594);
-            this.guna2ShadowPanelShowBill.TabIndex = 0;
+            this.guna2ShadowPanelShowBill.TabIndex = 0; */
             // 
             // guna2TextBoxShowBill
             // 
-            this.guna2TextBoxShowBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+    /*        this.guna2TextBoxShowBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2TextBoxShowBill.BorderThickness = 2;
             this.guna2TextBoxShowBill.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxShowBill.DefaultText = "Bill";
@@ -92,7 +92,7 @@
             this.guna2TextBoxShowBill.SelectedText = "";
             this.guna2TextBoxShowBill.Size = new System.Drawing.Size(98, 32);
             this.guna2TextBoxShowBill.TabIndex = 21;
-            this.guna2TextBoxShowBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2TextBoxShowBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center; */
             // 
             // labelTotalBill
             // 
