@@ -28,6 +28,7 @@ namespace CafeManagementSystem
             guna2ShadowForm1.SetShadowForm(this);
         }
 
+
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
@@ -85,6 +86,13 @@ namespace CafeManagementSystem
         private void guna2TextBoxPassWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fSignup signup = new fSignup();  
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
         }
     }
 
