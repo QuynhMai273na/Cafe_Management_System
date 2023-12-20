@@ -59,12 +59,14 @@ namespace CafeManagementSystem
         {
             return AccountDAO.Instance.Login(username, password);
         }
-
+        
         private void guna2ButtonLogin_Click(object sender, EventArgs e)
         {
             string username = guna2TextBoxUsername.Text;
             string password = guna2TextBoxPassWord.Text;
-            if (Login(username, password))
+            if(username.Trim()=="") MessageBox.Show("Please enter username !");
+            else if (password.Trim() == "") MessageBox.Show("Please enter password !");
+            else if (Login(username, password))
             {
 
                 //fTableManger f = new fTableManger()-- đăng nhập thành công nên mở tap mới
@@ -74,6 +76,15 @@ namespace CafeManagementSystem
                 //this.Show();
             }
             else MessageBox.Show("Wrong username or password!");
+        }
+
+        private void guna2TextBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) guna2TextBoxPassWord.Focus();
+        }
+        private void guna2TextBoxPassWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
         }
     }
 

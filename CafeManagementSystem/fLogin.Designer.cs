@@ -97,6 +97,7 @@
             this.guna2TextBoxUsername.Size = new System.Drawing.Size(284, 38);
             this.guna2TextBoxUsername.TabIndex = 2;
             this.guna2TextBoxUsername.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2TextBoxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxUsername_KeyDown);
             // 
             // guna2TextBoxPassWord
             // 
