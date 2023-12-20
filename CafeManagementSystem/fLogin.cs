@@ -90,7 +90,8 @@ namespace CafeManagementSystem
             if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
 
         }
-        private void label5_Click(object sender, EventArgs e)
+
+        private void label5_Click_1(object sender, EventArgs e)
         {
             fSignup signup = new fSignup();
             this.Hide();

@@ -183,7 +183,7 @@
             this.label5.Size = new System.Drawing.Size(176, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Don\'t Have Account? Sign up";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // guna2ButtonShutDown
             // 
