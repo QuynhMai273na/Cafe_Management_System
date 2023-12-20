@@ -72,14 +72,23 @@ namespace CafeManagementSystem
             }
             else MessageBox.Show("Wrong username or password!");
         }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fSignup signup = new fSignup();
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
+        }
 
         private void guna2TextBoxUsername_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) guna2TextBoxPassWord.Focus();
         }
+
         private void guna2TextBoxPassWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
+
         }
         private void label5_Click(object sender, EventArgs e)
         {
@@ -89,5 +98,5 @@ namespace CafeManagementSystem
             this.Close();
         }
     }
-
 }
+    
