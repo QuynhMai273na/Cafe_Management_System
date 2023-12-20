@@ -73,6 +73,7 @@
             this.guna2TextBoxUsername.Size = new System.Drawing.Size(308, 40);
             this.guna2TextBoxUsername.TabIndex = 2;
             this.guna2TextBoxUsername.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2TextBoxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxUsername_KeyDown);
             // 
             // guna2TextBoxPassWord
             // 
@@ -100,6 +101,7 @@
             this.guna2TextBoxPassWord.Tag = "";
             this.guna2TextBoxPassWord.TextOffset = new System.Drawing.Point(8, 0);
             this.guna2TextBoxPassWord.UseSystemPasswordChar = true;
+            this.guna2TextBoxPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxPassWord_KeyDown);
             // 
             // guna2ButtonLogin
             // 
@@ -193,6 +195,7 @@
             // 
             // labelForgotPW
             // 
+
             this.labelForgotPW.AutoSize = true;
             this.labelForgotPW.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelForgotPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));

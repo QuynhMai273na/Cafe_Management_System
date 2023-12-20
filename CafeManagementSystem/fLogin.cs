@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeManagementSystem.DAO;
 
@@ -65,7 +59,9 @@ namespace CafeManagementSystem
         {
             string username = guna2TextBoxUsername.Text;
             string password = guna2TextBoxPassWord.Text;
-            if (Login(username, password))
+            if (username.Trim() == "") MessageBox.Show("Please enter username !");
+            else if (password.Trim() == "") MessageBox.Show("Please enter password !");
+            else if (Login(username, password))
             {
 
                 fTableManagement tableManagement = new fTableManagement();
@@ -75,14 +71,32 @@ namespace CafeManagementSystem
             }
             else MessageBox.Show("Wrong username or password!");
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
-            fSignup signup = new fSignup();  
+            fSignup signup = new fSignup();
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
+        }
+
+        private void guna2TextBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) guna2TextBoxPassWord.Focus();
+        }
+
+        private void guna2TextBoxPassWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+            fSignup signup = new fSignup();
             this.Hide();
             signup.ShowDialog();
             this.Close();
         }
     }
-
 }
+    
