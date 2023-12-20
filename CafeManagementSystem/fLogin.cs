@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeManagementSystem.DAO;
 
@@ -60,12 +54,12 @@ namespace CafeManagementSystem
         {
             return AccountDAO.Instance.Login(username, password);
         }
-        
+
         private void guna2ButtonLogin_Click(object sender, EventArgs e)
         {
             string username = guna2TextBoxUsername.Text;
             string password = guna2TextBoxPassWord.Text;
-            if(username.Trim()=="") MessageBox.Show("Please enter username !");
+            if (username.Trim() == "") MessageBox.Show("Please enter username !");
             else if (password.Trim() == "") MessageBox.Show("Please enter password !");
             else if (Login(username, password))
             {
@@ -86,10 +80,10 @@ namespace CafeManagementSystem
         private void guna2TextBoxPassWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
-
+        }
         private void label5_Click(object sender, EventArgs e)
         {
-            fSignup signup = new fSignup();  
+            fSignup signup = new fSignup();
             this.Hide();
             signup.ShowDialog();
             this.Close();
