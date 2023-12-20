@@ -28,6 +28,7 @@ namespace CafeManagementSystem
             guna2ShadowForm1.SetShadowForm(this);
         }
 
+
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
@@ -74,6 +75,14 @@ namespace CafeManagementSystem
                 //this.Show();
             }
             else MessageBox.Show("Wrong username or password!");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fSignup signup = new fSignup();  
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
         }
     }
 
