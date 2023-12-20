@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using CafeManagementSystem;
+using CafeManagementSystem.DAO;
 
-namespace CoffeeManagerApplication
+namespace CafeManagementSystem
 {
     public partial class fLogin : Form
     {
@@ -57,7 +57,7 @@ namespace CoffeeManagerApplication
         }
         bool Login(string username, string password)
         {
-            return false;
+            return AccountDAO.Instance.Login(username, password);
         }
 
         private void guna2ButtonLogin_Click(object sender, EventArgs e)
@@ -78,4 +78,3 @@ namespace CoffeeManagerApplication
     }
 
 }
-
