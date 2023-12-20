@@ -68,11 +68,10 @@ namespace CafeManagementSystem
             if (Login(username, password))
             {
 
-                //fTableManger f = new fTableManger()-- đăng nhập thành công nên mở tap mới
+                fTableManagement tableManagement = new fTableManagement();
                 this.Hide();
-                //hiển thị f
-                //f.ShowDiaLog();
-                //this.Show();
+                tableManagement.ShowDialog();
+                this.Close();
             }
             else MessageBox.Show("Wrong username or password!");
         }
