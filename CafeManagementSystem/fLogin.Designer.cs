@@ -73,6 +73,7 @@
             this.guna2TextBoxUsername.Size = new System.Drawing.Size(308, 40);
             this.guna2TextBoxUsername.TabIndex = 2;
             this.guna2TextBoxUsername.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2TextBoxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxUsername_KeyDown);
             // 
             // guna2TextBoxPassWord
             // 
@@ -100,6 +101,7 @@
             this.guna2TextBoxPassWord.Tag = "";
             this.guna2TextBoxPassWord.TextOffset = new System.Drawing.Point(8, 0);
             this.guna2TextBoxPassWord.UseSystemPasswordChar = true;
+            this.guna2TextBoxPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxPassWord_KeyDown);
             // 
             // guna2ButtonLogin
             // 
@@ -181,7 +183,7 @@
             this.label5.Size = new System.Drawing.Size(176, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Don\'t Have Account? Sign up";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // guna2ButtonShutDown
             // 
