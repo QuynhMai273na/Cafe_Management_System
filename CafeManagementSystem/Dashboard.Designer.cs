@@ -297,7 +297,7 @@
             this.guna2TextBoxNote.SelectedText = "";
             this.guna2TextBoxNote.Size = new System.Drawing.Size(419, 58);
             this.guna2TextBoxNote.TabIndex = 29;
-            // 
+            //
             // labelNoteBill
             // 
             this.labelNoteBill.AutoSize = true;
@@ -412,5 +412,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2PanelShowBill;
         private System.Windows.Forms.Label labelTableManager;
         private System.Windows.Forms.Label labelShowBill;
+
     }
 }
