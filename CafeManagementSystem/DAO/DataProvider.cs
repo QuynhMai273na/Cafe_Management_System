@@ -11,7 +11,7 @@ namespace CafeManagementSystem.DAO
     public class DataProvider // design pattern singleton: chi ton tai duy nhat 1 the hien trong chuong trinh
     {
         private static DataProvider instance;
-        private string connectionSTR = @"Data Source=.\;Initial Catalog=CafeManagement;Integrated Security=True";
+        private string connectionSTR = @"Data Source=.\sqlexpress;Initial Catalog=CafeManagement;Integrated Security=True";
 
         public static DataProvider Instance
         {
@@ -40,13 +40,11 @@ namespace CafeManagementSystem.DAO
                     int i = 0;
                     foreach (string item in listParameter)
                     {
-                        // fix lỗi 
                         if (item.Contains('@'))
                         {
                             command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
-                        
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);// trung gian thuc hien cau truy van
