@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeManagementSystem.DAO;
 
@@ -94,6 +88,14 @@ namespace CafeManagementSystem
         private void guna2TextBoxPassWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) guna2ButtonLogin.PerformClick();
+
+        }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fSignup signup = new fSignup();
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
         }
     }
 }
