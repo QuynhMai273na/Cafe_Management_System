@@ -32,7 +32,6 @@
             this.guna2TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -40,12 +39,12 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2ButtonShutDown = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PanelBackGround = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2PictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PanelBackGround.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -127,17 +126,6 @@
             this.guna2ButtonLogin.Text = "Log in";
             this.guna2ButtonLogin.Click += new System.EventHandler(this.guna2ButtonLogin_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(581, 346);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Remember Me";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -194,21 +182,6 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Don\'t Have Account? Sign up";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // guna2ToggleSwitch1
-            // 
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(531, 343);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(40, 20);
-            this.guna2ToggleSwitch1.TabIndex = 15;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // guna2ButtonShutDown
             // 
@@ -279,14 +252,25 @@
             this.guna2Panel3.Size = new System.Drawing.Size(273, 1);
             this.guna2Panel3.TabIndex = 18;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.label1.Location = new System.Drawing.Point(626, 332);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Forgot Password?";
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(900, 508);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2ToggleSwitch1);
             this.Controls.Add(this.guna2ButtonShutDown);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Panel2);
@@ -294,7 +278,6 @@
             this.Controls.Add(this.guna2PanelBackGround);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ButtonLogin);
             this.Controls.Add(this.guna2TextBoxPassWord);
             this.Controls.Add(this.guna2TextBoxUsername);
@@ -321,7 +304,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxUsername;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPassWord;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonLogin;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
@@ -331,8 +313,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonShutDown;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label label1;
     }
 }
 
