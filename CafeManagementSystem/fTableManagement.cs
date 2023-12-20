@@ -66,7 +66,27 @@ namespace CafeManagementSystem
             int idTable =((sender as Button).Tag as Table).Id;
             ShowBill(idTable);
         }
+
+        private void guna2ButtonDashBoard_Click(object sender, EventArgs e)
+        {
+            labelTableManage.Text = "Table Manager Overview";
+            guna2PictureBoxTableIcon.Image = Properties.Resources._4;
+            container(new Dashboard());
+        }
         #endregion
         //cm code
+
+        private void container(object _form)
+        {
+            if (guna2PanelContainer.Controls.Count > 0) guna2PanelContainer.Controls.Clear();
+
+            Form form = _form as Form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            guna2PanelContainer.Controls.Add(form);
+            guna2PanelContainer.Tag = form;
+            form.Show();
+        }
     }
 }
