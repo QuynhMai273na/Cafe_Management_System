@@ -40,7 +40,7 @@ namespace CafeManagementSystem.DTO
             this.Price = price;
             this.TotalPrice = totalPrice;
         }
-        public Menu(DataRow row)
+        public Menu(DataRow row)  
         {
             this.FoodName = row["name"].ToString();
             this.Count = (int)row["count"];
