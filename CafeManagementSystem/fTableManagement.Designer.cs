@@ -33,8 +33,6 @@ namespace CafeManagementSystem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTableManagement));
             this.guna2PanelLeft = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabelAccountType = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabelAccountName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBoxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBoxMenu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonSetting = new Guna.UI2.WinForms.Guna2Button();
@@ -53,6 +51,8 @@ namespace CafeManagementSystem
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.labelAccountName = new System.Windows.Forms.Label();
+            this.labelKindAccount = new System.Windows.Forms.Label();
             this.guna2PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).BeginInit();
@@ -63,8 +63,8 @@ namespace CafeManagementSystem
             // 
             // guna2PanelLeft
             // 
-            this.guna2PanelLeft.Controls.Add(this.guna2HtmlLabelAccountType);
-            this.guna2PanelLeft.Controls.Add(this.guna2HtmlLabelAccountName);
+            this.guna2PanelLeft.Controls.Add(this.labelKindAccount);
+            this.guna2PanelLeft.Controls.Add(this.labelAccountName);
             this.guna2PanelLeft.Controls.Add(this.guna2PictureBoxAvatar);
             this.guna2PanelLeft.Controls.Add(this.guna2PictureBoxMenu);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonSetting);
@@ -79,27 +79,6 @@ namespace CafeManagementSystem
             this.guna2PanelLeft.Name = "guna2PanelLeft";
             this.guna2PanelLeft.Size = new System.Drawing.Size(233, 754);
             this.guna2PanelLeft.TabIndex = 0;
-            // 
-            // guna2HtmlLabelAccountType
-            // 
-            this.guna2HtmlLabelAccountType.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabelAccountType.Font = new System.Drawing.Font("Arial", 6.5F);
-            this.guna2HtmlLabelAccountType.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.guna2HtmlLabelAccountType.Location = new System.Drawing.Point(75, 717);
-            this.guna2HtmlLabelAccountType.Name = "guna2HtmlLabelAccountType";
-            this.guna2HtmlLabelAccountType.Size = new System.Drawing.Size(45, 16);
-            this.guna2HtmlLabelAccountType.TabIndex = 8;
-            this.guna2HtmlLabelAccountType.Text = "Manager";
-            // 
-            // guna2HtmlLabelAccountName
-            // 
-            this.guna2HtmlLabelAccountName.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabelAccountName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabelAccountName.Location = new System.Drawing.Point(75, 696);
-            this.guna2HtmlLabelAccountName.Name = "guna2HtmlLabelAccountName";
-            this.guna2HtmlLabelAccountName.Size = new System.Drawing.Size(91, 19);
-            this.guna2HtmlLabelAccountName.TabIndex = 7;
-            this.guna2HtmlLabelAccountName.Text = "Peter Paker";
             // 
             // guna2PictureBoxAvatar
             // 
@@ -151,7 +130,7 @@ namespace CafeManagementSystem
             this.guna2ButtonSetting.TabIndex = 4;
             this.guna2ButtonSetting.Text = "Setting";
             this.guna2ButtonSetting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonSetting.TextOffset = new System.Drawing.Point(15, 0);
+            this.guna2ButtonSetting.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2ButtonSetting.UseTransparentBackground = true;
             // 
             // guna2ButtonUserProfile
@@ -178,7 +157,7 @@ namespace CafeManagementSystem
             this.guna2ButtonUserProfile.TabIndex = 3;
             this.guna2ButtonUserProfile.Text = "User\'s Profile";
             this.guna2ButtonUserProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(15, 0);
+            this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2ButtonUserProfile.UseTransparentBackground = true;
             // 
             // guna2ButtonAdmin
@@ -206,7 +185,6 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin.TabIndex = 2;
             this.guna2ButtonAdmin.Text = "Admin";
             this.guna2ButtonAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonAdmin.TextOffset = new System.Drawing.Point(5, 0);
             this.guna2ButtonAdmin.UseTransparentBackground = true;
             // 
             // guna2ButtonDashBoard
@@ -233,7 +211,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDashBoard.TabIndex = 1;
             this.guna2ButtonDashBoard.Text = "OverView";
             this.guna2ButtonDashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonDashBoard.TextOffset = new System.Drawing.Point(15, 0);
+            this.guna2ButtonDashBoard.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2ButtonDashBoard.UseTransparentBackground = true;
             this.guna2ButtonDashBoard.Click += new System.EventHandler(this.guna2ButtonDashBoard_Click);
             // 
@@ -380,6 +358,29 @@ namespace CafeManagementSystem
             this.guna2PanelContainer.Size = new System.Drawing.Size(975, 701);
             this.guna2PanelContainer.TabIndex = 2;
             // 
+            // labelAccountName
+            // 
+            this.labelAccountName.AutoSize = true;
+            this.labelAccountName.BackColor = System.Drawing.Color.Transparent;
+            this.labelAccountName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccountName.Location = new System.Drawing.Point(72, 695);
+            this.labelAccountName.Name = "labelAccountName";
+            this.labelAccountName.Size = new System.Drawing.Size(96, 17);
+            this.labelAccountName.TabIndex = 9;
+            this.labelAccountName.Text = "Peter Paker";
+            // 
+            // labelKindAccount
+            // 
+            this.labelKindAccount.AutoSize = true;
+            this.labelKindAccount.BackColor = System.Drawing.Color.Transparent;
+            this.labelKindAccount.Font = new System.Drawing.Font("Arial", 7F);
+            this.labelKindAccount.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelKindAccount.Location = new System.Drawing.Point(73, 719);
+            this.labelKindAccount.Name = "labelKindAccount";
+            this.labelKindAccount.Size = new System.Drawing.Size(55, 15);
+            this.labelKindAccount.TabIndex = 10;
+            this.labelKindAccount.Text = "Manager";
+            // 
             // fTableManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -427,11 +428,11 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdmin;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxMenu;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxAvatar;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelAccountName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelAccountType;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelContainer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxTableIcon;
         private System.Windows.Forms.Label labelTableManage;
+        private System.Windows.Forms.Label labelKindAccount;
+        private System.Windows.Forms.Label labelAccountName;
     }
 }
