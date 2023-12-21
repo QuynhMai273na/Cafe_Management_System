@@ -207,6 +207,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin.Text = "Admin";
             this.guna2ButtonAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonAdmin.UseTransparentBackground = true;
+            this.guna2ButtonAdmin.Click += new System.EventHandler(this.guna2ButtonAdmin_Click);
             // 
             // guna2ButtonDashBoard
             // 
