@@ -46,8 +46,8 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBoxShowBill = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelAddFood = new System.Windows.Forms.Panel();
-            this.guna2TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.guna2TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).BeginInit();
             this.guna2PanelCustomerInfo.SuspendLayout();
             this.guna2PanelNoteBill.SuspendLayout();
@@ -89,7 +89,7 @@
             this.guna2ButtonPayMent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonPayMent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonPayMent.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonPayMent.Location = new System.Drawing.Point(855, 649);
+            this.guna2ButtonPayMent.Location = new System.Drawing.Point(849, 649);
             this.guna2ButtonPayMent.Name = "guna2ButtonPayMent";
             this.guna2ButtonPayMent.Size = new System.Drawing.Size(98, 43);
             this.guna2ButtonPayMent.TabIndex = 22;
@@ -211,7 +211,7 @@
             this.guna2ButtonExportBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonExportBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonExportBill.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonExportBill.Location = new System.Drawing.Point(751, 649);
+            this.guna2ButtonExportBill.Location = new System.Drawing.Point(744, 649);
             this.guna2ButtonExportBill.Name = "guna2ButtonExportBill";
             this.guna2ButtonExportBill.Size = new System.Drawing.Size(98, 44);
             this.guna2ButtonExportBill.TabIndex = 32;
@@ -282,6 +282,18 @@
             this.panelAddFood.Size = new System.Drawing.Size(449, 85);
             this.panelAddFood.TabIndex = 34;
             // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(317, 9);
+            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(74, 29);
+            this.guna2NumericUpDown1.TabIndex = 26;
+            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            // 
             // guna2TextBoxSearch
             // 
             this.guna2TextBoxSearch.AutoRoundedCorners = true;
@@ -309,18 +321,6 @@
             this.guna2TextBoxSearch.Size = new System.Drawing.Size(294, 35);
             this.guna2TextBoxSearch.TabIndex = 23;
             this.guna2TextBoxSearch.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // guna2NumericUpDown1
-            // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(317, 9);
-            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(74, 29);
-            this.guna2NumericUpDown1.TabIndex = 26;
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             // 
             // Dashboard
             // 
