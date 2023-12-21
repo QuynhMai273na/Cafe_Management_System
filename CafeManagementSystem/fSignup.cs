@@ -39,7 +39,7 @@ namespace CafeManagementSystem
         {
             return Regex.IsMatch(ac, "^{6,24}$");
         }
-        private void guna2ButtonLogin_Click(object sender, EventArgs e)
+        private void guna2ButtonSignUp_Click(object sender, EventArgs e)
         {
             string userame = guna2TextBoxUsername.Text;
             string password = guna2TextBoxPassword.Text;
@@ -129,6 +129,12 @@ namespace CafeManagementSystem
             this.Hide();
             login.ShowDialog();
             this.Close();
+        }
+
+        private void guna2TextBoxRePass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) guna2ButtonSignUp.PerformClick();
+
         }
     }
 }

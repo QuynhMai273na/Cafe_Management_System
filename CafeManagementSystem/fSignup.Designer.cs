@@ -37,7 +37,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.forgotPW = new System.Windows.Forms.Label();
-            this.guna2ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBoxRePass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,7 +58,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.forgotPW);
-            this.guna2Panel1.Controls.Add(this.guna2ButtonLogin);
+            this.guna2Panel1.Controls.Add(this.guna2ButtonSignUp);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.guna2TextBoxRePass);
@@ -164,30 +164,30 @@
             this.forgotPW.Text = "I\'m already a member! Log in";
             this.forgotPW.Click += new System.EventHandler(this.MemberExist_Click);
             // 
-            // guna2ButtonLogin
+            // guna2ButtonSignUp
             // 
-            this.guna2ButtonLogin.AutoRoundedCorners = true;
-            this.guna2ButtonLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2ButtonLogin.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonLogin.BorderRadius = 17;
-            this.guna2ButtonLogin.BorderThickness = 2;
-            this.guna2ButtonLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.guna2ButtonLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonLogin.DisabledState.CustomBorderColor = System.Drawing.Color.Black;
-            this.guna2ButtonLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonLogin.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ButtonLogin.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonLogin.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonLogin.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonLogin.Location = new System.Drawing.Point(295, 569);
-            this.guna2ButtonLogin.Name = "guna2ButtonLogin";
-            this.guna2ButtonLogin.Size = new System.Drawing.Size(125, 37);
-            this.guna2ButtonLogin.TabIndex = 11;
-            this.guna2ButtonLogin.Text = "Sign up";
-            this.guna2ButtonLogin.Click += new System.EventHandler(this.guna2ButtonLogin_Click);
+            this.guna2ButtonSignUp.AutoRoundedCorners = true;
+            this.guna2ButtonSignUp.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2ButtonSignUp.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonSignUp.BorderRadius = 17;
+            this.guna2ButtonSignUp.BorderThickness = 2;
+            this.guna2ButtonSignUp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.guna2ButtonSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.Black;
+            this.guna2ButtonSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonSignUp.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2ButtonSignUp.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonSignUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonSignUp.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonSignUp.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonSignUp.Location = new System.Drawing.Point(295, 569);
+            this.guna2ButtonSignUp.Name = "guna2ButtonSignUp";
+            this.guna2ButtonSignUp.Size = new System.Drawing.Size(125, 37);
+            this.guna2ButtonSignUp.TabIndex = 11;
+            this.guna2ButtonSignUp.Text = "Sign up";
+            this.guna2ButtonSignUp.Click += new System.EventHandler(this.guna2ButtonSignUp_Click);
             // 
             // label3
             // 
@@ -235,6 +235,7 @@
             this.guna2TextBoxRePass.Size = new System.Drawing.Size(348, 40);
             this.guna2TextBoxRePass.TabIndex = 6;
             this.guna2TextBoxRePass.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2TextBoxRePass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxRePass_KeyDown);
             // 
             // guna2TextBoxPassword
             // 
@@ -344,7 +345,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxDisplayName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonLogin;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonSignUp;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonReturn;
         private System.Windows.Forms.Label forgotPW;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxLogo;

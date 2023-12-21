@@ -33,6 +33,15 @@ namespace CafeManagementSystem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTableManagement));
             this.guna2PanelLeft = new Guna.UI2.WinForms.Guna2Panel();
+            this.labelKindAccount = new System.Windows.Forms.Label();
+            this.labelAccountName = new System.Windows.Forms.Label();
+            this.guna2PanelTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBoxExit = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBoxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBoxMenu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonSetting = new Guna.UI2.WinForms.Guna2Button();
@@ -40,24 +49,17 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PanelTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.labelTableManage = new System.Windows.Forms.Label();
             this.guna2PictureBoxTableIcon = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.labelTableManage = new System.Windows.Forms.Label();
             this.guna2TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ControlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBoxExit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.labelAccountName = new System.Windows.Forms.Label();
-            this.labelKindAccount = new System.Windows.Forms.Label();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2PanelLeft.SuspendLayout();
+            this.guna2PanelTop.SuspendLayout();
+            this.guna2PanelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).BeginInit();
-            this.guna2PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,153 +82,28 @@ namespace CafeManagementSystem
             this.guna2PanelLeft.Size = new System.Drawing.Size(233, 754);
             this.guna2PanelLeft.TabIndex = 0;
             // 
-            // guna2PictureBoxAvatar
+            // labelKindAccount
             // 
-            this.guna2PictureBoxAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxAvatar.Image")));
-            this.guna2PictureBoxAvatar.ImageRotate = 0F;
-            this.guna2PictureBoxAvatar.Location = new System.Drawing.Point(12, 696);
-            this.guna2PictureBoxAvatar.Name = "guna2PictureBoxAvatar";
-            this.guna2PictureBoxAvatar.Size = new System.Drawing.Size(46, 46);
-            this.guna2PictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxAvatar.TabIndex = 6;
-            this.guna2PictureBoxAvatar.TabStop = false;
-            this.guna2PictureBoxAvatar.UseTransparentBackground = true;
+            this.labelKindAccount.AutoSize = true;
+            this.labelKindAccount.BackColor = System.Drawing.Color.Transparent;
+            this.labelKindAccount.Font = new System.Drawing.Font("Arial", 7F);
+            this.labelKindAccount.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelKindAccount.Location = new System.Drawing.Point(73, 719);
+            this.labelKindAccount.Name = "labelKindAccount";
+            this.labelKindAccount.Size = new System.Drawing.Size(55, 15);
+            this.labelKindAccount.TabIndex = 10;
+            this.labelKindAccount.Text = "Manager";
             // 
-            // guna2PictureBoxMenu
+            // labelAccountName
             // 
-            this.guna2PictureBoxMenu.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxMenu.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxMenu.Image")));
-            this.guna2PictureBoxMenu.ImageRotate = 0F;
-            this.guna2PictureBoxMenu.Location = new System.Drawing.Point(185, -4);
-            this.guna2PictureBoxMenu.Name = "guna2PictureBoxMenu";
-            this.guna2PictureBoxMenu.Size = new System.Drawing.Size(50, 48);
-            this.guna2PictureBoxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxMenu.TabIndex = 5;
-            this.guna2PictureBoxMenu.TabStop = false;
-            this.guna2PictureBoxMenu.UseTransparentBackground = true;
-            // 
-            // guna2ButtonSetting
-            // 
-            this.guna2ButtonSetting.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonSetting.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
-            this.guna2ButtonSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonSetting.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonSetting.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonSetting.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonSetting.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.guna2ButtonSetting.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonSetting.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonSetting.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2ButtonSetting.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonSetting.Image")));
-            this.guna2ButtonSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonSetting.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2ButtonSetting.Location = new System.Drawing.Point(0, 276);
-            this.guna2ButtonSetting.Name = "guna2ButtonSetting";
-            this.guna2ButtonSetting.Size = new System.Drawing.Size(233, 46);
-            this.guna2ButtonSetting.TabIndex = 4;
-            this.guna2ButtonSetting.Text = "Setting";
-            this.guna2ButtonSetting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonSetting.TextOffset = new System.Drawing.Point(10, 0);
-            this.guna2ButtonSetting.UseTransparentBackground = true;
-            // 
-            // guna2ButtonUserProfile
-            // 
-            this.guna2ButtonUserProfile.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonUserProfile.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
-            this.guna2ButtonUserProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonUserProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonUserProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonUserProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonUserProfile.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonUserProfile.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonUserProfile.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonUserProfile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.guna2ButtonUserProfile.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonUserProfile.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonUserProfile.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.guna2ButtonUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonUserProfile.Image")));
-            this.guna2ButtonUserProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonUserProfile.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2ButtonUserProfile.Location = new System.Drawing.Point(0, 224);
-            this.guna2ButtonUserProfile.Name = "guna2ButtonUserProfile";
-            this.guna2ButtonUserProfile.Size = new System.Drawing.Size(233, 46);
-            this.guna2ButtonUserProfile.TabIndex = 3;
-            this.guna2ButtonUserProfile.Text = "User\'s Profile";
-            this.guna2ButtonUserProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(10, 0);
-            this.guna2ButtonUserProfile.UseTransparentBackground = true;
-            // 
-            // guna2ButtonAdmin
-            // 
-            this.guna2ButtonAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonAdmin.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
-            this.guna2ButtonAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonAdmin.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonAdmin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonAdmin.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonAdmin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.guna2ButtonAdmin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonAdmin.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdmin.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.guna2ButtonAdmin.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonAdmin.Image")));
-            this.guna2ButtonAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonAdmin.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.guna2ButtonAdmin.ImageSize = new System.Drawing.Size(60, 60);
-            this.guna2ButtonAdmin.Location = new System.Drawing.Point(0, 172);
-            this.guna2ButtonAdmin.Name = "guna2ButtonAdmin";
-            this.guna2ButtonAdmin.Size = new System.Drawing.Size(233, 46);
-            this.guna2ButtonAdmin.TabIndex = 2;
-            this.guna2ButtonAdmin.Text = "Admin";
-            this.guna2ButtonAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonAdmin.UseTransparentBackground = true;
-            // 
-            // guna2ButtonDashBoard
-            // 
-            this.guna2ButtonDashBoard.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonDashBoard.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
-            this.guna2ButtonDashBoard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonDashBoard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonDashBoard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonDashBoard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonDashBoard.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonDashBoard.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonDashBoard.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonDashBoard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.guna2ButtonDashBoard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonDashBoard.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDashBoard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            this.guna2ButtonDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonDashBoard.Image")));
-            this.guna2ButtonDashBoard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonDashBoard.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2ButtonDashBoard.Location = new System.Drawing.Point(0, 120);
-            this.guna2ButtonDashBoard.Name = "guna2ButtonDashBoard";
-            this.guna2ButtonDashBoard.Size = new System.Drawing.Size(233, 46);
-            this.guna2ButtonDashBoard.TabIndex = 1;
-            this.guna2ButtonDashBoard.Text = "OverView";
-            this.guna2ButtonDashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonDashBoard.TextOffset = new System.Drawing.Point(10, 0);
-            this.guna2ButtonDashBoard.UseTransparentBackground = true;
-            this.guna2ButtonDashBoard.Click += new System.EventHandler(this.guna2ButtonDashBoard_Click);
-            // 
-            // guna2PictureBoxLogo
-            // 
-            this.guna2PictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxLogo.Image = global::CafeManagementSystem.Properties.Resources.logo;
-            this.guna2PictureBoxLogo.ImageRotate = 0F;
-            this.guna2PictureBoxLogo.Location = new System.Drawing.Point(65, 7);
-            this.guna2PictureBoxLogo.Name = "guna2PictureBoxLogo";
-            this.guna2PictureBoxLogo.Size = new System.Drawing.Size(97, 92);
-            this.guna2PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxLogo.TabIndex = 0;
-            this.guna2PictureBoxLogo.TabStop = false;
-            this.guna2PictureBoxLogo.UseTransparentBackground = true;
+            this.labelAccountName.AutoSize = true;
+            this.labelAccountName.BackColor = System.Drawing.Color.Transparent;
+            this.labelAccountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccountName.Location = new System.Drawing.Point(72, 695);
+            this.labelAccountName.Name = "labelAccountName";
+            this.labelAccountName.Size = new System.Drawing.Size(86, 18);
+            this.labelAccountName.TabIndex = 9;
+            this.labelAccountName.Text = "Peter Paker";
             // 
             // guna2PanelTop
             // 
@@ -244,73 +121,6 @@ namespace CafeManagementSystem
             this.guna2PanelTop.Name = "guna2PanelTop";
             this.guna2PanelTop.Size = new System.Drawing.Size(975, 53);
             this.guna2PanelTop.TabIndex = 1;
-            // 
-            // labelTableManage
-            // 
-            this.labelTableManage.AutoSize = true;
-            this.labelTableManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTableManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelTableManage.Location = new System.Drawing.Point(60, 18);
-            this.labelTableManage.Name = "labelTableManage";
-            this.labelTableManage.Size = new System.Drawing.Size(0, 18);
-            this.labelTableManage.TabIndex = 29;
-            // 
-            // guna2PictureBoxTableIcon
-            // 
-            this.guna2PictureBoxTableIcon.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxTableIcon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2PictureBoxTableIcon.ImageRotate = 0F;
-            this.guna2PictureBoxTableIcon.Location = new System.Drawing.Point(23, 8);
-            this.guna2PictureBoxTableIcon.Name = "guna2PictureBoxTableIcon";
-            this.guna2PictureBoxTableIcon.Size = new System.Drawing.Size(31, 37);
-            this.guna2PictureBoxTableIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxTableIcon.TabIndex = 4;
-            this.guna2PictureBoxTableIcon.TabStop = false;
-            this.guna2PictureBoxTableIcon.UseTransparentBackground = true;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, 0);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(791, 7);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(30, 30);
-            this.guna2CircleButton1.TabIndex = 2;
-            // 
-            // guna2TextBoxSearch
-            // 
-            this.guna2TextBoxSearch.AutoRoundedCorners = true;
-            this.guna2TextBoxSearch.BorderRadius = 16;
-            this.guna2TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxSearch.DefaultText = "";
-            this.guna2TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearch.IconLeft")));
-            this.guna2TextBoxSearch.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBoxSearch.IconLeftSize = new System.Drawing.Size(18, 18);
-            this.guna2TextBoxSearch.Location = new System.Drawing.Point(541, 9);
-            this.guna2TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBoxSearch.Name = "guna2TextBoxSearch";
-            this.guna2TextBoxSearch.PasswordChar = '\0';
-            this.guna2TextBoxSearch.PlaceholderText = "Searching ";
-            this.guna2TextBoxSearch.SelectedText = "";
-            this.guna2TextBoxSearch.Size = new System.Drawing.Size(229, 35);
-            this.guna2TextBoxSearch.TabIndex = 3;
-            this.guna2TextBoxSearch.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // guna2ControlBoxMin
             // 
@@ -352,34 +162,244 @@ namespace CafeManagementSystem
             // 
             // guna2PanelContainer
             // 
+            this.guna2PanelContainer.Controls.Add(this.guna2CircleButton2);
             this.guna2PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2PanelContainer.Location = new System.Drawing.Point(233, 53);
             this.guna2PanelContainer.Name = "guna2PanelContainer";
             this.guna2PanelContainer.Size = new System.Drawing.Size(975, 701);
             this.guna2PanelContainer.TabIndex = 2;
             // 
-            // labelAccountName
+            // guna2PictureBoxAvatar
             // 
-            this.labelAccountName.AutoSize = true;
-            this.labelAccountName.BackColor = System.Drawing.Color.Transparent;
-            this.labelAccountName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountName.Location = new System.Drawing.Point(72, 695);
-            this.labelAccountName.Name = "labelAccountName";
-            this.labelAccountName.Size = new System.Drawing.Size(96, 17);
-            this.labelAccountName.TabIndex = 9;
-            this.labelAccountName.Text = "Peter Paker";
+            this.guna2PictureBoxAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxAvatar.Image")));
+            this.guna2PictureBoxAvatar.ImageRotate = 0F;
+            this.guna2PictureBoxAvatar.Location = new System.Drawing.Point(12, 696);
+            this.guna2PictureBoxAvatar.Name = "guna2PictureBoxAvatar";
+            this.guna2PictureBoxAvatar.Size = new System.Drawing.Size(46, 46);
+            this.guna2PictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxAvatar.TabIndex = 6;
+            this.guna2PictureBoxAvatar.TabStop = false;
+            this.guna2PictureBoxAvatar.UseTransparentBackground = true;
             // 
-            // labelKindAccount
+            // guna2PictureBoxMenu
             // 
-            this.labelKindAccount.AutoSize = true;
-            this.labelKindAccount.BackColor = System.Drawing.Color.Transparent;
-            this.labelKindAccount.Font = new System.Drawing.Font("Arial", 7F);
-            this.labelKindAccount.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.labelKindAccount.Location = new System.Drawing.Point(73, 719);
-            this.labelKindAccount.Name = "labelKindAccount";
-            this.labelKindAccount.Size = new System.Drawing.Size(55, 15);
-            this.labelKindAccount.TabIndex = 10;
-            this.labelKindAccount.Text = "Manager";
+            this.guna2PictureBoxMenu.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBoxMenu.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxMenu.Image")));
+            this.guna2PictureBoxMenu.ImageRotate = 0F;
+            this.guna2PictureBoxMenu.Location = new System.Drawing.Point(185, -4);
+            this.guna2PictureBoxMenu.Name = "guna2PictureBoxMenu";
+            this.guna2PictureBoxMenu.Size = new System.Drawing.Size(50, 48);
+            this.guna2PictureBoxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxMenu.TabIndex = 5;
+            this.guna2PictureBoxMenu.TabStop = false;
+            this.guna2PictureBoxMenu.UseTransparentBackground = true;
+            // 
+            // guna2ButtonSetting
+            // 
+            this.guna2ButtonSetting.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonSetting.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
+            this.guna2ButtonSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonSetting.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonSetting.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonSetting.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.guna2ButtonSetting.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonSetting.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonSetting.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.guna2ButtonSetting.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonSetting.Image")));
+            this.guna2ButtonSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonSetting.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ButtonSetting.Location = new System.Drawing.Point(0, 276);
+            this.guna2ButtonSetting.Name = "guna2ButtonSetting";
+            this.guna2ButtonSetting.Size = new System.Drawing.Size(233, 46);
+            this.guna2ButtonSetting.TabIndex = 4;
+            this.guna2ButtonSetting.Text = "Setting";
+            this.guna2ButtonSetting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonSetting.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonSetting.UseTransparentBackground = true;
+            // 
+            // guna2ButtonUserProfile
+            // 
+            this.guna2ButtonUserProfile.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonUserProfile.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
+            this.guna2ButtonUserProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonUserProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonUserProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonUserProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonUserProfile.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonUserProfile.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonUserProfile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.guna2ButtonUserProfile.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonUserProfile.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonUserProfile.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.guna2ButtonUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonUserProfile.Image")));
+            this.guna2ButtonUserProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonUserProfile.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ButtonUserProfile.Location = new System.Drawing.Point(0, 224);
+            this.guna2ButtonUserProfile.Name = "guna2ButtonUserProfile";
+            this.guna2ButtonUserProfile.Size = new System.Drawing.Size(233, 46);
+            this.guna2ButtonUserProfile.TabIndex = 3;
+            this.guna2ButtonUserProfile.Text = "User\'s Profile";
+            this.guna2ButtonUserProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonUserProfile.UseTransparentBackground = true;
+            // 
+            // guna2ButtonAdmin
+            // 
+            this.guna2ButtonAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonAdmin.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
+            this.guna2ButtonAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonAdmin.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonAdmin.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonAdmin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.guna2ButtonAdmin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonAdmin.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonAdmin.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.guna2ButtonAdmin.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonAdmin.Image")));
+            this.guna2ButtonAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonAdmin.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2ButtonAdmin.ImageSize = new System.Drawing.Size(60, 60);
+            this.guna2ButtonAdmin.Location = new System.Drawing.Point(0, 172);
+            this.guna2ButtonAdmin.Name = "guna2ButtonAdmin";
+            this.guna2ButtonAdmin.Size = new System.Drawing.Size(233, 46);
+            this.guna2ButtonAdmin.TabIndex = 2;
+            this.guna2ButtonAdmin.Text = "Admin";
+            this.guna2ButtonAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonAdmin.UseTransparentBackground = true;
+            // 
+            // guna2ButtonDashBoard
+            // 
+            this.guna2ButtonDashBoard.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonDashBoard.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
+            this.guna2ButtonDashBoard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDashBoard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDashBoard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonDashBoard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonDashBoard.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonDashBoard.ForeColor = System.Drawing.Color.Black;
+            this.guna2ButtonDashBoard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.guna2ButtonDashBoard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonDashBoard.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonDashBoard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.guna2ButtonDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonDashBoard.Image")));
+            this.guna2ButtonDashBoard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonDashBoard.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ButtonDashBoard.Location = new System.Drawing.Point(0, 120);
+            this.guna2ButtonDashBoard.Name = "guna2ButtonDashBoard";
+            this.guna2ButtonDashBoard.Size = new System.Drawing.Size(233, 46);
+            this.guna2ButtonDashBoard.TabIndex = 1;
+            this.guna2ButtonDashBoard.Text = "OverView";
+            this.guna2ButtonDashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonDashBoard.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonDashBoard.UseTransparentBackground = true;
+            this.guna2ButtonDashBoard.Click += new System.EventHandler(this.guna2ButtonDashBoard_Click);
+            // 
+            // guna2PictureBoxLogo
+            // 
+            this.guna2PictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBoxLogo.Image = global::CafeManagementSystem.Properties.Resources.logo;
+            this.guna2PictureBoxLogo.ImageRotate = 0F;
+            this.guna2PictureBoxLogo.Location = new System.Drawing.Point(65, 7);
+            this.guna2PictureBoxLogo.Name = "guna2PictureBoxLogo";
+            this.guna2PictureBoxLogo.Size = new System.Drawing.Size(97, 92);
+            this.guna2PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxLogo.TabIndex = 0;
+            this.guna2PictureBoxLogo.TabStop = false;
+            this.guna2PictureBoxLogo.UseTransparentBackground = true;
+            // 
+            // guna2PictureBoxTableIcon
+            // 
+            this.guna2PictureBoxTableIcon.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBoxTableIcon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2PictureBoxTableIcon.ImageRotate = 0F;
+            this.guna2PictureBoxTableIcon.Location = new System.Drawing.Point(23, 8);
+            this.guna2PictureBoxTableIcon.Name = "guna2PictureBoxTableIcon";
+            this.guna2PictureBoxTableIcon.Size = new System.Drawing.Size(31, 37);
+            this.guna2PictureBoxTableIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxTableIcon.TabIndex = 4;
+            this.guna2PictureBoxTableIcon.TabStop = false;
+            this.guna2PictureBoxTableIcon.UseTransparentBackground = true;
+            // 
+            // labelTableManage
+            // 
+            this.labelTableManage.AutoSize = true;
+            this.labelTableManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTableManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.labelTableManage.Location = new System.Drawing.Point(60, 18);
+            this.labelTableManage.Name = "labelTableManage";
+            this.labelTableManage.Size = new System.Drawing.Size(0, 18);
+            this.labelTableManage.TabIndex = 29;
+            // 
+            // guna2TextBoxSearch
+            // 
+            this.guna2TextBoxSearch.AutoRoundedCorners = true;
+            this.guna2TextBoxSearch.BorderRadius = 16;
+            this.guna2TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxSearch.DefaultText = "";
+            this.guna2TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearch.IconLeft")));
+            this.guna2TextBoxSearch.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.guna2TextBoxSearch.IconLeftSize = new System.Drawing.Size(18, 18);
+            this.guna2TextBoxSearch.Location = new System.Drawing.Point(541, 9);
+            this.guna2TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxSearch.Name = "guna2TextBoxSearch";
+            this.guna2TextBoxSearch.PasswordChar = '\0';
+            this.guna2TextBoxSearch.PlaceholderText = "Searching ";
+            this.guna2TextBoxSearch.SelectedText = "";
+            this.guna2TextBoxSearch.Size = new System.Drawing.Size(229, 35);
+            this.guna2TextBoxSearch.TabIndex = 3;
+            this.guna2TextBoxSearch.TextOffset = new System.Drawing.Point(5, 0);
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
+            this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(791, 7);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(30, 30);
+            this.guna2CircleButton1.TabIndex = 2;
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton2.Image")));
+            this.guna2CircleButton2.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(689, 67);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(30, 30);
+            this.guna2CircleButton2.TabIndex = 3;
             // 
             // fTableManagement
             // 
@@ -396,11 +416,12 @@ namespace CafeManagementSystem
             this.Load += new System.EventHandler(this.fTableManagement_Load);
             this.guna2PanelLeft.ResumeLayout(false);
             this.guna2PanelLeft.PerformLayout();
+            this.guna2PanelTop.ResumeLayout(false);
+            this.guna2PanelTop.PerformLayout();
+            this.guna2PanelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).EndInit();
-            this.guna2PanelTop.ResumeLayout(false);
-            this.guna2PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIcon)).EndInit();
             this.ResumeLayout(false);
 
@@ -416,11 +437,9 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2Panel guna2PanelLeft;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelTop;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMin;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMax;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxExit;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxLogo;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDashBoard;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSetting;
@@ -430,9 +449,12 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxAvatar;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelContainer;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxTableIcon;
-        private System.Windows.Forms.Label labelTableManage;
         private System.Windows.Forms.Label labelKindAccount;
         private System.Windows.Forms.Label labelAccountName;
+        private System.Windows.Forms.Label labelTableManage;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxTableIcon;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
     }
 }

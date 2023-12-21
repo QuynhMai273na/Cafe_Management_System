@@ -200,6 +200,9 @@
       <DependentUpon>ModelEntity.edmx</DependentUpon>
       <LastGenOutput>ModelEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\add-icon-png-2459 %281%291.png" />
+    <None Include="Resources\add-icon-png-2459 %281%29.png" />
+    <None Include="Resources\Image1.png" />
     <None Include="Resources\7604036.png" />
     <None Include="Resources\6.png" />
     <None Include="Resources\5.png" />

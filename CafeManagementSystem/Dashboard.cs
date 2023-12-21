@@ -65,5 +65,15 @@ namespace CafeManagementSystem
             int idTable = ((sender as Button).Tag as Table).Id;
             ShowBill(idTable);
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBoxShowBill_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
