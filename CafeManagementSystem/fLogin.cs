@@ -59,26 +59,33 @@ namespace CafeManagementSystem
         {
             string username = guna2TextBoxUsername.Text;
             string password = guna2TextBoxPassWord.Text;
-            if (username.Trim() == "") MessageBox.Show("Please enter username !");
-            else if (password.Trim() == "") MessageBox.Show("Please enter password !");
-            else if (Login(username, password))
+         
+           if (username.Trim()=="")
             {
-
-                fTableManagement tableManagement = new fTableManagement();
+                fNotification noti=new fNotification();
+                noti.labelNote.Text = "Please enter username !";
+                noti.ShowDialog();
+            }
+           else if (password.Trim() == "")
+            {
+                fNotification noti = new fNotification();
+                noti.labelNote.Text = "Please enter password !";
+                noti.ShowDialog();
+            }
+           else if (Login(username,password))
+            {
+                fTableManagement tableManagement= new fTableManagement();
                 this.Hide();
                 tableManagement.ShowDialog();
                 this.Close();
             }
-            else MessageBox.Show("Wrong username or password!");
+           else
+            {
+                fNotification noti = new fNotification();
+                noti.labelNote.Text = "Wrong user name or password !";
+                noti.ShowDialog();
+            }
         }
-        private void label5_Click(object sender, EventArgs e)
-        {
-            fSignup signup = new fSignup();
-            this.Hide();
-            signup.ShowDialog();
-            this.Close();
-        }
-
         private void guna2TextBoxUsername_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) guna2TextBoxPassWord.Focus();
@@ -90,7 +97,13 @@ namespace CafeManagementSystem
 
         }
 
-   
+        private void labelCreateNewAccount_Click(object sender, EventArgs e)
+        {
+            fSignup signup = new fSignup();
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
+        }
     }
 }
     
