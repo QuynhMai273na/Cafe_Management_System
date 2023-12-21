@@ -61,6 +61,12 @@
     <Compile Include="Account.cs">
       <DependentUpon>ModelEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="AdminReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminReceipt.Designer.cs">
+      <DependentUpon>AdminReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="bill.cs">
       <DependentUpon>ModelEntity.tt</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="TableFood.cs">
       <DependentUpon>ModelEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminReceipt.resx">
+      <DependentUpon>AdminReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
