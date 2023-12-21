@@ -101,6 +101,7 @@
             this.guna2NumericUpDownDiscount.Size = new System.Drawing.Size(78, 23);
             this.guna2NumericUpDownDiscount.TabIndex = 25;
             this.guna2NumericUpDownDiscount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2NumericUpDownDiscount.ValueChanged += new System.EventHandler(this.guna2NumericUpDownDiscount_ValueChanged);
             // 
             // labelDiscount
             // 
@@ -279,7 +280,7 @@
             this.panelAddFood.Controls.Add(this.guna2CircleButton1);
             this.panelAddFood.Location = new System.Drawing.Point(504, 4);
             this.panelAddFood.Name = "panelAddFood";
-            this.panelAddFood.Size = new System.Drawing.Size(449, 85);
+            this.panelAddFood.Size = new System.Drawing.Size(455, 85);
             this.panelAddFood.TabIndex = 34;
             // 
             // guna2NumericUpDown1
@@ -326,11 +327,14 @@
             // 
             // listViewBill
             // 
+            this.listViewBill.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listViewBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.listViewBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.listViewBill.GridLines = true;
             this.listViewBill.HideSelection = false;
             this.listViewBill.Location = new System.Drawing.Point(504, 95);
@@ -343,18 +347,24 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 201;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Price";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 113;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Count";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Total Price";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 100;
             // 
             // Dashboard
             // 

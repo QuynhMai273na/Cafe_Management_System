@@ -15,6 +15,7 @@ namespace CafeManagementSystem
 {
     public partial class Dashboard : Form
     {
+        float totalmoney = 0;
         public Dashboard()
         {
             InitializeComponent();
@@ -61,7 +62,8 @@ namespace CafeManagementSystem
                 // thêm vào list view bill
                 listViewBill.Items.Add(lsvItem);
             }
-            this.labelTotalBill.Text = "Total: \t"+ sumPrice.ToString()+" VND";
+            totalmoney = sumPrice;
+            this.labelTotalBill.Text = "Total: \t" + totalmoney + " VND";
         }
         void btn_Click(object sender, EventArgs e)
         {
@@ -69,6 +71,10 @@ namespace CafeManagementSystem
             ShowBill(idTable);
         }
 
-
+        private void guna2NumericUpDownDiscount_ValueChanged(object sender, EventArgs e)
+        {
+            float moneyAfterDis = totalmoney * (100 - ((float)Convert.ToDouble(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
+            this.labelTotalBill.Text = "Total: \t" + moneyAfterDis + " VND";
+        }
     }
 }
