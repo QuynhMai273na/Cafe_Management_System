@@ -42,19 +42,20 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.labelTableManage = new System.Windows.Forms.Label();
             this.guna2PictureBoxTableIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxExit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).BeginInit();
+            this.guna2PanelContainer.SuspendLayout();
             this.guna2PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIcon)).BeginInit();
             this.SuspendLayout();
@@ -250,8 +251,23 @@ namespace CafeManagementSystem
             this.guna2PictureBoxLogo.TabStop = false;
             this.guna2PictureBoxLogo.UseTransparentBackground = true;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2PanelContainer
+            // 
+            this.guna2PanelContainer.Controls.Add(this.guna2PanelTop);
+            this.guna2PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PanelContainer.Location = new System.Drawing.Point(233, 0);
+            this.guna2PanelContainer.Name = "guna2PanelContainer";
+            this.guna2PanelContainer.Size = new System.Drawing.Size(975, 754);
+            this.guna2PanelContainer.TabIndex = 2;
+            // 
             // guna2PanelTop
             // 
+            this.guna2PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelTop.Controls.Add(this.labelTableManage);
             this.guna2PanelTop.Controls.Add(this.guna2PictureBoxTableIcon);
             this.guna2PanelTop.Controls.Add(this.guna2ControlBoxMin);
@@ -260,17 +276,18 @@ namespace CafeManagementSystem
             this.guna2PanelTop.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2PanelTop.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PanelTop.Location = new System.Drawing.Point(233, 0);
+            this.guna2PanelTop.Location = new System.Drawing.Point(0, 0);
             this.guna2PanelTop.Name = "guna2PanelTop";
-            this.guna2PanelTop.Size = new System.Drawing.Size(975, 53);
-            this.guna2PanelTop.TabIndex = 1;
+            this.guna2PanelTop.Size = new System.Drawing.Size(975, 33);
+            this.guna2PanelTop.TabIndex = 2;
             // 
             // labelTableManage
             // 
             this.labelTableManage.AutoSize = true;
+            this.labelTableManage.BackColor = System.Drawing.Color.Transparent;
             this.labelTableManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTableManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelTableManage.Location = new System.Drawing.Point(60, 18);
+            this.labelTableManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.labelTableManage.Location = new System.Drawing.Point(60, 8);
             this.labelTableManage.Name = "labelTableManage";
             this.labelTableManage.Size = new System.Drawing.Size(0, 18);
             this.labelTableManage.TabIndex = 29;
@@ -278,11 +295,11 @@ namespace CafeManagementSystem
             // guna2PictureBoxTableIcon
             // 
             this.guna2PictureBoxTableIcon.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxTableIcon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2PictureBoxTableIcon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PictureBoxTableIcon.ImageRotate = 0F;
-            this.guna2PictureBoxTableIcon.Location = new System.Drawing.Point(23, 8);
+            this.guna2PictureBoxTableIcon.Location = new System.Drawing.Point(19, 5);
             this.guna2PictureBoxTableIcon.Name = "guna2PictureBoxTableIcon";
-            this.guna2PictureBoxTableIcon.Size = new System.Drawing.Size(31, 37);
+            this.guna2PictureBoxTableIcon.Size = new System.Drawing.Size(21, 22);
             this.guna2PictureBoxTableIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBoxTableIcon.TabIndex = 4;
             this.guna2PictureBoxTableIcon.TabStop = false;
@@ -293,7 +310,7 @@ namespace CafeManagementSystem
             this.guna2ControlBoxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBoxMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBoxMin.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBoxMin.IconColor = System.Drawing.Color.Gray;
+            this.guna2ControlBoxMin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2ControlBoxMin.Location = new System.Drawing.Point(842, 0);
             this.guna2ControlBoxMin.Name = "guna2ControlBoxMin";
             this.guna2ControlBoxMin.Size = new System.Drawing.Size(45, 29);
@@ -302,9 +319,10 @@ namespace CafeManagementSystem
             // guna2ControlBoxMax
             // 
             this.guna2ControlBoxMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBoxMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ControlBoxMax.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBoxMax.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBoxMax.IconColor = System.Drawing.Color.Gray;
+            this.guna2ControlBoxMax.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2ControlBoxMax.Location = new System.Drawing.Point(886, 0);
             this.guna2ControlBoxMax.Name = "guna2ControlBoxMax";
             this.guna2ControlBoxMax.Size = new System.Drawing.Size(45, 29);
@@ -313,26 +331,13 @@ namespace CafeManagementSystem
             // guna2ControlBoxExit
             // 
             this.guna2ControlBoxExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBoxExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ControlBoxExit.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBoxExit.IconColor = System.Drawing.Color.Gray;
+            this.guna2ControlBoxExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2ControlBoxExit.Location = new System.Drawing.Point(930, 0);
             this.guna2ControlBoxExit.Name = "guna2ControlBoxExit";
             this.guna2ControlBoxExit.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBoxExit.TabIndex = 0;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.guna2PanelTop;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // guna2PanelContainer
-            // 
-            this.guna2PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PanelContainer.Location = new System.Drawing.Point(233, 53);
-            this.guna2PanelContainer.Name = "guna2PanelContainer";
-            this.guna2PanelContainer.Size = new System.Drawing.Size(975, 701);
-            this.guna2PanelContainer.TabIndex = 2;
             // 
             // fTableManagement
             // 
@@ -341,7 +346,6 @@ namespace CafeManagementSystem
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1208, 754);
             this.Controls.Add(this.guna2PanelContainer);
-            this.Controls.Add(this.guna2PanelTop);
             this.Controls.Add(this.guna2PanelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fTableManagement";
@@ -352,6 +356,7 @@ namespace CafeManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).EndInit();
+            this.guna2PanelContainer.ResumeLayout(false);
             this.guna2PanelTop.ResumeLayout(false);
             this.guna2PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIcon)).EndInit();
@@ -367,11 +372,7 @@ namespace CafeManagementSystem
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2PanelLeft;
-        private Guna.UI2.WinForms.Guna2Panel guna2PanelTop;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMin;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMax;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxExit;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxLogo;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDashBoard;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSetting;
@@ -383,7 +384,11 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2Panel guna2PanelContainer;
         private System.Windows.Forms.Label labelKindAccount;
         private System.Windows.Forms.Label labelAccountName;
+        private Guna.UI2.WinForms.Guna2Panel guna2PanelTop;
         private System.Windows.Forms.Label labelTableManage;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxTableIcon;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMin;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMax;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxExit;
     }
 }
