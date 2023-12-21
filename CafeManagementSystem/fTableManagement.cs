@@ -31,7 +31,7 @@ namespace CafeManagementSystem
                 btn.Tag = item;
                 switch (item.Status)
                 {
-                    case "Free":
+                    case "Reserved":
                         btn.BackColor = Color.Pink;
                         break;
                     case "Occupied":

@@ -59,7 +59,7 @@ namespace CafeManagementSystem
         {
             string username = guna2TextBoxUsername.Text;
             string password = guna2TextBoxPassWord.Text;
-            if (username.Trim() == "") MessageBox.Show("Please enter username !");
+           /* if (username.Trim() == "") MessageBox.Show("Please enter username !");
             else if (password.Trim() == "") MessageBox.Show("Please enter password !");
             else if (Login(username, password))
             {
@@ -69,7 +69,32 @@ namespace CafeManagementSystem
                 tableManagement.ShowDialog();
                 this.Close();
             }
-            else MessageBox.Show("Wrong username or password!");
+            else MessageBox.Show("Wrong username or password!"); */
+           if (username.Trim()=="")
+            {
+                fNotification noti=new fNotification();
+                noti.labelNote.Text = "Please enter username !";
+                noti.ShowDialog();
+            }
+           else if (password.Trim() == "")
+            {
+                fNotification noti = new fNotification();
+                noti.labelNote.Text = "Please enter password !";
+                noti.ShowDialog();
+            }
+           else if (Login(username,password))
+            {
+                fTableManagement tableManagement= new fTableManagement();
+                this.Hide();
+                tableManagement.ShowDialog();
+                this.Close();
+            }
+           else
+            {
+                fNotification noti = new fNotification();
+                noti.labelNote.Text = "Wrong user name or password !";
+                noti.ShowDialog();
+            }
         }
         private void label5_Click(object sender, EventArgs e)
         {
