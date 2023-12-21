@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.guna2ShadowPanelShowBill = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.labelTotalBill = new System.Windows.Forms.Label();
             this.guna2ButtonPayMent = new Guna.UI2.WinForms.Guna2Button();
             this.guna2NumericUpDownDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -48,26 +47,17 @@
             this.panelAddFood = new System.Windows.Forms.Panel();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.listViewBill = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).BeginInit();
             this.guna2PanelCustomerInfo.SuspendLayout();
             this.guna2PanelNoteBill.SuspendLayout();
             this.panelAddFood.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2ShadowPanelShowBill
-            // 
-            this.guna2ShadowPanelShowBill.BackColor = System.Drawing.Color.MistyRose;
-            this.guna2ShadowPanelShowBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ShadowPanelShowBill.Location = new System.Drawing.Point(567, 119);
-            this.guna2ShadowPanelShowBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2ShadowPanelShowBill.Name = "guna2ShadowPanelShowBill";
-            this.guna2ShadowPanelShowBill.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanelShowBill.ShadowDepth = 0;
-            this.guna2ShadowPanelShowBill.ShadowShift = 0;
-            this.guna2ShadowPanelShowBill.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanelShowBill.Size = new System.Drawing.Size(505, 531);
-            this.guna2ShadowPanelShowBill.TabIndex = 0;
             // 
             // labelTotalBill
             // 
@@ -82,13 +72,15 @@
             // 
             // guna2ButtonPayMent
             // 
+            this.guna2ButtonPayMent.AutoRoundedCorners = true;
             this.guna2ButtonPayMent.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonPayMent.BorderRadius = 21;
             this.guna2ButtonPayMent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonPayMent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonPayMent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonPayMent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonPayMent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonPayMent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonPayMent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonPayMent.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonPayMent.Location = new System.Drawing.Point(952, 810);
             this.guna2ButtonPayMent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -99,7 +91,9 @@
             // 
             // guna2NumericUpDownDiscount
             // 
+            this.guna2NumericUpDownDiscount.AutoRoundedCorners = true;
             this.guna2NumericUpDownDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDownDiscount.BorderRadius = 10;
             this.guna2NumericUpDownDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDownDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2NumericUpDownDiscount.Location = new System.Drawing.Point(672, 784);
@@ -108,6 +102,7 @@
             this.guna2NumericUpDownDiscount.Size = new System.Drawing.Size(88, 29);
             this.guna2NumericUpDownDiscount.TabIndex = 25;
             this.guna2NumericUpDownDiscount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2NumericUpDownDiscount.ValueChanged += new System.EventHandler(this.guna2NumericUpDownDiscount_ValueChanged);
             // 
             // labelDiscount
             // 
@@ -136,7 +131,9 @@
             // 
             // guna2ButtonCheckInfo
             // 
+            this.guna2ButtonCheckInfo.AutoRoundedCorners = true;
             this.guna2ButtonCheckInfo.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonCheckInfo.BorderRadius = 15;
             this.guna2ButtonCheckInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonCheckInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonCheckInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -208,16 +205,18 @@
             // 
             // guna2ButtonExportBill
             // 
+            this.guna2ButtonExportBill.AutoRoundedCorners = true;
             this.guna2ButtonExportBill.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonExportBill.BorderRadius = 21;
             this.guna2ButtonExportBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonExportBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonExportBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonExportBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonExportBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonExportBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonExportBill.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonExportBill.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonExportBill.Location = new System.Drawing.Point(836, 810);
-            this.guna2ButtonExportBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ButtonExportBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);-----------------------------//TT thêm
             this.guna2ButtonExportBill.Name = "guna2ButtonExportBill";
             this.guna2ButtonExportBill.Size = new System.Drawing.Size(110, 55);
             this.guna2ButtonExportBill.TabIndex = 32;
@@ -244,7 +243,7 @@
             this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
             this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, 0);
             this.guna2CircleButton1.Location = new System.Drawing.Point(462, 10);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4); -----------------------------//TT thêm
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.Size = new System.Drawing.Size(34, 38);
@@ -292,7 +291,9 @@
             // 
             // guna2NumericUpDown1
             // 
+            this.guna2NumericUpDown1.AutoRoundedCorners = true;
             this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.BorderRadius = 13;
             this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2NumericUpDown1.Location = new System.Drawing.Point(357, 11);
@@ -330,12 +331,54 @@
             this.guna2TextBoxSearch.TabIndex = 23;
             this.guna2TextBoxSearch.TextOffset = new System.Drawing.Point(5, 0);
             // 
+            // listViewBill
+            // 
+            this.listViewBill.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listViewBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.listViewBill.GridLines = true;
+            this.listViewBill.HideSelection = false;
+            this.listViewBill.Location = new System.Drawing.Point(504, 95);
+            this.listViewBill.Name = "listViewBill";
+            this.listViewBill.Size = new System.Drawing.Size(455, 424);
+            this.listViewBill.TabIndex = 35;
+            this.listViewBill.UseCompatibleStateImageBehavior = false;
+            this.listViewBill.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 201;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Price";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 113;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Count";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Total Price";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 100;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1077, 880);
+            this.Controls.Add(this.listViewBill);
             this.Controls.Add(this.panelAddFood);
             this.Controls.Add(this.flowLayoutPanelTable);
             this.Controls.Add(this.guna2ButtonExportBill);
@@ -345,12 +388,10 @@
             this.Controls.Add(this.guna2NumericUpDownDiscount);
             this.Controls.Add(this.guna2ButtonPayMent);
             this.Controls.Add(this.labelTotalBill);
-            this.Controls.Add(this.guna2ShadowPanelShowBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).EndInit();
             this.guna2PanelCustomerInfo.ResumeLayout(false);
             this.guna2PanelCustomerInfo.PerformLayout();
@@ -364,8 +405,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanelShowBill;
         private System.Windows.Forms.Label labelTotalBill;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonPayMent;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDownDiscount;
@@ -384,5 +423,10 @@
         private System.Windows.Forms.Panel panelAddFood;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private System.Windows.Forms.ListView listViewBill;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

@@ -15,6 +15,7 @@ namespace CafeManagementSystem
 {
     public partial class Dashboard : Form
     {
+        float totalmoney = 0;
         public Dashboard()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace CafeManagementSystem
                 Button btn = new Button() { Width = 80, Height = 80, };
                 btn.Font = new System.Drawing.Font("Microsoft YaHei", 8, System.Drawing.FontStyle.Regular);
                 btn.Text = item.Name + "\n" + item.Location;
-                // btn.Click += btn_Click;
+                btn.Click += btn_Click;
                 btn.Tag = item;
                 switch (item.Status)
                 {
@@ -47,7 +48,9 @@ namespace CafeManagementSystem
         }
         void ShowBill(int id)
         {
-            //lsvBill.Items.Clear();
+            float sumPrice = 0;
+            // listViewBill
+            listViewBill.Items.Clear();
             List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
             foreach (CafeManagementSystem.DTO.Menu item in listbillInfo)
             {
@@ -55,10 +58,12 @@ namespace CafeManagementSystem
                 lsvItem.SubItems.Add(item.Price.ToString());
                 lsvItem.SubItems.Add(item.Count.ToString());
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
-
+                sumPrice = sumPrice + item.TotalPrice;
                 // thêm vào list view bill
-                //lsvBill.Items.Add(lsvItem);
+                listViewBill.Items.Add(lsvItem);
             }
+            totalmoney = sumPrice;
+            this.labelTotalBill.Text = "Total: \t" + totalmoney + " VND";
         }
         void btn_Click(object sender, EventArgs e)
         {
@@ -66,14 +71,10 @@ namespace CafeManagementSystem
             ShowBill(idTable);
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private void guna2NumericUpDownDiscount_ValueChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2TextBoxShowBill_TextChanged(object sender, EventArgs e)
-        {
-
+            float moneyAfterDis = totalmoney * (100 - ((float)Convert.ToDouble(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
+            this.labelTotalBill.Text = "Total: \t" + moneyAfterDis + " VND";
         }
     }
 }

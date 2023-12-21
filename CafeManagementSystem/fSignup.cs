@@ -46,7 +46,7 @@ namespace CafeManagementSystem
             string displayName = guna2TextBoxDisplayName.Text;
             string phoneNumber = guna2TextBoxPhoneNumber.Text;
             string rePassword = guna2TextBoxRePass.Text;
-            if(CheckAccount(userame))
+            if(!CheckAccount(userame))
             {
                 //MessageBox.Show("The length of username must in the range [6,24]");
                 fNotification noti=new fNotification();
@@ -108,7 +108,7 @@ namespace CafeManagementSystem
                 DataProvider.Instance.Modify(query);
                 //MessageBox.Show("Welcome to SAIDONESE coffee !!!");
                 fNotification noti = new fNotification();
-                noti.labelNote.Text = "Welcome to SAIDONESE coffee !!!";
+                noti.labelNote.Text = "Welcome to SAIGONESE coffee !!!";
                 noti.ShowDialog();
                 fLogin flogin = new fLogin();
                 this.Hide();
