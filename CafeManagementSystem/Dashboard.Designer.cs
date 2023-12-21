@@ -187,7 +187,7 @@
             this.guna2PanelNoteBill.Controls.Add(this.labelNoteBill);
             this.guna2PanelNoteBill.Location = new System.Drawing.Point(504, 526);
             this.guna2PanelNoteBill.Name = "guna2PanelNoteBill";
-            this.guna2PanelNoteBill.Size = new System.Drawing.Size(454, 98);
+            this.guna2PanelNoteBill.Size = new System.Drawing.Size(450, 98);
             this.guna2PanelNoteBill.TabIndex = 25;
             // 
             // labelNoteBill
