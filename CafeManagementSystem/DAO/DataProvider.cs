@@ -103,5 +103,15 @@ namespace CafeManagementSystem.DAO
             }
             return data;
         }
+        public void Modify(string query) //dung de dang ky tai khoan
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }
