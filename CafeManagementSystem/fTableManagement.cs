@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,23 @@ namespace CafeManagementSystem
 {
     public partial class fTableManagement : Form
     {
-        public fTableManagement()
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
+        }
+        public fTableManagement(string type)
         {
             InitializeComponent();
+            ChangeAccount(type);
         }
 
         #region Method 
+        void ChangeAccount(string type)
+        {
+            if (type=="Member") guna2ButtonAdmin.Enabled = false;
+        }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -93,7 +105,7 @@ namespace CafeManagementSystem
         {
             labelTableManage.Text = "Admin Management";
             guna2PictureBoxTableIcon.Image = Properties.Resources._5;
-            container(new Dashboard());
+            container(new AdminReceipt());
         }
     }
 }

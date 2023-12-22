@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Menu.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="Enums\TableEnums.cs" />
@@ -149,6 +150,9 @@
     <Compile Include="TableFood.cs">
       <DependentUpon>ModelEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminReceipt.resx">
+      <DependentUpon>AdminReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

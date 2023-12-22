@@ -1,4 +1,6 @@
-﻿namespace CafeManagementSystem
+﻿using Guna.UI2.WinForms;
+
+namespace CafeManagementSystem
 {
     partial class AdminReceipt
     {
@@ -51,6 +53,7 @@
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tabPageReceipts = new System.Windows.Forms.TabPage();
             this.guna2TabControlCatagories.SuspendLayout();
             this.tabPageReceipts.SuspendLayout();
             this.tabPageAccounts.SuspendLayout();
@@ -61,6 +64,19 @@
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+
+            this.guna2TextBoxSearchReceipts = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox3= new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PanelMainReceipts=new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ButtonCheckBill=new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2=new System.Windows.Forms.Label();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1=new Guna.UI2.WinForms.Guna2PictureBox();
             this.SuspendLayout();
             // 
             // guna2TabControlCatagories
@@ -659,7 +675,7 @@
         private System.Windows.Forms.TabPage tabPageDrinksDesserts;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelMainAccounts;
-        private System.Windows.Forms.TabPage tabPageReceipts;
+    //    private System.Windows.Forms.TabPage tabPageReceipts;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelMainReceipts;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonCheckBill;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
@@ -688,5 +704,10 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2TabControl guna2TabControlCategories;
+
     }
 }

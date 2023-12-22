@@ -17,7 +17,7 @@ namespace CafeManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fTableManagement());
+            Application.Run(new fLogin());
         }
     }
 }
