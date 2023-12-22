@@ -337,7 +337,7 @@
             this.listViewBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.listViewBill.GridLines = true;
             this.listViewBill.HideSelection = false;
-            this.listViewBill.Location = new System.Drawing.Point(504, 95);
+            this.listViewBill.Location = new System.Drawing.Point(504, 94);
             this.listViewBill.Name = "listViewBill";
             this.listViewBill.Size = new System.Drawing.Size(455, 424);
             this.listViewBill.TabIndex = 35;
@@ -347,13 +347,13 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 201;
+            this.columnHeader1.Width = 148;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Price";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 113;
+            this.columnHeader2.Width = 70;
             // 
             // columnHeader3
             // 
@@ -364,7 +364,7 @@
             // 
             this.columnHeader4.Text = "Total Price";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 100;
+            this.columnHeader4.Width = 80;
             // 
             // Dashboard
             // 
