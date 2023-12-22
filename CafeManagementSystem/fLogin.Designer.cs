@@ -183,7 +183,7 @@
             this.labelCreateNewAccount.Size = new System.Drawing.Size(176, 13);
             this.labelCreateNewAccount.TabIndex = 13;
             this.labelCreateNewAccount.Text = "Don\'t Have Account? Sign up";
-            this.labelCreateNewAccount.Click += new System.EventHandler(this.label5_Click);
+            this.labelCreateNewAccount.Click += new System.EventHandler(this.labelCreateNewAccount_Click);
             // 
             // guna2Panel3
             // 
@@ -195,7 +195,6 @@
             // 
             // labelForgotPW
             // 
-
             this.labelForgotPW.AutoSize = true;
             this.labelForgotPW.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelForgotPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));

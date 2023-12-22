@@ -13,8 +13,8 @@ namespace CafeManagementSystem.DTO
         private int id;
         public int Id
         {
-            get { return Id; }
-            set { Id = value; }
+            get { return id; }
+            set { id = value; }
         }
         private string name;
         public string Name
@@ -28,8 +28,8 @@ namespace CafeManagementSystem.DTO
             get { return numPeople; }
             set { numPeople = value; }
         }
-        private TableStatus status;
-        public TableStatus Status { get => status; set => status = value; }
+        private string status;
+        public string Status { get => status; set => status = value; }
         
         private string location;
         public string Location
@@ -39,7 +39,7 @@ namespace CafeManagementSystem.DTO
         }
 
 
-        public Table(int id, string name, int numPeople, TableStatus status, string location)
+        public Table(int id, string name, int numPeople, string status, string location)
         {
             this.id = id;
             this.name = name;
@@ -49,10 +49,10 @@ namespace CafeManagementSystem.DTO
         }
         public Table(DataRow row)
         {
-            this.id = (int)row["ID"];
-            this.name = row["Name"].ToString();
-            this.status = (TableStatus)row["Status"];
-            this.location = row["Location"].ToString();
+            this.id = (int)row["id"];
+            this.name = row["name"].ToString();
+            this.status = row["status"].ToString();
+            this.location = row["location"].ToString();
         }
         //cmment
     }

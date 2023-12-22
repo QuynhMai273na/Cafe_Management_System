@@ -19,7 +19,7 @@ namespace CafeManagementSystem
             InitializeComponent();
         }
 
-        #region Method
+        #region Method 
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -31,10 +31,10 @@ namespace CafeManagementSystem
                 btn.Tag = item;
                 switch (item.Status)
                 {
-                    case Enums.TableStatus.Reserved:
+                    case "Reserved":
                         btn.BackColor = Color.Pink;
                         break;
-                    case Enums.TableStatus.Occupied:
+                    case "Occupied":
                         btn.BackColor = Color.Red;
                         break;
                     default:

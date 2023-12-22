@@ -74,6 +74,7 @@
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillInfoDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\TableDAO.cs" />
     <Compile Include="Dashboard.cs">
@@ -84,6 +85,7 @@
     </Compile>
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\Menu.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="Enums\TableEnums.cs" />
@@ -101,6 +103,12 @@
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNotification.Designer.cs">
+      <DependentUpon>fNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="fTableManagement.cs">
       <SubType>Form</SubType>
@@ -142,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNotification.resx">
+      <DependentUpon>fNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTableManagement.resx">
       <DependentUpon>fTableManagement.cs</DependentUpon>
@@ -191,6 +202,9 @@
       <DependentUpon>ModelEntity.edmx</DependentUpon>
       <LastGenOutput>ModelEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\add-icon-png-2459 %281%291.png" />
+    <None Include="Resources\add-icon-png-2459 %281%29.png" />
+    <None Include="Resources\Image1.png" />
     <None Include="Resources\7604036.png" />
     <None Include="Resources\6.png" />
     <None Include="Resources\5.png" />
