@@ -34,6 +34,9 @@
             this.guna2NumericUpDownDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.guna2PanelCustomerInfo = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBoxCustomerLevel = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBoxCustomerPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBoxCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ButtonCheckInfo = new Guna.UI2.WinForms.Guna2Button();
             this.labelCustomerLevel = new System.Windows.Forms.Label();
             this.labelPhoneNuber = new System.Windows.Forms.Label();
@@ -45,19 +48,19 @@
             this.guna2CircleButtonAddFood = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBoxShowBill = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelAddFood = new System.Windows.Forms.Panel();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.guna2ComboBoxResultSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2NumericUpDownNumberAdd = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2TextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.listViewBill = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.guna2ComboBoxResultSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.columnNameFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnTotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).BeginInit();
             this.guna2PanelCustomerInfo.SuspendLayout();
             this.guna2PanelNoteBill.SuspendLayout();
             this.panelAddFood.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownNumberAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTotalBill
@@ -119,14 +122,85 @@
             // 
             this.guna2PanelCustomerInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelCustomerInfo.BorderThickness = 2;
+            this.guna2PanelCustomerInfo.Controls.Add(this.guna2TextBoxCustomerLevel);
+            this.guna2PanelCustomerInfo.Controls.Add(this.guna2TextBoxCustomerPhone);
+            this.guna2PanelCustomerInfo.Controls.Add(this.guna2TextBoxCustomerName);
             this.guna2PanelCustomerInfo.Controls.Add(this.guna2ButtonCheckInfo);
             this.guna2PanelCustomerInfo.Controls.Add(this.labelCustomerLevel);
             this.guna2PanelCustomerInfo.Controls.Add(this.labelPhoneNuber);
             this.guna2PanelCustomerInfo.Controls.Add(this.labelCustomerName);
-            this.guna2PanelCustomerInfo.Location = new System.Drawing.Point(1, 524);
+            this.guna2PanelCustomerInfo.Location = new System.Drawing.Point(1, 525);
             this.guna2PanelCustomerInfo.Name = "guna2PanelCustomerInfo";
-            this.guna2PanelCustomerInfo.Size = new System.Drawing.Size(500, 179);
+            this.guna2PanelCustomerInfo.Size = new System.Drawing.Size(500, 174);
             this.guna2PanelCustomerInfo.TabIndex = 27;
+            // 
+            // guna2TextBoxCustomerLevel
+            // 
+            this.guna2TextBoxCustomerLevel.AutoRoundedCorners = true;
+            this.guna2TextBoxCustomerLevel.BorderRadius = 16;
+            this.guna2TextBoxCustomerLevel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxCustomerLevel.DefaultText = "";
+            this.guna2TextBoxCustomerLevel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxCustomerLevel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxCustomerLevel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerLevel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerLevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxCustomerLevel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxCustomerLevel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxCustomerLevel.Location = new System.Drawing.Point(174, 93);
+            this.guna2TextBoxCustomerLevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxCustomerLevel.Name = "guna2TextBoxCustomerLevel";
+            this.guna2TextBoxCustomerLevel.PasswordChar = '\0';
+            this.guna2TextBoxCustomerLevel.PlaceholderText = "";
+            this.guna2TextBoxCustomerLevel.ReadOnly = true;
+            this.guna2TextBoxCustomerLevel.SelectedText = "";
+            this.guna2TextBoxCustomerLevel.Size = new System.Drawing.Size(290, 34);
+            this.guna2TextBoxCustomerLevel.TabIndex = 33;
+            // 
+            // guna2TextBoxCustomerPhone
+            // 
+            this.guna2TextBoxCustomerPhone.AutoRoundedCorners = true;
+            this.guna2TextBoxCustomerPhone.BorderRadius = 16;
+            this.guna2TextBoxCustomerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxCustomerPhone.DefaultText = "";
+            this.guna2TextBoxCustomerPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxCustomerPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxCustomerPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxCustomerPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxCustomerPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxCustomerPhone.Location = new System.Drawing.Point(174, 51);
+            this.guna2TextBoxCustomerPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxCustomerPhone.Name = "guna2TextBoxCustomerPhone";
+            this.guna2TextBoxCustomerPhone.PasswordChar = '\0';
+            this.guna2TextBoxCustomerPhone.PlaceholderText = "";
+            this.guna2TextBoxCustomerPhone.SelectedText = "";
+            this.guna2TextBoxCustomerPhone.Size = new System.Drawing.Size(290, 34);
+            this.guna2TextBoxCustomerPhone.TabIndex = 32;
+            // 
+            // guna2TextBoxCustomerName
+            // 
+            this.guna2TextBoxCustomerName.AutoRoundedCorners = true;
+            this.guna2TextBoxCustomerName.BorderRadius = 16;
+            this.guna2TextBoxCustomerName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxCustomerName.DefaultText = "";
+            this.guna2TextBoxCustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxCustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxCustomerName.Location = new System.Drawing.Point(174, 9);
+            this.guna2TextBoxCustomerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxCustomerName.Name = "guna2TextBoxCustomerName";
+            this.guna2TextBoxCustomerName.PasswordChar = '\0';
+            this.guna2TextBoxCustomerName.PlaceholderText = "";
+            this.guna2TextBoxCustomerName.ReadOnly = true;
+            this.guna2TextBoxCustomerName.SelectedText = "";
+            this.guna2TextBoxCustomerName.Size = new System.Drawing.Size(290, 34);
+            this.guna2TextBoxCustomerName.TabIndex = 31;
             // 
             // guna2ButtonCheckInfo
             // 
@@ -140,7 +214,7 @@
             this.guna2ButtonCheckInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonCheckInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonCheckInfo.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonCheckInfo.Location = new System.Drawing.Point(388, 131);
+            this.guna2ButtonCheckInfo.Location = new System.Drawing.Point(388, 136);
             this.guna2ButtonCheckInfo.Name = "guna2ButtonCheckInfo";
             this.guna2ButtonCheckInfo.Size = new System.Drawing.Size(98, 32);
             this.guna2ButtonCheckInfo.TabIndex = 28;
@@ -151,7 +225,7 @@
             this.labelCustomerLevel.AutoSize = true;
             this.labelCustomerLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCustomerLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelCustomerLevel.Location = new System.Drawing.Point(16, 100);
+            this.labelCustomerLevel.Location = new System.Drawing.Point(16, 101);
             this.labelCustomerLevel.Name = "labelCustomerLevel";
             this.labelCustomerLevel.Size = new System.Drawing.Size(144, 18);
             this.labelCustomerLevel.TabIndex = 30;
@@ -162,7 +236,7 @@
             this.labelPhoneNuber.AutoSize = true;
             this.labelPhoneNuber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPhoneNuber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelPhoneNuber.Location = new System.Drawing.Point(16, 59);
+            this.labelPhoneNuber.Location = new System.Drawing.Point(16, 61);
             this.labelPhoneNuber.Name = "labelPhoneNuber";
             this.labelPhoneNuber.Size = new System.Drawing.Size(125, 18);
             this.labelPhoneNuber.TabIndex = 29;
@@ -173,7 +247,7 @@
             this.labelCustomerName.AutoSize = true;
             this.labelCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelCustomerName.Location = new System.Drawing.Point(16, 16);
+            this.labelCustomerName.Location = new System.Drawing.Point(16, 19);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(87, 18);
             this.labelCustomerName.TabIndex = 28;
@@ -184,9 +258,9 @@
             this.guna2PanelNoteBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelNoteBill.BorderThickness = 2;
             this.guna2PanelNoteBill.Controls.Add(this.labelNoteBill);
-            this.guna2PanelNoteBill.Location = new System.Drawing.Point(504, 526);
+            this.guna2PanelNoteBill.Location = new System.Drawing.Point(504, 525);
             this.guna2PanelNoteBill.Name = "guna2PanelNoteBill";
-            this.guna2PanelNoteBill.Size = new System.Drawing.Size(469, 98);
+            this.guna2PanelNoteBill.Size = new System.Drawing.Size(468, 99);
             this.guna2PanelNoteBill.TabIndex = 25;
             // 
             // labelNoteBill
@@ -221,10 +295,10 @@
             // flowLayoutPanelTable
             // 
             this.flowLayoutPanelTable.AutoScroll = true;
-            this.flowLayoutPanelTable.Location = new System.Drawing.Point(1, 7);
+            this.flowLayoutPanelTable.Location = new System.Drawing.Point(1, 4);
             this.flowLayoutPanelTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelTable.Name = "flowLayoutPanelTable";
-            this.flowLayoutPanelTable.Size = new System.Drawing.Size(500, 512);
+            this.flowLayoutPanelTable.Size = new System.Drawing.Size(500, 515);
             this.flowLayoutPanelTable.TabIndex = 33;
             // 
             // guna2CircleButtonAddFood
@@ -239,10 +313,10 @@
             this.guna2CircleButtonAddFood.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButtonAddFood.Image")));
             this.guna2CircleButtonAddFood.ImageOffset = new System.Drawing.Point(1, 0);
             this.guna2CircleButtonAddFood.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButtonAddFood.Location = new System.Drawing.Point(410, 46);
+            this.guna2CircleButtonAddFood.Location = new System.Drawing.Point(432, 48);
             this.guna2CircleButtonAddFood.Name = "guna2CircleButtonAddFood";
             this.guna2CircleButtonAddFood.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButtonAddFood.Size = new System.Drawing.Size(31, 29);
+            this.guna2CircleButtonAddFood.Size = new System.Drawing.Size(36, 36);
             this.guna2CircleButtonAddFood.TabIndex = 22;
             // 
             // guna2TextBoxShowBill
@@ -260,16 +334,16 @@
             this.guna2TextBoxShowBill.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxShowBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2TextBoxShowBill.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxShowBill.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBoxShowBill.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2TextBoxShowBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2TextBoxShowBill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxShowBill.Location = new System.Drawing.Point(8, 87);
+            this.guna2TextBoxShowBill.Location = new System.Drawing.Point(0, 95);
             this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBoxShowBill.Name = "guna2TextBoxShowBill";
             this.guna2TextBoxShowBill.PasswordChar = '\0';
             this.guna2TextBoxShowBill.PlaceholderText = "";
             this.guna2TextBoxShowBill.SelectedText = "";
-            this.guna2TextBoxShowBill.Size = new System.Drawing.Size(87, 26);
+            this.guna2TextBoxShowBill.Size = new System.Drawing.Size(468, 26);
             this.guna2TextBoxShowBill.TabIndex = 21;
             this.guna2TextBoxShowBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -277,53 +351,74 @@
             // 
             this.panelAddFood.Controls.Add(this.guna2ComboBoxResultSearch);
             this.panelAddFood.Controls.Add(this.guna2TextBoxShowBill);
-            this.panelAddFood.Controls.Add(this.guna2NumericUpDown1);
+            this.panelAddFood.Controls.Add(this.guna2NumericUpDownNumberAdd);
             this.panelAddFood.Controls.Add(this.guna2TextBoxSearch);
             this.panelAddFood.Controls.Add(this.guna2CircleButtonAddFood);
             this.panelAddFood.Location = new System.Drawing.Point(504, 4);
             this.panelAddFood.Name = "panelAddFood";
-            this.panelAddFood.Size = new System.Drawing.Size(455, 117);
+            this.panelAddFood.Size = new System.Drawing.Size(468, 125);
             this.panelAddFood.TabIndex = 34;
             // 
-            // guna2NumericUpDown1
+            // guna2ComboBoxResultSearch
             // 
-            this.guna2NumericUpDown1.AutoRoundedCorners = true;
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderRadius = 14;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(308, 46);
-            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(80, 30);
-            this.guna2NumericUpDown1.TabIndex = 26;
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ComboBoxResultSearch.AutoRoundedCorners = true;
+            this.guna2ComboBoxResultSearch.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxResultSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ComboBoxResultSearch.BorderRadius = 17;
+            this.guna2ComboBoxResultSearch.BorderThickness = 2;
+            this.guna2ComboBoxResultSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxResultSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxResultSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxResultSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxResultSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBoxResultSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ComboBoxResultSearch.ItemHeight = 30;
+            this.guna2ComboBoxResultSearch.Location = new System.Drawing.Point(0, 46);
+            this.guna2ComboBoxResultSearch.Name = "guna2ComboBoxResultSearch";
+            this.guna2ComboBoxResultSearch.Size = new System.Drawing.Size(329, 36);
+            this.guna2ComboBoxResultSearch.TabIndex = 27;
+            this.guna2ComboBoxResultSearch.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxResultSearch_SelectedIndexChanged);
+            // 
+            // guna2NumericUpDownNumberAdd
+            // 
+            this.guna2NumericUpDownNumberAdd.AutoRoundedCorners = true;
+            this.guna2NumericUpDownNumberAdd.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDownNumberAdd.BorderRadius = 17;
+            this.guna2NumericUpDownNumberAdd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDownNumberAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDownNumberAdd.Location = new System.Drawing.Point(335, 48);
+            this.guna2NumericUpDownNumberAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDownNumberAdd.Name = "guna2NumericUpDownNumberAdd";
+            this.guna2NumericUpDownNumberAdd.Size = new System.Drawing.Size(90, 36);
+            this.guna2NumericUpDownNumberAdd.TabIndex = 26;
+            this.guna2NumericUpDownNumberAdd.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             // 
             // guna2TextBoxSearch
             // 
             this.guna2TextBoxSearch.AutoRoundedCorners = true;
-            this.guna2TextBoxSearch.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBoxSearch.BorderRadius = 14;
+            this.guna2TextBoxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2TextBoxSearch.BorderRadius = 17;
+            this.guna2TextBoxSearch.BorderThickness = 2;
             this.guna2TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxSearch.DefaultText = "";
             this.guna2TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2TextBoxSearch.FillColor = System.Drawing.SystemColors.Control;
             this.guna2TextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearch.IconLeft")));
             this.guna2TextBoxSearch.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.guna2TextBoxSearch.IconLeftSize = new System.Drawing.Size(18, 18);
-            this.guna2TextBoxSearch.Location = new System.Drawing.Point(8, 8);
+            this.guna2TextBoxSearch.Location = new System.Drawing.Point(0, 3);
             this.guna2TextBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxSearch.Name = "guna2TextBoxSearch";
             this.guna2TextBoxSearch.PasswordChar = '\0';
             this.guna2TextBoxSearch.PlaceholderText = "Searching ";
             this.guna2TextBoxSearch.SelectedText = "";
-            this.guna2TextBoxSearch.Size = new System.Drawing.Size(290, 30);
+            this.guna2TextBoxSearch.Size = new System.Drawing.Size(468, 36);
             this.guna2TextBoxSearch.TabIndex = 23;
             this.guna2TextBoxSearch.TextOffset = new System.Drawing.Point(5, 0);
             this.guna2TextBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxSearch_KeyDown);
@@ -332,67 +427,49 @@
             // 
             this.listViewBill.BackColor = System.Drawing.Color.PapayaWhip;
             this.listViewBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnNameFood,
+            this.columnPrice,
+            this.columnCount,
+            this.columnTotalPrice});
             this.listViewBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.listViewBill.GridLines = true;
             this.listViewBill.HideSelection = false;
-            this.listViewBill.Location = new System.Drawing.Point(504, 120);
+            this.listViewBill.Location = new System.Drawing.Point(504, 132);
             this.listViewBill.Name = "listViewBill";
-            this.listViewBill.Size = new System.Drawing.Size(455, 399);
+            this.listViewBill.Size = new System.Drawing.Size(468, 387);
             this.listViewBill.TabIndex = 35;
             this.listViewBill.UseCompatibleStateImageBehavior = false;
             this.listViewBill.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // columnNameFood
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 201;
+            this.columnNameFood.Text = "Name";
+            this.columnNameFood.Width = 170;
             // 
-            // columnHeader2
+            // columnPrice
             // 
-            this.columnHeader2.Text = "Price";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 113;
+            this.columnPrice.Text = "Price";
+            this.columnPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnPrice.Width = 75;
             // 
-            // columnHeader3
+            // columnCount
             // 
-            this.columnHeader3.Text = "Count";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnCount.Text = "Count";
+            this.columnCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // columnHeader4
+            // columnTotalPrice
             // 
-            this.columnHeader4.Text = "Total Price";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 100;
-            // 
-            // guna2ComboBoxResultSearch
-            // 
-            this.guna2ComboBoxResultSearch.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxResultSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guna2ComboBoxResultSearch.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.guna2ComboBoxResultSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxResultSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxResultSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBoxResultSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBoxResultSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBoxResultSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ComboBoxResultSearch.ItemHeight = 30;
-            this.guna2ComboBoxResultSearch.Location = new System.Drawing.Point(8, 45);
-            this.guna2ComboBoxResultSearch.Name = "guna2ComboBoxResultSearch";
-            this.guna2ComboBoxResultSearch.Size = new System.Drawing.Size(290, 36);
-            this.guna2ComboBoxResultSearch.TabIndex = 27;
-            this.guna2ComboBoxResultSearch.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxResultSearch_SelectedIndexChanged);
+            this.columnTotalPrice.Text = "Total Price";
+            this.columnTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnTotalPrice.Width = 98;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.ClientSize = new System.Drawing.Size(963, 704);
+            this.ClientSize = new System.Drawing.Size(975, 701);
             this.Controls.Add(this.listViewBill);
             this.Controls.Add(this.panelAddFood);
             this.Controls.Add(this.flowLayoutPanelTable);
@@ -412,7 +489,7 @@
             this.guna2PanelNoteBill.ResumeLayout(false);
             this.guna2PanelNoteBill.PerformLayout();
             this.panelAddFood.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownNumberAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,12 +513,15 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButtonAddFood;
         private System.Windows.Forms.Panel panelAddFood;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDownNumberAdd;
         private System.Windows.Forms.ListView listViewBill;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnNameFood;
+        private System.Windows.Forms.ColumnHeader columnPrice;
+        private System.Windows.Forms.ColumnHeader columnCount;
+        private System.Windows.Forms.ColumnHeader columnTotalPrice;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxResultSearch;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerName;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerLevel;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerPhone;
     }
 }
