@@ -42,7 +42,7 @@
             this.labelNoteBill = new System.Windows.Forms.Label();
             this.guna2ButtonExportBill = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButtonAddFood = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBoxShowBill = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelAddFood = new System.Windows.Forms.Panel();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -52,6 +52,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2ComboBoxResultSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).BeginInit();
             this.guna2PanelCustomerInfo.SuspendLayout();
             this.guna2PanelNoteBill.SuspendLayout();
@@ -226,23 +227,23 @@
             this.flowLayoutPanelTable.Size = new System.Drawing.Size(500, 512);
             this.flowLayoutPanelTable.TabIndex = 33;
             // 
-            // guna2CircleButton1
+            // guna2CircleButtonAddFood
             // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.ImageOffset = new System.Drawing.Point(1, 0);
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(410, 9);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(31, 29);
-            this.guna2CircleButton1.TabIndex = 22;
+            this.guna2CircleButtonAddFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButtonAddFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButtonAddFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButtonAddFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButtonAddFood.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2CircleButtonAddFood.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.guna2CircleButtonAddFood.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButtonAddFood.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButtonAddFood.Image")));
+            this.guna2CircleButtonAddFood.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2CircleButtonAddFood.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButtonAddFood.Location = new System.Drawing.Point(410, 46);
+            this.guna2CircleButtonAddFood.Name = "guna2CircleButtonAddFood";
+            this.guna2CircleButtonAddFood.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButtonAddFood.Size = new System.Drawing.Size(31, 29);
+            this.guna2CircleButtonAddFood.TabIndex = 22;
             // 
             // guna2TextBoxShowBill
             // 
@@ -262,7 +263,7 @@
             this.guna2TextBoxShowBill.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBoxShowBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2TextBoxShowBill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxShowBill.Location = new System.Drawing.Point(8, 51);
+            this.guna2TextBoxShowBill.Location = new System.Drawing.Point(8, 87);
             this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBoxShowBill.Name = "guna2TextBoxShowBill";
             this.guna2TextBoxShowBill.PasswordChar = '\0';
@@ -274,26 +275,27 @@
             // 
             // panelAddFood
             // 
+            this.panelAddFood.Controls.Add(this.guna2ComboBoxResultSearch);
             this.panelAddFood.Controls.Add(this.guna2TextBoxShowBill);
             this.panelAddFood.Controls.Add(this.guna2NumericUpDown1);
             this.panelAddFood.Controls.Add(this.guna2TextBoxSearch);
-            this.panelAddFood.Controls.Add(this.guna2CircleButton1);
+            this.panelAddFood.Controls.Add(this.guna2CircleButtonAddFood);
             this.panelAddFood.Location = new System.Drawing.Point(504, 4);
             this.panelAddFood.Name = "panelAddFood";
-            this.panelAddFood.Size = new System.Drawing.Size(455, 85);
+            this.panelAddFood.Size = new System.Drawing.Size(455, 117);
             this.panelAddFood.TabIndex = 34;
             // 
             // guna2NumericUpDown1
             // 
             this.guna2NumericUpDown1.AutoRoundedCorners = true;
             this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderRadius = 13;
+            this.guna2NumericUpDown1.BorderRadius = 14;
             this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(308, 11);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(308, 46);
             this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(84, 29);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(80, 30);
             this.guna2NumericUpDown1.TabIndex = 26;
             this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             // 
@@ -301,7 +303,7 @@
             // 
             this.guna2TextBoxSearch.AutoRoundedCorners = true;
             this.guna2TextBoxSearch.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBoxSearch.BorderRadius = 16;
+            this.guna2TextBoxSearch.BorderRadius = 14;
             this.guna2TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxSearch.DefaultText = "";
             this.guna2TextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -321,13 +323,14 @@
             this.guna2TextBoxSearch.PasswordChar = '\0';
             this.guna2TextBoxSearch.PlaceholderText = "Searching ";
             this.guna2TextBoxSearch.SelectedText = "";
-            this.guna2TextBoxSearch.Size = new System.Drawing.Size(294, 35);
+            this.guna2TextBoxSearch.Size = new System.Drawing.Size(290, 30);
             this.guna2TextBoxSearch.TabIndex = 23;
             this.guna2TextBoxSearch.TextOffset = new System.Drawing.Point(5, 0);
+            this.guna2TextBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxSearch_KeyDown);
             // 
             // listViewBill
             // 
-            this.listViewBill.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listViewBill.BackColor = System.Drawing.Color.PapayaWhip;
             this.listViewBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -337,9 +340,9 @@
             this.listViewBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.listViewBill.GridLines = true;
             this.listViewBill.HideSelection = false;
-            this.listViewBill.Location = new System.Drawing.Point(504, 95);
+            this.listViewBill.Location = new System.Drawing.Point(504, 120);
             this.listViewBill.Name = "listViewBill";
-            this.listViewBill.Size = new System.Drawing.Size(455, 424);
+            this.listViewBill.Size = new System.Drawing.Size(455, 399);
             this.listViewBill.TabIndex = 35;
             this.listViewBill.UseCompatibleStateImageBehavior = false;
             this.listViewBill.View = System.Windows.Forms.View.Details;
@@ -365,6 +368,24 @@
             this.columnHeader4.Text = "Total Price";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 100;
+            // 
+            // guna2ComboBoxResultSearch
+            // 
+            this.guna2ComboBoxResultSearch.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxResultSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.guna2ComboBoxResultSearch.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2ComboBoxResultSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxResultSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxResultSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxResultSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxResultSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBoxResultSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ComboBoxResultSearch.ItemHeight = 30;
+            this.guna2ComboBoxResultSearch.Location = new System.Drawing.Point(8, 45);
+            this.guna2ComboBoxResultSearch.Name = "guna2ComboBoxResultSearch";
+            this.guna2ComboBoxResultSearch.Size = new System.Drawing.Size(290, 36);
+            this.guna2ComboBoxResultSearch.TabIndex = 27;
+            this.guna2ComboBoxResultSearch.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxResultSearch_SelectedIndexChanged);
             // 
             // Dashboard
             // 
@@ -412,7 +433,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2ButtonExportBill;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTable;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxShowBill;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButtonAddFood;
         private System.Windows.Forms.Panel panelAddFood;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
@@ -421,5 +442,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxResultSearch;
     }
 }

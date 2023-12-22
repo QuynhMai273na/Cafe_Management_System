@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using CafeManagementSystem.DAO;
 using CafeManagementSystem.DTO;
 using Guna.UI2.WinForms;
-
+using System.Globalization;
+using System.Threading;
 namespace CafeManagementSystem
 {
     public partial class Dashboard : Form
@@ -21,6 +22,14 @@ namespace CafeManagementSystem
             InitializeComponent();
             LoadTable();
         }
+
+        #region Methods
+        List<Food> SearchFoodByName(string nearName)
+        { 
+            List<Food> listFoods = FoodDAO.Instance.SearchFoodByName(nearName);
+            return listFoods;
+        }
+        void LoadFoodList() { }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -63,8 +72,12 @@ namespace CafeManagementSystem
                 listViewBill.Items.Add(lsvItem);
             }
             totalmoney = sumPrice;
-            this.labelTotalBill.Text = "Total: \t" + totalmoney + " VND";
+            CultureInfo culture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = culture;
+            this.labelTotalBill.Text = "Total: \t" + totalmoney.ToString("c");
         }
+        #endregion
+        #region Events
         void btn_Click(object sender, EventArgs e)
         {
             int idTable = ((sender as Button).Tag as Table).Id;
@@ -74,7 +87,21 @@ namespace CafeManagementSystem
         private void guna2NumericUpDownDiscount_ValueChanged(object sender, EventArgs e)
         {
             float moneyAfterDis = totalmoney * (100 - ((float)Convert.ToDouble(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
-            this.labelTotalBill.Text = "Total: \t" + moneyAfterDis + " VND";
+            this.labelTotalBill.Text = "Total: \t" + moneyAfterDis.ToString("c");
         }
+        private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SearchFoodByName(guna2TextBoxSearch.Text);
+        }
+        private void guna2ComboBoxResultSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadFoodList();
+        }
+
+
+
+        #endregion
+
+
     }
 }
