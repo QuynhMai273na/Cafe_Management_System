@@ -129,13 +129,25 @@ namespace CafeManagementSystem
             }
             ShowBill(table.Id);
         }
+        private void guna2ButtonCheckInfo_Click(object sender, EventArgs e)
+        {
+            //if(CheckMember(guna2TextBoxCustomerPhone.Text))
+            //{
+            //    /// show tên và level
+            //}
+            //else
+            //{
+            //    // hiện thông báo chưa phải thành viên
+            //    fNotification noti = new fNotification();
+            //    noti.labelNote.Text = "This item is not available in the menu !";
+            //    noti.ShowDialog();
 
+            //}
+           
+        }
 
         #endregion
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

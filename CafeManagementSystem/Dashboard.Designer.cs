@@ -220,6 +220,7 @@
             this.guna2ButtonCheckInfo.Size = new System.Drawing.Size(98, 32);
             this.guna2ButtonCheckInfo.TabIndex = 28;
             this.guna2ButtonCheckInfo.Text = "Check";
+            this.guna2ButtonCheckInfo.Click += new System.EventHandler(this.guna2ButtonCheckInfo_Click);
             // 
             // labelCustomerLevel
             // 
@@ -277,7 +278,6 @@
             this.textBoxWriteNote.Name = "textBoxWriteNote";
             this.textBoxWriteNote.Size = new System.Drawing.Size(402, 79);
             this.textBoxWriteNote.TabIndex = 29;
-            this.textBoxWriteNote.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // labelNoteBill
             // 
