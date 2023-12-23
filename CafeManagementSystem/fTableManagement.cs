@@ -14,59 +14,15 @@ namespace CafeManagementSystem
 {
     public partial class fTableManagement : Form
     {
-        public fTableManagement()
+        public fTableManagement(Account acc)
         {
             InitializeComponent();
+            loginAccount = acc;
+            changeProfile();
+            ChangeAccount(acc.AccountType);
         }
 
-        #region Method
-        void LoadTable()
-        {
-            List<Table> tableList = TableDAO.Instance.LoadTableList();
-            foreach (Table item in tableList)
-            {
-                Button btn = new Button() { Width = 80, Height = 80 };
-                btn.Text = item.Name + "\n" + item.NumPeople + "\n" + item.Location;
-                btn.Click += btn_Click;
-                btn.Tag = item;
-                switch (item.Status)
-                {
-                    case Enums.TableStatus.Reserved:
-                        btn.BackColor = Color.Pink;
-                        break;
-                    case Enums.TableStatus.Occupied:
-                        btn.BackColor = Color.Red;
-                        break;
-                    default:
-                        btn.BackColor = Color.Green;
-                        break;
-                }
-
-            }
-        }
-        void ShowBill(int id)
-        {
-            //lsvBill.Items.Clear();
-            List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-            foreach (CafeManagementSystem.DTO.Menu item in listbillInfo)
-            {
-                ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
-                lsvItem.SubItems.Add(item.Price.ToString());
-                lsvItem.SubItems.Add(item.Count.ToString());
-                lsvItem.SubItems.Add(item.TotalPrice.ToString());
-
-                // thêm vào list view bill
-                //lsvBill.Items.Add(lsvItem);
-            }
-        }
-        #endregion
-        #region Events
-        void btn_Click(object sender, EventArgs e)
-        {
-            int idTable =((sender as Button).Tag as Table).Id;
-            ShowBill(idTable);
-        }
-
+        #region Method 
         private void guna2ButtonDashBoard_Click(object sender, EventArgs e)
         {
             labelTableManage.Text = "Table Manager Overview";
@@ -75,7 +31,10 @@ namespace CafeManagementSystem
         }
         #endregion
         //cm code
-
+        void ChangeAccount(string type)
+        {
+            if (type == "staff") guna2ButtonAdmin.Enabled = false;
+        }
         private void container(object _form)
         {
             if (guna2PanelContainer.Controls.Count > 0) guna2PanelContainer.Controls.Clear();
@@ -87,6 +46,31 @@ namespace CafeManagementSystem
             guna2PanelContainer.Controls.Add(form);
             guna2PanelContainer.Tag = form;
             form.Show();
+        }
+
+        private void guna2ButtonAdmin_Click(object sender, EventArgs e)
+        {
+            labelTableManage.Text = "Admin Management";
+            guna2PictureBoxTableIcon.Image = Properties.Resources._5;
+            container(new fAdmin());
+        }
+
+        public void changeProfile()
+        {
+            labelAccountName.Text = loginAccount.DisplayName.ToString();
+            labelKindAccount.Text=loginAccount.AccountType.ToString();
+        }
+        private void guna2ButtonUserProfile_Click(object sender, EventArgs e)
+        {
+            labelTableManage.Text = "User Profile";
+            guna2PictureBoxTableIcon.Image = Properties.Resources._6;
+            container(new UserProfile());
+        }
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
         }
     }
 }

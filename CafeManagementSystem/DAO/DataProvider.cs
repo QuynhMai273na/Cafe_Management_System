@@ -69,8 +69,11 @@ namespace CafeManagementSystem.DAO
                     int i = 0;
                     foreach (string item in listParameter)
                     {
-                        command.Parameters.AddWithValue(item, parameter[i]);
-                        i++;
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);// trung gian thuc hien cau truy van
@@ -102,6 +105,16 @@ namespace CafeManagementSystem.DAO
                 connection.Close();
             }
             return data;
+        }
+        public void Modify(string query) //dung de dang ky tai khoan
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
         }
     }
 }
