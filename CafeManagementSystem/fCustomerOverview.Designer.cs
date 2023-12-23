@@ -322,6 +322,7 @@
             this.Controls.Add(this.flowLayoutPanelTableCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fCustomerOverview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fCustomerOverview";
             this.panelAddFoodCustomer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownNumberAddCustomer)).EndInit();

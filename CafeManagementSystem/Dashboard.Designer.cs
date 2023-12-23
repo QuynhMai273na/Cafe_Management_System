@@ -355,7 +355,7 @@
             this.guna2TextBoxShowBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2TextBoxShowBill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxShowBill.Location = new System.Drawing.Point(0, 95);
-            this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBoxShowBill.Name = "guna2TextBoxShowBill";
             this.guna2TextBoxShowBill.PasswordChar = '\0';
             this.guna2TextBoxShowBill.PlaceholderText = "";
@@ -503,6 +503,7 @@
             this.Controls.Add(this.labelTotalBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).EndInit();
             this.guna2PanelCustomerInfo.ResumeLayout(false);

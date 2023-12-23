@@ -597,6 +597,7 @@
             this.Controls.Add(this.guna2PanelUpdateInfoCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerProfile";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxUserAvatarCustomer)).EndInit();
             this.guna2PanelTopUserCustomer.ResumeLayout(false);

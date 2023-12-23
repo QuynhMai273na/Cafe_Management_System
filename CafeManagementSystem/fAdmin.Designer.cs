@@ -664,6 +664,7 @@ namespace CafeManagementSystem
             this.Controls.Add(this.guna2TabControlAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Accounts.ResumeLayout(false);
             this.guna2PanelAccounts.ResumeLayout(false);

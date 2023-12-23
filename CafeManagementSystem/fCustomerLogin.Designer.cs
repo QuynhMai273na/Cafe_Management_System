@@ -285,6 +285,7 @@
             this.Controls.Add(this.guna2PanelLeftCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fCustomerLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fCustomerLogin";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatarCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenuCustomer)).EndInit();
