@@ -37,7 +37,6 @@ namespace CafeManagementSystem
             this.labelAccountName = new System.Windows.Forms.Label();
             this.guna2PictureBoxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBoxMenu = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ButtonSetting = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonUserProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDashBoard = new Guna.UI2.WinForms.Guna2Button();
@@ -65,7 +64,6 @@ namespace CafeManagementSystem
             this.guna2PanelLeft.Controls.Add(this.labelAccountName);
             this.guna2PanelLeft.Controls.Add(this.guna2PictureBoxAvatar);
             this.guna2PanelLeft.Controls.Add(this.guna2PictureBoxMenu);
-            this.guna2PanelLeft.Controls.Add(this.guna2ButtonSetting);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonUserProfile);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonAdmin);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonDashBoard);
@@ -82,11 +80,11 @@ namespace CafeManagementSystem
             // 
             this.labelKindAccount.AutoSize = true;
             this.labelKindAccount.BackColor = System.Drawing.Color.Transparent;
-            this.labelKindAccount.Font = new System.Drawing.Font("Arial", 7F);
+            this.labelKindAccount.Font = new System.Drawing.Font("Arial", 7.5F);
             this.labelKindAccount.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.labelKindAccount.Location = new System.Drawing.Point(73, 719);
+            this.labelKindAccount.Location = new System.Drawing.Point(73, 726);
             this.labelKindAccount.Name = "labelKindAccount";
-            this.labelKindAccount.Size = new System.Drawing.Size(55, 15);
+            this.labelKindAccount.Size = new System.Drawing.Size(57, 16);
             this.labelKindAccount.TabIndex = 10;
             this.labelKindAccount.Text = "Manager";
             // 
@@ -94,10 +92,10 @@ namespace CafeManagementSystem
             // 
             this.labelAccountName.AutoSize = true;
             this.labelAccountName.BackColor = System.Drawing.Color.Transparent;
-            this.labelAccountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountName.Location = new System.Drawing.Point(72, 695);
+            this.labelAccountName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccountName.Location = new System.Drawing.Point(72, 702);
             this.labelAccountName.Name = "labelAccountName";
-            this.labelAccountName.Size = new System.Drawing.Size(86, 18);
+            this.labelAccountName.Size = new System.Drawing.Size(92, 18);
             this.labelAccountName.TabIndex = 9;
             this.labelAccountName.Text = "Peter Paker";
             // 
@@ -127,33 +125,6 @@ namespace CafeManagementSystem
             this.guna2PictureBoxMenu.TabStop = false;
             this.guna2PictureBoxMenu.UseTransparentBackground = true;
             // 
-            // guna2ButtonSetting
-            // 
-            this.guna2ButtonSetting.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonSetting.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 0, 0, 8);
-            this.guna2ButtonSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonSetting.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonSetting.ForeColor = System.Drawing.Color.Black;
-            this.guna2ButtonSetting.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.guna2ButtonSetting.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonSetting.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonSetting.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2ButtonSetting.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonSetting.Image")));
-            this.guna2ButtonSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonSetting.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2ButtonSetting.Location = new System.Drawing.Point(0, 276);
-            this.guna2ButtonSetting.Name = "guna2ButtonSetting";
-            this.guna2ButtonSetting.Size = new System.Drawing.Size(233, 46);
-            this.guna2ButtonSetting.TabIndex = 4;
-            this.guna2ButtonSetting.Text = "Setting";
-            this.guna2ButtonSetting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonSetting.TextOffset = new System.Drawing.Point(10, 0);
-            this.guna2ButtonSetting.UseTransparentBackground = true;
-            // 
             // guna2ButtonUserProfile
             // 
             this.guna2ButtonUserProfile.BackColor = System.Drawing.Color.Transparent;
@@ -163,12 +134,12 @@ namespace CafeManagementSystem
             this.guna2ButtonUserProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonUserProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonUserProfile.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonUserProfile.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonUserProfile.ForeColor = System.Drawing.Color.Black;
             this.guna2ButtonUserProfile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.guna2ButtonUserProfile.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonUserProfile.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonUserProfile.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.guna2ButtonUserProfile.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.guna2ButtonUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonUserProfile.Image")));
             this.guna2ButtonUserProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonUserProfile.ImageSize = new System.Drawing.Size(50, 50);
@@ -180,6 +151,7 @@ namespace CafeManagementSystem
             this.guna2ButtonUserProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2ButtonUserProfile.UseTransparentBackground = true;
+            this.guna2ButtonUserProfile.Click += new System.EventHandler(this.guna2ButtonUserProfile_Click);
             // 
             // guna2ButtonAdmin
             // 
@@ -190,12 +162,12 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonAdmin.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonAdmin.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAdmin.ForeColor = System.Drawing.Color.Black;
             this.guna2ButtonAdmin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.guna2ButtonAdmin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonAdmin.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdmin.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.guna2ButtonAdmin.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.guna2ButtonAdmin.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonAdmin.Image")));
             this.guna2ButtonAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonAdmin.ImageOffset = new System.Drawing.Point(-5, 0);
@@ -218,12 +190,12 @@ namespace CafeManagementSystem
             this.guna2ButtonDashBoard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonDashBoard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonDashBoard.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonDashBoard.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDashBoard.ForeColor = System.Drawing.Color.Black;
             this.guna2ButtonDashBoard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.guna2ButtonDashBoard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonDashBoard.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDashBoard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.guna2ButtonDashBoard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.guna2ButtonDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonDashBoard.Image")));
             this.guna2ButtonDashBoard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonDashBoard.ImageSize = new System.Drawing.Size(50, 50);
@@ -375,7 +347,6 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxExit;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxLogo;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDashBoard;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonSetting;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonUserProfile;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdmin;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxMenu;
