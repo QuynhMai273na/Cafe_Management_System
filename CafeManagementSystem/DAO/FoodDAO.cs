@@ -65,6 +65,33 @@ namespace CafeManagementSystem.DAO
             }
             return list;
         }
+        public List<Food> GetListFood()
+        {
+            List<Food> listFood = new List<Food>();
+            string query = "select * from food";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                listFood.Add(food);
+            }
+            return listFood;
+        }
+        public void AddFood(string id, string name, string cateID, string price)
+        {
+            string query = string.Format("Insert into food (id,name,idCategory,price) values ({0},N'{1}',{2},{3})", id, name,cateID,price);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void EditFood(string id,string name, string price)
+        {
+            string query = string.Format("update food set name = N'{0}',price={1} where id = {2}", name, price,id);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void DeleteFood(string id)
+        {
+            string query = string.Format("Delete FROM food WHERE id =  {0}", id);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
 
     }
 }

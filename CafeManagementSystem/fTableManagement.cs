@@ -64,7 +64,7 @@ namespace CafeManagementSystem
         {
             labelTableManage.Text = "User Profile";
             guna2PictureBoxTableIcon.Image = Properties.Resources._6;
-            container(new UserProfile());
+            container(new UserProfile(loginAccount));
         }
         private Account loginAccount;
         public Account LoginAccount
