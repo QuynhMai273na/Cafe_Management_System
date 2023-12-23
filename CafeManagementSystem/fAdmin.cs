@@ -41,6 +41,7 @@ namespace CafeManagementSystem
             Thread.CurrentThread.CurrentCulture = culture;
         }
      */
+     //nochange
         void LoadAccountList(string nearName)
         {
             List<Account> listAcc = AccountDAO.Instance.SearchAccountByName(nearName);
