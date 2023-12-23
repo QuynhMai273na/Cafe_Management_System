@@ -105,14 +105,14 @@ namespace CafeManagementSystem
             this.guna2PanelAccounts.Controls.Add(this.guna2TextBoxSearchAccounts);
             this.guna2PanelAccounts.Location = new System.Drawing.Point(0, 0);
             this.guna2PanelAccounts.Name = "guna2PanelAccounts";
-            this.guna2PanelAccounts.Size = new System.Drawing.Size(725, 43);
+            this.guna2PanelAccounts.Size = new System.Drawing.Size(725, 56);
             this.guna2PanelAccounts.TabIndex = 5;
             // 
             // guna2PictureBoxRefreshAccounts
             // 
             this.guna2PictureBoxRefreshAccounts.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxRefreshAccounts.Image")));
             this.guna2PictureBoxRefreshAccounts.ImageRotate = 0F;
-            this.guna2PictureBoxRefreshAccounts.Location = new System.Drawing.Point(681, 4);
+            this.guna2PictureBoxRefreshAccounts.Location = new System.Drawing.Point(681, 10);
             this.guna2PictureBoxRefreshAccounts.Name = "guna2PictureBoxRefreshAccounts";
             this.guna2PictureBoxRefreshAccounts.Size = new System.Drawing.Size(35, 34);
             this.guna2PictureBoxRefreshAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +133,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteAccounts.FillColor = System.Drawing.Color.Red;
             this.guna2ButtonDeleteAccounts.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDeleteAccounts.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDeleteAccounts.Location = new System.Drawing.Point(565, 3);
+            this.guna2ButtonDeleteAccounts.Location = new System.Drawing.Point(565, 9);
             this.guna2ButtonDeleteAccounts.Name = "guna2ButtonDeleteAccounts";
             this.guna2ButtonDeleteAccounts.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonDeleteAccounts.TabIndex = 2;
@@ -152,7 +152,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAddAccounts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonAddAccounts.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAddAccounts.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAddAccounts.Location = new System.Drawing.Point(451, 3);
+            this.guna2ButtonAddAccounts.Location = new System.Drawing.Point(451, 9);
             this.guna2ButtonAddAccounts.Name = "guna2ButtonAddAccounts";
             this.guna2ButtonAddAccounts.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonAddAccounts.TabIndex = 1;
@@ -174,7 +174,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxSearchAccounts.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearchAccounts.IconLeft")));
             this.guna2TextBoxSearchAccounts.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.guna2TextBoxSearchAccounts.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBoxSearchAccounts.Location = new System.Drawing.Point(8, 6);
+            this.guna2TextBoxSearchAccounts.Location = new System.Drawing.Point(8, 12);
             this.guna2TextBoxSearchAccounts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxSearchAccounts.Name = "guna2TextBoxSearchAccounts";
             this.guna2TextBoxSearchAccounts.PasswordChar = '\0';
@@ -187,9 +187,9 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelSmallAccounts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelSmallAccounts.BorderThickness = 2;
-            this.guna2PanelSmallAccounts.Location = new System.Drawing.Point(0, 41);
+            this.guna2PanelSmallAccounts.Location = new System.Drawing.Point(0, 55);
             this.guna2PanelSmallAccounts.Name = "guna2PanelSmallAccounts";
-            this.guna2PanelSmallAccounts.Size = new System.Drawing.Size(725, 652);
+            this.guna2PanelSmallAccounts.Size = new System.Drawing.Size(725, 638);
             this.guna2PanelSmallAccounts.TabIndex = 3;
             // 
             // Categories
@@ -209,9 +209,9 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelCategoriesEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelCategoriesEdit.BorderThickness = 2;
-            this.guna2PanelCategoriesEdit.Location = new System.Drawing.Point(0, 41);
+            this.guna2PanelCategoriesEdit.Location = new System.Drawing.Point(0, 55);
             this.guna2PanelCategoriesEdit.Name = "guna2PanelCategoriesEdit";
-            this.guna2PanelCategoriesEdit.Size = new System.Drawing.Size(725, 652);
+            this.guna2PanelCategoriesEdit.Size = new System.Drawing.Size(725, 638);
             this.guna2PanelCategoriesEdit.TabIndex = 5;
             // 
             // guna2PanelCategories
@@ -224,14 +224,14 @@ namespace CafeManagementSystem
             this.guna2PanelCategories.Controls.Add(this.guna2TextBoxSearchCategories);
             this.guna2PanelCategories.Location = new System.Drawing.Point(0, 0);
             this.guna2PanelCategories.Name = "guna2PanelCategories";
-            this.guna2PanelCategories.Size = new System.Drawing.Size(725, 43);
+            this.guna2PanelCategories.Size = new System.Drawing.Size(725, 56);
             this.guna2PanelCategories.TabIndex = 4;
             // 
             // guna2PictureBoxRefreshCategories
             // 
             this.guna2PictureBoxRefreshCategories.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxRefreshCategories.Image")));
             this.guna2PictureBoxRefreshCategories.ImageRotate = 0F;
-            this.guna2PictureBoxRefreshCategories.Location = new System.Drawing.Point(681, 4);
+            this.guna2PictureBoxRefreshCategories.Location = new System.Drawing.Point(681, 10);
             this.guna2PictureBoxRefreshCategories.Name = "guna2PictureBoxRefreshCategories";
             this.guna2PictureBoxRefreshCategories.Size = new System.Drawing.Size(35, 34);
             this.guna2PictureBoxRefreshCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +252,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteCategories.FillColor = System.Drawing.Color.Red;
             this.guna2ButtonDeleteCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDeleteCategories.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDeleteCategories.Location = new System.Drawing.Point(565, 3);
+            this.guna2ButtonDeleteCategories.Location = new System.Drawing.Point(565, 9);
             this.guna2ButtonDeleteCategories.Name = "guna2ButtonDeleteCategories";
             this.guna2ButtonDeleteCategories.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonDeleteCategories.TabIndex = 2;
@@ -271,7 +271,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAddCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonAddCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAddCategories.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAddCategories.Location = new System.Drawing.Point(451, 3);
+            this.guna2ButtonAddCategories.Location = new System.Drawing.Point(451, 9);
             this.guna2ButtonAddCategories.Name = "guna2ButtonAddCategories";
             this.guna2ButtonAddCategories.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonAddCategories.TabIndex = 1;
@@ -293,7 +293,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxSearchCategories.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearchCategories.IconLeft")));
             this.guna2TextBoxSearchCategories.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.guna2TextBoxSearchCategories.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBoxSearchCategories.Location = new System.Drawing.Point(8, 6);
+            this.guna2TextBoxSearchCategories.Location = new System.Drawing.Point(8, 12);
             this.guna2TextBoxSearchCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxSearchCategories.Name = "guna2TextBoxSearchCategories";
             this.guna2TextBoxSearchCategories.PasswordChar = '\0';
@@ -352,9 +352,9 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelReceiptsEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelReceiptsEdit.BorderThickness = 2;
-            this.guna2PanelReceiptsEdit.Location = new System.Drawing.Point(-1, 83);
+            this.guna2PanelReceiptsEdit.Location = new System.Drawing.Point(-1, 96);
             this.guna2PanelReceiptsEdit.Name = "guna2PanelReceiptsEdit";
-            this.guna2PanelReceiptsEdit.Size = new System.Drawing.Size(726, 609);
+            this.guna2PanelReceiptsEdit.Size = new System.Drawing.Size(726, 596);
             this.guna2PanelReceiptsEdit.TabIndex = 6;
             // 
             // guna2PanelReceipts
@@ -367,14 +367,14 @@ namespace CafeManagementSystem
             this.guna2PanelReceipts.Controls.Add(this.guna2TextBoxSearchReceipts);
             this.guna2PanelReceipts.Location = new System.Drawing.Point(-1, -1);
             this.guna2PanelReceipts.Name = "guna2PanelReceipts";
-            this.guna2PanelReceipts.Size = new System.Drawing.Size(726, 43);
+            this.guna2PanelReceipts.Size = new System.Drawing.Size(726, 56);
             this.guna2PanelReceipts.TabIndex = 5;
             // 
             // guna2PictureBoxRefreshReceipts
             // 
             this.guna2PictureBoxRefreshReceipts.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxRefreshReceipts.Image")));
             this.guna2PictureBoxRefreshReceipts.ImageRotate = 0F;
-            this.guna2PictureBoxRefreshReceipts.Location = new System.Drawing.Point(681, 4);
+            this.guna2PictureBoxRefreshReceipts.Location = new System.Drawing.Point(681, 10);
             this.guna2PictureBoxRefreshReceipts.Name = "guna2PictureBoxRefreshReceipts";
             this.guna2PictureBoxRefreshReceipts.Size = new System.Drawing.Size(35, 34);
             this.guna2PictureBoxRefreshReceipts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,7 +395,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteReceipts.FillColor = System.Drawing.Color.Red;
             this.guna2ButtonDeleteReceipts.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDeleteReceipts.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDeleteReceipts.Location = new System.Drawing.Point(565, 3);
+            this.guna2ButtonDeleteReceipts.Location = new System.Drawing.Point(565, 9);
             this.guna2ButtonDeleteReceipts.Name = "guna2ButtonDeleteReceipts";
             this.guna2ButtonDeleteReceipts.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonDeleteReceipts.TabIndex = 2;
@@ -414,7 +414,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAddReceipts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonAddReceipts.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAddReceipts.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAddReceipts.Location = new System.Drawing.Point(451, 3);
+            this.guna2ButtonAddReceipts.Location = new System.Drawing.Point(451, 9);
             this.guna2ButtonAddReceipts.Name = "guna2ButtonAddReceipts";
             this.guna2ButtonAddReceipts.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonAddReceipts.TabIndex = 1;
@@ -436,7 +436,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxSearchReceipts.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearchReceipts.IconLeft")));
             this.guna2TextBoxSearchReceipts.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.guna2TextBoxSearchReceipts.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBoxSearchReceipts.Location = new System.Drawing.Point(8, 6);
+            this.guna2TextBoxSearchReceipts.Location = new System.Drawing.Point(8, 12);
             this.guna2TextBoxSearchReceipts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxSearchReceipts.Name = "guna2TextBoxSearchReceipts";
             this.guna2TextBoxSearchReceipts.PasswordChar = '\0';
@@ -454,7 +454,7 @@ namespace CafeManagementSystem
             this.guna2PanelDateFromTo.Controls.Add(this.From);
             this.guna2PanelDateFromTo.Controls.Add(this.guna2DateTimePickeTo);
             this.guna2PanelDateFromTo.Controls.Add(this.guna2DateTimePickerFrom);
-            this.guna2PanelDateFromTo.Location = new System.Drawing.Point(-1, 40);
+            this.guna2PanelDateFromTo.Location = new System.Drawing.Point(-1, 53);
             this.guna2PanelDateFromTo.Name = "guna2PanelDateFromTo";
             this.guna2PanelDateFromTo.Size = new System.Drawing.Size(726, 45);
             this.guna2PanelDateFromTo.TabIndex = 2;
@@ -546,10 +546,10 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelDrinksDessertsEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelDrinksDessertsEdit.BorderThickness = 2;
-            this.guna2PanelDrinksDessertsEdit.Location = new System.Drawing.Point(0, 42);
+            this.guna2PanelDrinksDessertsEdit.Location = new System.Drawing.Point(0, 55);
             this.guna2PanelDrinksDessertsEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PanelDrinksDessertsEdit.Name = "guna2PanelDrinksDessertsEdit";
-            this.guna2PanelDrinksDessertsEdit.Size = new System.Drawing.Size(725, 652);
+            this.guna2PanelDrinksDessertsEdit.Size = new System.Drawing.Size(725, 638);
             this.guna2PanelDrinksDessertsEdit.TabIndex = 6;
             // 
             // guna2PanelDrinksDesserts
@@ -563,7 +563,7 @@ namespace CafeManagementSystem
             this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonAddDrinks);
             this.guna2PanelDrinksDesserts.Location = new System.Drawing.Point(0, 0);
             this.guna2PanelDrinksDesserts.Name = "guna2PanelDrinksDesserts";
-            this.guna2PanelDrinksDesserts.Size = new System.Drawing.Size(725, 43);
+            this.guna2PanelDrinksDesserts.Size = new System.Drawing.Size(725, 56);
             this.guna2PanelDrinksDesserts.TabIndex = 5;
             // 
             // guna2ComboBoxCategoriesofDrinks
@@ -580,7 +580,7 @@ namespace CafeManagementSystem
             this.guna2ComboBoxCategoriesofDrinks.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBoxCategoriesofDrinks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBoxCategoriesofDrinks.ItemHeight = 30;
-            this.guna2ComboBoxCategoriesofDrinks.Location = new System.Drawing.Point(5, 3);
+            this.guna2ComboBoxCategoriesofDrinks.Location = new System.Drawing.Point(5, 6);
             this.guna2ComboBoxCategoriesofDrinks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBoxCategoriesofDrinks.Name = "guna2ComboBoxCategoriesofDrinks";
             this.guna2ComboBoxCategoriesofDrinks.Size = new System.Drawing.Size(256, 36);
@@ -599,7 +599,7 @@ namespace CafeManagementSystem
             this.guna2ButtonNewCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2ButtonNewCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonNewCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonNewCategories.Location = new System.Drawing.Point(279, 3);
+            this.guna2ButtonNewCategories.Location = new System.Drawing.Point(279, 10);
             this.guna2ButtonNewCategories.Name = "guna2ButtonNewCategories";
             this.guna2ButtonNewCategories.Size = new System.Drawing.Size(164, 37);
             this.guna2ButtonNewCategories.TabIndex = 4;
@@ -609,7 +609,7 @@ namespace CafeManagementSystem
             // 
             this.guna2PictureBoxRefreshDrinks.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxRefreshDrinks.Image")));
             this.guna2PictureBoxRefreshDrinks.ImageRotate = 0F;
-            this.guna2PictureBoxRefreshDrinks.Location = new System.Drawing.Point(681, 4);
+            this.guna2PictureBoxRefreshDrinks.Location = new System.Drawing.Point(681, 11);
             this.guna2PictureBoxRefreshDrinks.Name = "guna2PictureBoxRefreshDrinks";
             this.guna2PictureBoxRefreshDrinks.Size = new System.Drawing.Size(35, 34);
             this.guna2PictureBoxRefreshDrinks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -630,7 +630,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteDrinks.FillColor = System.Drawing.Color.Red;
             this.guna2ButtonDeleteDrinks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDeleteDrinks.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDeleteDrinks.Location = new System.Drawing.Point(565, 3);
+            this.guna2ButtonDeleteDrinks.Location = new System.Drawing.Point(565, 10);
             this.guna2ButtonDeleteDrinks.Name = "guna2ButtonDeleteDrinks";
             this.guna2ButtonDeleteDrinks.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonDeleteDrinks.TabIndex = 2;
@@ -649,7 +649,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAddDrinks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonAddDrinks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAddDrinks.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAddDrinks.Location = new System.Drawing.Point(451, 3);
+            this.guna2ButtonAddDrinks.Location = new System.Drawing.Point(451, 10);
             this.guna2ButtonAddDrinks.Name = "guna2ButtonAddDrinks";
             this.guna2ButtonAddDrinks.Size = new System.Drawing.Size(106, 37);
             this.guna2ButtonAddDrinks.TabIndex = 1;
