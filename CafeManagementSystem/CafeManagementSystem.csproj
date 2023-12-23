@@ -145,6 +145,12 @@
     <Compile Include="TableFood.cs">
       <DependentUpon>ModelEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="fSignup.resx">
       <DependentUpon>fSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="ModelEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
