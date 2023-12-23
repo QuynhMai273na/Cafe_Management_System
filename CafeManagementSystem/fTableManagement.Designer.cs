@@ -47,8 +47,8 @@ namespace CafeManagementSystem
             this.guna2ControlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxExit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2DragControlManager = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ShadowFormManager = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).BeginInit();
@@ -292,11 +292,11 @@ namespace CafeManagementSystem
             this.guna2ControlBoxExit.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBoxExit.TabIndex = 0;
             // 
-            // guna2DragControl1
+            // guna2DragControlManager
             // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.guna2PanelTop;
-            this.guna2DragControl1.UseTransparentDrag = true;
+            this.guna2DragControlManager.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControlManager.TargetControl = this.guna2PanelTop;
+            this.guna2DragControlManager.UseTransparentDrag = true;
             // 
             // guna2PanelContainer
             // 
@@ -334,14 +334,14 @@ namespace CafeManagementSystem
 
         private void fTableManagement_Load(object sender, EventArgs e)
         {
-            guna2ShadowForm1.SetShadowForm(this);
+            guna2ShadowFormManager.SetShadowForm(this);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2PanelLeft;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelTop;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControlManager;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMin;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMax;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxExit;
@@ -351,7 +351,7 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdmin;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxMenu;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxAvatar;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowFormManager;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelContainer;
         private System.Windows.Forms.Label labelKindAccount;
         private System.Windows.Forms.Label labelAccountName;
