@@ -45,6 +45,17 @@ namespace CafeManagementSystem.DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
-        
+        public string GetTypeAccountByUserName(string userName)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select accountType from Account where userName='" + userName + "'");
+            foreach (DataRow item in data.Rows)
+            {
+                string type = item[0].ToString();
+                //Account account = new Account(item);
+                return type;
+            }
+            return "";
+        }
+
     }
 }
