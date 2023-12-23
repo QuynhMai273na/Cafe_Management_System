@@ -580,7 +580,7 @@ namespace CafeManagementSystem
             this.guna2ComboBoxCategoriesofDrinks.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBoxCategoriesofDrinks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBoxCategoriesofDrinks.ItemHeight = 30;
-            this.guna2ComboBoxCategoriesofDrinks.Location = new System.Drawing.Point(5, 7);
+            this.guna2ComboBoxCategoriesofDrinks.Location = new System.Drawing.Point(5, 3);
             this.guna2ComboBoxCategoriesofDrinks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBoxCategoriesofDrinks.Name = "guna2ComboBoxCategoriesofDrinks";
             this.guna2ComboBoxCategoriesofDrinks.Size = new System.Drawing.Size(256, 36);
@@ -599,9 +599,9 @@ namespace CafeManagementSystem
             this.guna2ButtonNewCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2ButtonNewCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonNewCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonNewCategories.Location = new System.Drawing.Point(291, 3);
+            this.guna2ButtonNewCategories.Location = new System.Drawing.Point(279, 3);
             this.guna2ButtonNewCategories.Name = "guna2ButtonNewCategories";
-            this.guna2ButtonNewCategories.Size = new System.Drawing.Size(148, 37);
+            this.guna2ButtonNewCategories.Size = new System.Drawing.Size(164, 37);
             this.guna2ButtonNewCategories.TabIndex = 4;
             this.guna2ButtonNewCategories.Text = "New Categories";
             // 
