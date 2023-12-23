@@ -17,9 +17,9 @@ namespace CafeManagementSystem.DAO
             get
             {
                 if (instance == null) instance = new TableDAO();
-                return instance;
+                return TableDAO.instance;
             }
-            private set { instance = value; }
+            private set { TableDAO.instance = value; }
         }
         private TableDAO() { }
         public List<Table> LoadTableList()

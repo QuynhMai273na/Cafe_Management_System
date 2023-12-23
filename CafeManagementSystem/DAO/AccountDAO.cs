@@ -39,5 +39,12 @@ namespace CafeManagementSystem.DAO
             //Nếu số hàng (rows) trong "result" > 0, tức là có ít nhất một hàng dữ liệu, thì trả về true. Ngược lại thì trả về false.
             return result.Rows.Count > 0;
         }
+        public bool CheckExist(string str)
+        {
+            string query = "SELECT* FROM Account WHERE phoneNumber = '"+ str +"'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
+        
     }
 }
