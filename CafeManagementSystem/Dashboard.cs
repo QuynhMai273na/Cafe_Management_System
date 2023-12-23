@@ -130,8 +130,12 @@ namespace CafeManagementSystem
             ShowBill(table.Id);
         }
 
+
         #endregion
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

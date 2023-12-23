@@ -56,6 +56,7 @@
             this.columnPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnTotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxWriteNote = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).BeginInit();
             this.guna2PanelCustomerInfo.SuspendLayout();
             this.guna2PanelNoteBill.SuspendLayout();
@@ -257,6 +258,7 @@
             // 
             this.guna2PanelNoteBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelNoteBill.BorderThickness = 2;
+            this.guna2PanelNoteBill.Controls.Add(this.textBoxWriteNote);
             this.guna2PanelNoteBill.Controls.Add(this.labelNoteBill);
             this.guna2PanelNoteBill.Location = new System.Drawing.Point(504, 525);
             this.guna2PanelNoteBill.Name = "guna2PanelNoteBill";
@@ -469,6 +471,19 @@
             this.columnTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnTotalPrice.Width = 98;
             // 
+            // textBoxWriteNote
+            // 
+            this.textBoxWriteNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.textBoxWriteNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxWriteNote.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxWriteNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.textBoxWriteNote.Location = new System.Drawing.Point(52, 6);
+            this.textBoxWriteNote.Multiline = true;
+            this.textBoxWriteNote.Name = "textBoxWriteNote";
+            this.textBoxWriteNote.Size = new System.Drawing.Size(413, 90);
+            this.textBoxWriteNote.TabIndex = 29;
+            this.textBoxWriteNote.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,5 +543,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerName;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerLevel;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerPhone;
+        private System.Windows.Forms.TextBox textBoxWriteNote;
     }
 }

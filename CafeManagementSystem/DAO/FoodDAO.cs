@@ -52,12 +52,11 @@ namespace CafeManagementSystem.DAO
 
             return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
         }
-
         public List<Food> SearchFoodByName(string nearName)
         {
             List<Food> list = new List<Food>();
             nearName = RemoveDiacritics(nearName);
-            string query =string.Format("SELECT * FROM Food WHERE name COLLATE SQL_Latin1_General_CP1251_CI_AS LIKE N'%{0}%' ", nearName);
+            string query =string.Format("SELECT * FROM Food WHERE name COLLATE SQL_Latin1_General_CP1253_CI_AI LIKE N'%{0}%' ", nearName);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
