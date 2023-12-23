@@ -41,5 +41,19 @@ namespace CafeManagementSystem
             guna2PanelContainer.Tag = form;
             form.Show();
         }
+
+        private void guna2ButtonAdmin_Click(object sender, EventArgs e)
+        {
+            labelTableManage.Text = "Admin Management";
+            guna2PictureBoxTableIcon.Image = Properties.Resources._5;
+            container(new fAdmin());
+        }
+
+        private void guna2ButtonUserProfile_Click(object sender, EventArgs e)
+        {
+            labelTableManage.Text = "User Profile";
+            guna2PictureBoxTableIcon.Image = Properties.Resources._6;
+            container(new UserProfile());
+        }
     }
 }
