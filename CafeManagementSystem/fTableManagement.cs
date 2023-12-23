@@ -14,9 +14,10 @@ namespace CafeManagementSystem
 {
     public partial class fTableManagement : Form
     {
-        public fTableManagement()
+        public fTableManagement(string type)
         {
             InitializeComponent();
+            ChangeAccount(type);
         }
 
         #region Method 
@@ -28,7 +29,10 @@ namespace CafeManagementSystem
         }
         #endregion
         //cm code
-
+        void ChangeAccount(string type)
+        {
+            if (type == "staff") guna2ButtonAdmin.Enabled = false;
+        }
         private void container(object _form)
         {
             if (guna2PanelContainer.Controls.Count > 0) guna2PanelContainer.Controls.Clear();
@@ -54,6 +58,12 @@ namespace CafeManagementSystem
             labelTableManage.Text = "User Profile";
             guna2PictureBoxTableIcon.Image = Properties.Resources._6;
             container(new UserProfile());
+        }
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
         }
     }
 }
