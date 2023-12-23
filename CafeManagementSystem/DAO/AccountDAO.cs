@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CafeManagementSystem.DTO;
 
 namespace CafeManagementSystem.DAO
 {
@@ -56,6 +58,46 @@ namespace CafeManagementSystem.DAO
             }
             return "";
         }
+        public List<Account> GetListAccount()
+        {
+            List<Account> listAcc = new List<Account>();
+            string query = "SELECT * FROM dbo.Account ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                listAcc.Add(acc);
+            }
+            return listAcc;
+        }
+        static string RemoveDiacritics(string input)
+        {
+            string normalizedString = input.Normalize(NormalizationForm.FormD);
+            StringBuilder stringBuilder = new StringBuilder();
 
+            foreach (char c in normalizedString)
+            {
+                UnicodeCategory unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(c);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+        }
+        public List<Account> SearchAccountByName(string nearName)
+        {
+            List<Account> list = new List<Account>();
+            nearName = RemoveDiacritics(nearName);
+            string query = string.Format("SELECT * FROM Account WHERE displayName COLLATE SQL_Latin1_General_CP1253_CI_AI LIKE N'%{0}%' ", nearName);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                list.Add(acc);
+            }
+            return list;
+        }
     }
 }
