@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeManagementSystem.DTO;
 
 namespace CafeManagementSystem
 {
     public partial class fCustomerLogin : Form
     {
-        public fCustomerLogin()
+        public fCustomerLogin(Account acc)
         {
             InitializeComponent();
+            
+            loginAccount = acc;
+            changeProfile();
         }
 
         private void guna2ButtonDashBoardCustomer_Click(object sender, EventArgs e)
@@ -36,12 +40,22 @@ namespace CafeManagementSystem
             guna2PanelContainerCustomer.Tag = form;
             form.Show();
         }
-
+        public void changeProfile()
+        {
+            labelAccountNameCustomer.Text = loginAccount.DisplayName.ToString();
+            labelKindCustomer.Text = loginAccount.AccountType.ToString();
+        }
         private void guna2ButtonCustomerProfile_Click(object sender, EventArgs e)
         {
             labelTableManageCustomer.Text = "User's Profile";
             guna2PictureBoxTableIconCustomer.Image = Properties.Resources._6;
             container(new CustomerProfile());
+        }
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
         }
     }
 }

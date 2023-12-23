@@ -76,10 +76,21 @@ namespace CafeManagementSystem
            else if (Login(username,password))
             {
                 string typeAccount = AccountDAO.Instance.GetTypeAccountByUserName(username);
-                fTableManagement tableManagement= new fTableManagement(typeAccount);
-                this.Hide();
-                tableManagement.ShowDialog();
-                this.Close();
+                if (typeAccount=="Member")
+                {
+                    fCustomerLogin customerForm = new fCustomerLogin(AccountDAO.Instance.GetAccountByUserName(username));
+                    this.Hide();
+                    customerForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    fTableManagement tableManagement = new fTableManagement(AccountDAO.Instance.GetAccountByUserName(username));
+                    this.Hide();
+                    tableManagement.ShowDialog();
+                    this.Close();
+                }    
+                
             }
            else
             {

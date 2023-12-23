@@ -14,10 +14,12 @@ namespace CafeManagementSystem
 {
     public partial class fTableManagement : Form
     {
-        public fTableManagement(string type)
+        public fTableManagement(Account acc)
         {
             InitializeComponent();
-            ChangeAccount(type);
+            loginAccount = acc;
+            changeProfile();
+            ChangeAccount(acc.AccountType);
         }
 
         #region Method 
@@ -53,6 +55,11 @@ namespace CafeManagementSystem
             container(new fAdmin());
         }
 
+        public void changeProfile()
+        {
+            labelAccountName.Text = loginAccount.DisplayName.ToString();
+            labelKindAccount.Text=loginAccount.AccountType.ToString();
+        }
         private void guna2ButtonUserProfile_Click(object sender, EventArgs e)
         {
             labelTableManage.Text = "User Profile";

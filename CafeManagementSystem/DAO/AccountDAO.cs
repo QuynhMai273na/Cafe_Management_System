@@ -58,6 +58,17 @@ namespace CafeManagementSystem.DAO
             }
             return "";
         }
+        public Account GetAccountByUserName(string userName)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Account where userName='" + userName + "'");
+            foreach (DataRow item in data.Rows)
+            {
+               
+                Account account = new Account(item);
+                return account;
+            }
+            return null;
+        }
         public List<Account> GetListAccount()
         {
             List<Account> listAcc = new List<Account>();
@@ -98,6 +109,21 @@ namespace CafeManagementSystem.DAO
                 list.Add(acc);
             }
             return list;
+        }
+        public void DeleteAccount(string user)
+        {
+            string query = string.Format("Delete FROM Account WHERE userName =  N'{0}' ", user);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void AddAccount (string username, string displayname, string password, string accounttype, string phonenumber)
+        {
+            string query = string.Format("Insert into account (userName,displayName,passWord,accountType,phoneNumber) values (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')", username, displayname, password, accounttype, phonenumber);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void EditAccount(string username, string displayname,string accounttype, string phonenumber)
+        {
+            string query = string.Format("update account set displayName = N'{0}', accountType = N'{1}', phoneNumber = N'{2}' where userName = N'{3}'",displayname,accounttype,phonenumber,username);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

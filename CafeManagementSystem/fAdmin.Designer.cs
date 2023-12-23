@@ -142,6 +142,7 @@ namespace CafeManagementSystem
             this.guna2PictureBoxRefreshAccounts.TabIndex = 3;
             this.guna2PictureBoxRefreshAccounts.TabStop = false;
             this.guna2PictureBoxRefreshAccounts.UseTransparentBackground = true;
+            this.guna2PictureBoxRefreshAccounts.Click += new System.EventHandler(this.guna2PictureBoxRefreshAccounts_Click);
             // 
             // guna2ButtonDeleteAccounts
             // 
@@ -162,6 +163,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteAccounts.Size = new System.Drawing.Size(119, 46);
             this.guna2ButtonDeleteAccounts.TabIndex = 2;
             this.guna2ButtonDeleteAccounts.Text = "Delete";
+            this.guna2ButtonDeleteAccounts.Click += new System.EventHandler(this.guna2ButtonDeleteAccounts_Click);
             // 
             // guna2ButtonAddAccounts
             // 
@@ -182,6 +184,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAddAccounts.Size = new System.Drawing.Size(119, 46);
             this.guna2ButtonAddAccounts.TabIndex = 1;
             this.guna2ButtonAddAccounts.Text = "Add";
+            this.guna2ButtonAddAccounts.Click += new System.EventHandler(this.guna2ButtonAddAccounts_Click);
             // 
             // guna2TextBoxSearchAccounts
             // 
@@ -233,6 +236,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxPass.Enabled = false;
             this.guna2TextBoxPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -257,6 +261,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxType.Enabled = false;
             this.guna2TextBoxType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxType.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -281,6 +286,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxPhone.Enabled = false;
             this.guna2TextBoxPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -305,6 +311,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxUserName.Enabled = false;
             this.guna2TextBoxUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -384,6 +391,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxName.Enabled = false;
             this.guna2TextBoxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -963,6 +971,7 @@ namespace CafeManagementSystem
             this.guna2ButtonSaveChanges.Size = new System.Drawing.Size(169, 46);
             this.guna2ButtonSaveChanges.TabIndex = 11;
             this.guna2ButtonSaveChanges.Text = "Save Changes";
+            this.guna2ButtonSaveChanges.Click += new System.EventHandler(this.guna2ButtonSaveChanges_Click);
             // 
             // guna2Button1
             // 
@@ -983,6 +992,7 @@ namespace CafeManagementSystem
             this.guna2Button1.Size = new System.Drawing.Size(146, 46);
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "Edit";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // fAdmin
             // 
