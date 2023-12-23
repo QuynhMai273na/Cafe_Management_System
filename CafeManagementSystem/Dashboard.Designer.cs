@@ -92,6 +92,7 @@
             this.guna2ButtonPayMent.Size = new System.Drawing.Size(105, 45);
             this.guna2ButtonPayMent.TabIndex = 22;
             this.guna2ButtonPayMent.Text = "Payment";
+            this.guna2ButtonPayMent.Click += new System.EventHandler(this.guna2ButtonPayMent_Click);
             // 
             // guna2NumericUpDownDiscount
             // 
@@ -179,6 +180,8 @@
             this.guna2TextBoxCustomerPhone.SelectedText = "";
             this.guna2TextBoxCustomerPhone.Size = new System.Drawing.Size(290, 34);
             this.guna2TextBoxCustomerPhone.TabIndex = 32;
+            this.guna2TextBoxCustomerPhone.TextChanged += new System.EventHandler(this.guna2TextBoxCustomerPhone_TextChanged);
+            this.guna2TextBoxCustomerPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxCustomerPhone_KeyDown);
             // 
             // guna2TextBoxCustomerName
             // 
@@ -355,7 +358,7 @@
             this.guna2TextBoxShowBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2TextBoxShowBill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxShowBill.Location = new System.Drawing.Point(0, 95);
-            this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBoxShowBill.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBoxShowBill.Name = "guna2TextBoxShowBill";
             this.guna2TextBoxShowBill.PasswordChar = '\0';
             this.guna2TextBoxShowBill.PlaceholderText = "";

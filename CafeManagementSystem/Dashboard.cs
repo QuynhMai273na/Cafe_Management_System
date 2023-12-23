@@ -37,14 +37,16 @@ namespace CafeManagementSystem
             guna2ComboBoxResultSearch.DataSource = listFoods;
             guna2ComboBoxResultSearch.DisplayMember = "Name";
         }
-        void LoadFoodListById(int id)
-        {
-            List<Food> list = FoodDAO.Instance.GetFoodById(id);
-            guna2ComboBoxResultSearch.DataSource = list;
-            guna2ComboBoxResultSearch.DisplayMember = "Name";
-        }
+        //void LoadFoodListById(int id)
+        //{
+        //    List<Food> list = FoodDAO.Instance.GetFoodById(id);
+        //    guna2ComboBoxResultSearch.DataSource = list;
+        //    guna2ComboBoxResultSearch.DisplayMember = "Name";
+        //}
+        
         void LoadTable()
         {
+            flowLayoutPanelTable.Controls.Clear();
             List<Table> tableList = TableDAO.Instance.LoadTableList();
             foreach (Table item in tableList)
             {
@@ -88,6 +90,33 @@ namespace CafeManagementSystem
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
             this.labelTotalBill.Text = "Total: \t" + totalmoney.ToString("c");
+    
+        }
+        int ApplyDiscountForCustomerMember (string level)
+        {
+            if (level == "Diamond")
+            {
+                return 15;
+            }
+            else if (level == "Gold") return 10;
+            else if (level == "Silver") return 5;
+            else if (level == "Member") return 3;
+            else return 0;
+
+
+        }
+        void LoadMemberCustomer(string customerPhone) { 
+            List<Customer> customerList = CustomerDAO.Instance.GetCustomerByPhone(customerPhone);
+            guna2TextBoxCustomerName.Text = customerList[0].Name;
+            guna2TextBoxCustomerLevel.Text = customerList[0].Level;
+            guna2NumericUpDownDiscount.Value = ApplyDiscountForCustomerMember(guna2TextBoxCustomerLevel.Text);
+
+        }
+        bool CheckMember(string customerPhone)
+        {
+            List<Customer> customerList = CustomerDAO.Instance.GetCustomerByPhone(customerPhone);
+            if (customerList.Count == 0) return false;
+            return true;
         }
         #endregion
         #region Events
@@ -109,6 +138,7 @@ namespace CafeManagementSystem
             {
                 LoadFoodList(guna2TextBoxSearch.Text);
             }
+
         }
 
         private void guna2CircleButtonAddFood_Click(object sender, EventArgs e)
@@ -128,22 +158,52 @@ namespace CafeManagementSystem
                 BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
             }
             ShowBill(table.Id);
+            LoadTable();
         }
         private void guna2ButtonCheckInfo_Click(object sender, EventArgs e)
         {
-            //if(CheckMember(guna2TextBoxCustomerPhone.Text))
-            //{
-            //    /// show tên và level
-            //}
-            //else
-            //{
-            //    // hiện thông báo chưa phải thành viên
-            //    fNotification noti = new fNotification();
-            //    noti.labelNote.Text = "This item is not available in the menu !";
-            //    noti.ShowDialog();
+            if (CheckMember(guna2TextBoxCustomerPhone.Text))
+            {
+                LoadMemberCustomer(guna2TextBoxCustomerPhone.Text);
+            }
+            else
+            {
+                // hiện thông báo chưa phải thành viên
+                fNotification noti = new fNotification();
+                noti.labelNote.Text = "You have not yet registered to become a member customer !";
+                noti.ShowDialog();
 
-            //}
-           
+            }
+        }
+
+        private void guna2TextBoxCustomerPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter) guna2ButtonCheckInfo.PerformClick();
+        }
+        private void guna2TextBoxCustomerPhone_TextChanged(object sender, EventArgs e)
+        {
+            guna2TextBoxCustomerName.Text = "";
+            guna2TextBoxCustomerLevel.Text = "";
+            guna2NumericUpDownDiscount.Value = 0;
+
+        }
+        private void guna2ButtonPayMent_Click(object sender, EventArgs e)
+        {
+            Table table = listViewBill.Tag as Table;
+            int idBill = BillDAO.Instance.GetUncheckBillIdByTableId(table.Id);
+            if (idBill != -1)
+            {
+                fNotifyPayment notice = new fNotifyPayment();
+                notice.labelNote.Text= String.Format("Do you really want to make payment for table {0} ?", table.Name);
+                notice.ShowDialog();
+                if (notice.pay == true)
+                {
+                    BillDAO.Instance.CheckOut(idBill);
+                    ShowBill(table.Id);
+                }
+            }
+            LoadTable();
+
         }
 
         #endregion
