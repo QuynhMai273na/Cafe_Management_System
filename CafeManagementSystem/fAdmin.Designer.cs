@@ -38,7 +38,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxSearchAccounts = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PanelSmallAccounts = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelEditInfoCustomer = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonEditAccount = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonSaveChanges = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBoxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxPass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,6 +57,16 @@ namespace CafeManagementSystem
             this.columnAccountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Categories = new System.Windows.Forms.TabPage();
             this.guna2PanelCategoriesEdit = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PanelEditCategories = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ButtonEditCategories = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonSaveChangesCategories = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBoxIDCategories = new Guna.UI2.WinForms.Guna2TextBox();
+            this.labelIDCategories = new System.Windows.Forms.Label();
+            this.labelNameCategories = new System.Windows.Forms.Label();
+            this.guna2TextBoxNameCategories = new Guna.UI2.WinForms.Guna2TextBox();
+            this.listViewCategories = new System.Windows.Forms.ListView();
+            this.columnIDCategories = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2PanelCategories = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBoxRefreshCategories = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonDeleteCategories = new Guna.UI2.WinForms.Guna2Button();
@@ -78,24 +88,6 @@ namespace CafeManagementSystem
             this.guna2DateTimePickerFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Foods = new System.Windows.Forms.TabPage();
             this.guna2PanelDrinksDessertsEdit = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PanelDrinksDesserts = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ComboBoxCategoriesofDrinks = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ButtonNewCategories = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBoxRefreshDrinks = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ButtonDeleteDrinks = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonAddDrinks = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PanelEditCategories = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ButtonEditCategories = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonSaveChangesCategories = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBoxIDCategories = new Guna.UI2.WinForms.Guna2TextBox();
-            this.labelIDCategories = new System.Windows.Forms.Label();
-            this.labelNameCategories = new System.Windows.Forms.Label();
-            this.guna2TextBoxNameCategories = new Guna.UI2.WinForms.Guna2TextBox();
-            this.listViewCategories = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2PanelEditDrinksDesserts = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ButtonEditDrinks = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonSaveChangesDrinks = new Guna.UI2.WinForms.Guna2Button();
@@ -112,6 +104,12 @@ namespace CafeManagementSystem
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2PanelDrinksDesserts = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ComboBoxCategoriesofDrinks = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ButtonNewCategories = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBoxRefreshDrinks = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ButtonDeleteDrinks = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonAddDrinks = new Guna.UI2.WinForms.Guna2Button();
             this.Accounts.SuspendLayout();
             this.guna2PanelAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshAccounts)).BeginInit();
@@ -119,6 +117,7 @@ namespace CafeManagementSystem
             this.guna2PanelEditInfoCustomer.SuspendLayout();
             this.Categories.SuspendLayout();
             this.guna2PanelCategoriesEdit.SuspendLayout();
+            this.guna2PanelEditCategories.SuspendLayout();
             this.guna2PanelCategories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshCategories)).BeginInit();
             this.guna2TabControlAdmin.SuspendLayout();
@@ -128,10 +127,9 @@ namespace CafeManagementSystem
             this.guna2PanelDateFromTo.SuspendLayout();
             this.Foods.SuspendLayout();
             this.guna2PanelDrinksDessertsEdit.SuspendLayout();
+            this.guna2PanelEditDrinksDesserts.SuspendLayout();
             this.guna2PanelDrinksDesserts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshDrinks)).BeginInit();
-            this.guna2PanelEditCategories.SuspendLayout();
-            this.guna2PanelEditDrinksDesserts.SuspendLayout();
             this.SuspendLayout();
             // 
             // Accounts
@@ -260,7 +258,7 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelEditInfoCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelEditInfoCustomer.BorderThickness = 2;
-            this.guna2PanelEditInfoCustomer.Controls.Add(this.guna2Button1);
+            this.guna2PanelEditInfoCustomer.Controls.Add(this.guna2ButtonEditAccount);
             this.guna2PanelEditInfoCustomer.Controls.Add(this.guna2ButtonSaveChanges);
             this.guna2PanelEditInfoCustomer.Controls.Add(this.guna2TextBoxName);
             this.guna2PanelEditInfoCustomer.Controls.Add(this.guna2TextBoxPass);
@@ -277,26 +275,26 @@ namespace CafeManagementSystem
             this.guna2PanelEditInfoCustomer.Size = new System.Drawing.Size(814, 201);
             this.guna2PanelEditInfoCustomer.TabIndex = 11;
             // 
-            // guna2Button1
+            // guna2ButtonEditAccount
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Red;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(463, 140);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(146, 46);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Edit";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2ButtonEditAccount.AutoRoundedCorners = true;
+            this.guna2ButtonEditAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ButtonEditAccount.BorderRadius = 22;
+            this.guna2ButtonEditAccount.BorderThickness = 2;
+            this.guna2ButtonEditAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonEditAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonEditAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonEditAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonEditAccount.FillColor = System.Drawing.Color.Red;
+            this.guna2ButtonEditAccount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonEditAccount.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonEditAccount.Location = new System.Drawing.Point(463, 140);
+            this.guna2ButtonEditAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ButtonEditAccount.Name = "guna2ButtonEditAccount";
+            this.guna2ButtonEditAccount.Size = new System.Drawing.Size(146, 46);
+            this.guna2ButtonEditAccount.TabIndex = 4;
+            this.guna2ButtonEditAccount.Text = "Edit";
+            this.guna2ButtonEditAccount.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2ButtonSaveChanges
             // 
@@ -567,6 +565,163 @@ namespace CafeManagementSystem
             this.guna2PanelCategoriesEdit.Size = new System.Drawing.Size(816, 798);
             this.guna2PanelCategoriesEdit.TabIndex = 5;
             // 
+            // guna2PanelEditCategories
+            // 
+            this.guna2PanelEditCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2PanelEditCategories.BorderThickness = 2;
+            this.guna2PanelEditCategories.Controls.Add(this.guna2ButtonEditCategories);
+            this.guna2PanelEditCategories.Controls.Add(this.guna2ButtonSaveChangesCategories);
+            this.guna2PanelEditCategories.Controls.Add(this.guna2TextBoxIDCategories);
+            this.guna2PanelEditCategories.Controls.Add(this.labelIDCategories);
+            this.guna2PanelEditCategories.Controls.Add(this.labelNameCategories);
+            this.guna2PanelEditCategories.Controls.Add(this.guna2TextBoxNameCategories);
+            this.guna2PanelEditCategories.Location = new System.Drawing.Point(1, 658);
+            this.guna2PanelEditCategories.Name = "guna2PanelEditCategories";
+            this.guna2PanelEditCategories.Size = new System.Drawing.Size(814, 140);
+            this.guna2PanelEditCategories.TabIndex = 13;
+            // 
+            // guna2ButtonEditCategories
+            // 
+            this.guna2ButtonEditCategories.AutoRoundedCorners = true;
+            this.guna2ButtonEditCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ButtonEditCategories.BorderRadius = 22;
+            this.guna2ButtonEditCategories.BorderThickness = 2;
+            this.guna2ButtonEditCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonEditCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonEditCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonEditCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonEditCategories.FillColor = System.Drawing.Color.Red;
+            this.guna2ButtonEditCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonEditCategories.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonEditCategories.Location = new System.Drawing.Point(623, 14);
+            this.guna2ButtonEditCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ButtonEditCategories.Name = "guna2ButtonEditCategories";
+            this.guna2ButtonEditCategories.Size = new System.Drawing.Size(169, 46);
+            this.guna2ButtonEditCategories.TabIndex = 4;
+            this.guna2ButtonEditCategories.Text = "Edit";
+            this.guna2ButtonEditCategories.Click += new System.EventHandler(this.guna2ButtonEditCategories_Click);
+            // 
+            // guna2ButtonSaveChangesCategories
+            // 
+            this.guna2ButtonSaveChangesCategories.AutoRoundedCorners = true;
+            this.guna2ButtonSaveChangesCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ButtonSaveChangesCategories.BorderRadius = 22;
+            this.guna2ButtonSaveChangesCategories.BorderThickness = 2;
+            this.guna2ButtonSaveChangesCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonSaveChangesCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonSaveChangesCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonSaveChangesCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonSaveChangesCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonSaveChangesCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonSaveChangesCategories.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonSaveChangesCategories.Location = new System.Drawing.Point(623, 80);
+            this.guna2ButtonSaveChangesCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ButtonSaveChangesCategories.Name = "guna2ButtonSaveChangesCategories";
+            this.guna2ButtonSaveChangesCategories.Size = new System.Drawing.Size(169, 46);
+            this.guna2ButtonSaveChangesCategories.TabIndex = 11;
+            this.guna2ButtonSaveChangesCategories.Text = "Save Changes";
+            this.guna2ButtonSaveChangesCategories.Click += new System.EventHandler(this.guna2ButtonSaveChangesCategories_Click);
+            // 
+            // guna2TextBoxIDCategories
+            // 
+            this.guna2TextBoxIDCategories.AutoRoundedCorners = true;
+            this.guna2TextBoxIDCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2TextBoxIDCategories.BorderRadius = 19;
+            this.guna2TextBoxIDCategories.BorderThickness = 2;
+            this.guna2TextBoxIDCategories.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxIDCategories.DefaultText = "";
+            this.guna2TextBoxIDCategories.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxIDCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxIDCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxIDCategories.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxIDCategories.Enabled = false;
+            this.guna2TextBoxIDCategories.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxIDCategories.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxIDCategories.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxIDCategories.Location = new System.Drawing.Point(103, 14);
+            this.guna2TextBoxIDCategories.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.guna2TextBoxIDCategories.Name = "guna2TextBoxIDCategories";
+            this.guna2TextBoxIDCategories.PasswordChar = '\0';
+            this.guna2TextBoxIDCategories.PlaceholderText = "";
+            this.guna2TextBoxIDCategories.SelectedText = "";
+            this.guna2TextBoxIDCategories.Size = new System.Drawing.Size(417, 41);
+            this.guna2TextBoxIDCategories.TabIndex = 1;
+            // 
+            // labelIDCategories
+            // 
+            this.labelIDCategories.AutoSize = true;
+            this.labelIDCategories.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.labelIDCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.labelIDCategories.Location = new System.Drawing.Point(19, 27);
+            this.labelIDCategories.Name = "labelIDCategories";
+            this.labelIDCategories.Size = new System.Drawing.Size(31, 19);
+            this.labelIDCategories.TabIndex = 2;
+            this.labelIDCategories.Text = "ID:";
+            // 
+            // labelNameCategories
+            // 
+            this.labelNameCategories.AutoSize = true;
+            this.labelNameCategories.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.labelNameCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.labelNameCategories.Location = new System.Drawing.Point(19, 91);
+            this.labelNameCategories.Name = "labelNameCategories";
+            this.labelNameCategories.Size = new System.Drawing.Size(59, 19);
+            this.labelNameCategories.TabIndex = 3;
+            this.labelNameCategories.Text = "Name:";
+            // 
+            // guna2TextBoxNameCategories
+            // 
+            this.guna2TextBoxNameCategories.AutoRoundedCorners = true;
+            this.guna2TextBoxNameCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2TextBoxNameCategories.BorderRadius = 19;
+            this.guna2TextBoxNameCategories.BorderThickness = 2;
+            this.guna2TextBoxNameCategories.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxNameCategories.DefaultText = "";
+            this.guna2TextBoxNameCategories.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxNameCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxNameCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxNameCategories.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxNameCategories.Enabled = false;
+            this.guna2TextBoxNameCategories.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxNameCategories.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxNameCategories.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxNameCategories.Location = new System.Drawing.Point(103, 80);
+            this.guna2TextBoxNameCategories.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.guna2TextBoxNameCategories.Name = "guna2TextBoxNameCategories";
+            this.guna2TextBoxNameCategories.PasswordChar = '\0';
+            this.guna2TextBoxNameCategories.PlaceholderText = "";
+            this.guna2TextBoxNameCategories.SelectedText = "";
+            this.guna2TextBoxNameCategories.Size = new System.Drawing.Size(417, 41);
+            this.guna2TextBoxNameCategories.TabIndex = 7;
+            // 
+            // listViewCategories
+            // 
+            this.listViewCategories.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnIDCategories,
+            this.columnName});
+            this.listViewCategories.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.listViewCategories.FullRowSelect = true;
+            this.listViewCategories.HideSelection = false;
+            this.listViewCategories.Location = new System.Drawing.Point(2, 0);
+            this.listViewCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listViewCategories.Name = "listViewCategories";
+            this.listViewCategories.Size = new System.Drawing.Size(812, 662);
+            this.listViewCategories.TabIndex = 12;
+            this.listViewCategories.UseCompatibleStateImageBehavior = false;
+            this.listViewCategories.View = System.Windows.Forms.View.Details;
+            this.listViewCategories.SelectedIndexChanged += new System.EventHandler(this.listViewCategories_SelectedIndexChanged);
+            // 
+            // columnIDCategories
+            // 
+            this.columnIDCategories.Text = "ID";
+            this.columnIDCategories.Width = 142;
+            // 
+            // columnName
+            // 
+            this.columnName.Text = "Name";
+            this.columnName.Width = 113;
+            // 
             // guna2PanelCategories
             // 
             this.guna2PanelCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
@@ -593,6 +748,7 @@ namespace CafeManagementSystem
             this.guna2PictureBoxRefreshCategories.TabIndex = 3;
             this.guna2PictureBoxRefreshCategories.TabStop = false;
             this.guna2PictureBoxRefreshCategories.UseTransparentBackground = true;
+            this.guna2PictureBoxRefreshCategories.Click += new System.EventHandler(this.guna2PictureBoxRefreshCategories_Click);
             // 
             // guna2ButtonDeleteCategories
             // 
@@ -613,6 +769,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteCategories.Size = new System.Drawing.Size(119, 46);
             this.guna2ButtonDeleteCategories.TabIndex = 2;
             this.guna2ButtonDeleteCategories.Text = "Delete";
+            this.guna2ButtonDeleteCategories.Click += new System.EventHandler(this.guna2ButtonDeleteCategories_Click);
             // 
             // guna2ButtonAddCategories
             // 
@@ -633,6 +790,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAddCategories.Size = new System.Drawing.Size(119, 46);
             this.guna2ButtonAddCategories.TabIndex = 1;
             this.guna2ButtonAddCategories.Text = "Add";
+            this.guna2ButtonAddCategories.Click += new System.EventHandler(this.guna2ButtonAddCategories_Click);
             // 
             // guna2TextBoxSearchCategories
             // 
@@ -658,6 +816,7 @@ namespace CafeManagementSystem
             this.guna2TextBoxSearchCategories.SelectedText = "";
             this.guna2TextBoxSearchCategories.Size = new System.Drawing.Size(258, 41);
             this.guna2TextBoxSearchCategories.TabIndex = 0;
+            this.guna2TextBoxSearchCategories.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxSearchCategories_KeyDown);
             // 
             // guna2TabControlAdmin
             // 
@@ -922,282 +1081,6 @@ namespace CafeManagementSystem
             this.guna2PanelDrinksDessertsEdit.Size = new System.Drawing.Size(816, 798);
             this.guna2PanelDrinksDessertsEdit.TabIndex = 6;
             // 
-            // guna2PanelDrinksDesserts
-            // 
-            this.guna2PanelDrinksDesserts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2PanelDrinksDesserts.BorderThickness = 2;
-            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ComboBoxCategoriesofDrinks);
-            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonNewCategories);
-            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2PictureBoxRefreshDrinks);
-            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonDeleteDrinks);
-            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonAddDrinks);
-            this.guna2PanelDrinksDesserts.Location = new System.Drawing.Point(0, 0);
-            this.guna2PanelDrinksDesserts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PanelDrinksDesserts.Name = "guna2PanelDrinksDesserts";
-            this.guna2PanelDrinksDesserts.Size = new System.Drawing.Size(816, 70);
-            this.guna2PanelDrinksDesserts.TabIndex = 5;
-            // 
-            // guna2ComboBoxCategoriesofDrinks
-            // 
-            this.guna2ComboBoxCategoriesofDrinks.AutoRoundedCorners = true;
-            this.guna2ComboBoxCategoriesofDrinks.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxCategoriesofDrinks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ComboBoxCategoriesofDrinks.BorderRadius = 17;
-            this.guna2ComboBoxCategoriesofDrinks.BorderThickness = 2;
-            this.guna2ComboBoxCategoriesofDrinks.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxCategoriesofDrinks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxCategoriesofDrinks.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBoxCategoriesofDrinks.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBoxCategoriesofDrinks.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBoxCategoriesofDrinks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBoxCategoriesofDrinks.ItemHeight = 30;
-            this.guna2ComboBoxCategoriesofDrinks.Location = new System.Drawing.Point(6, 8);
-            this.guna2ComboBoxCategoriesofDrinks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBoxCategoriesofDrinks.Name = "guna2ComboBoxCategoriesofDrinks";
-            this.guna2ComboBoxCategoriesofDrinks.Size = new System.Drawing.Size(288, 36);
-            this.guna2ComboBoxCategoriesofDrinks.TabIndex = 5;
-            // 
-            // guna2ButtonNewCategories
-            // 
-            this.guna2ButtonNewCategories.AutoRoundedCorners = true;
-            this.guna2ButtonNewCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonNewCategories.BorderRadius = 22;
-            this.guna2ButtonNewCategories.BorderThickness = 2;
-            this.guna2ButtonNewCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonNewCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonNewCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonNewCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonNewCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonNewCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonNewCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonNewCategories.Location = new System.Drawing.Point(314, 12);
-            this.guna2ButtonNewCategories.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2ButtonNewCategories.Name = "guna2ButtonNewCategories";
-            this.guna2ButtonNewCategories.Size = new System.Drawing.Size(184, 46);
-            this.guna2ButtonNewCategories.TabIndex = 4;
-            this.guna2ButtonNewCategories.Text = "New Categories";
-            // 
-            // guna2PictureBoxRefreshDrinks
-            // 
-            this.guna2PictureBoxRefreshDrinks.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxRefreshDrinks.Image")));
-            this.guna2PictureBoxRefreshDrinks.ImageRotate = 0F;
-            this.guna2PictureBoxRefreshDrinks.Location = new System.Drawing.Point(766, 14);
-            this.guna2PictureBoxRefreshDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBoxRefreshDrinks.Name = "guna2PictureBoxRefreshDrinks";
-            this.guna2PictureBoxRefreshDrinks.Size = new System.Drawing.Size(39, 42);
-            this.guna2PictureBoxRefreshDrinks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxRefreshDrinks.TabIndex = 3;
-            this.guna2PictureBoxRefreshDrinks.TabStop = false;
-            this.guna2PictureBoxRefreshDrinks.UseTransparentBackground = true;
-            // 
-            // guna2ButtonDeleteDrinks
-            // 
-            this.guna2ButtonDeleteDrinks.AutoRoundedCorners = true;
-            this.guna2ButtonDeleteDrinks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonDeleteDrinks.BorderRadius = 22;
-            this.guna2ButtonDeleteDrinks.BorderThickness = 2;
-            this.guna2ButtonDeleteDrinks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonDeleteDrinks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonDeleteDrinks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonDeleteDrinks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonDeleteDrinks.FillColor = System.Drawing.Color.Red;
-            this.guna2ButtonDeleteDrinks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonDeleteDrinks.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonDeleteDrinks.Location = new System.Drawing.Point(636, 12);
-            this.guna2ButtonDeleteDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2ButtonDeleteDrinks.Name = "guna2ButtonDeleteDrinks";
-            this.guna2ButtonDeleteDrinks.Size = new System.Drawing.Size(119, 46);
-            this.guna2ButtonDeleteDrinks.TabIndex = 2;
-            this.guna2ButtonDeleteDrinks.Text = "Delete";
-            // 
-            // guna2ButtonAddDrinks
-            // 
-            this.guna2ButtonAddDrinks.AutoRoundedCorners = true;
-            this.guna2ButtonAddDrinks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonAddDrinks.BorderRadius = 22;
-            this.guna2ButtonAddDrinks.BorderThickness = 2;
-            this.guna2ButtonAddDrinks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonAddDrinks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonAddDrinks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonAddDrinks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonAddDrinks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonAddDrinks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonAddDrinks.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAddDrinks.Location = new System.Drawing.Point(507, 12);
-            this.guna2ButtonAddDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2ButtonAddDrinks.Name = "guna2ButtonAddDrinks";
-            this.guna2ButtonAddDrinks.Size = new System.Drawing.Size(119, 46);
-            this.guna2ButtonAddDrinks.TabIndex = 1;
-            this.guna2ButtonAddDrinks.Text = "Add";
-            // 
-            // guna2PanelEditCategories
-            // 
-            this.guna2PanelEditCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2PanelEditCategories.BorderThickness = 2;
-            this.guna2PanelEditCategories.Controls.Add(this.guna2ButtonEditCategories);
-            this.guna2PanelEditCategories.Controls.Add(this.guna2ButtonSaveChangesCategories);
-            this.guna2PanelEditCategories.Controls.Add(this.guna2TextBoxIDCategories);
-            this.guna2PanelEditCategories.Controls.Add(this.labelIDCategories);
-            this.guna2PanelEditCategories.Controls.Add(this.labelNameCategories);
-            this.guna2PanelEditCategories.Controls.Add(this.guna2TextBoxNameCategories);
-            this.guna2PanelEditCategories.Location = new System.Drawing.Point(1, 658);
-            this.guna2PanelEditCategories.Name = "guna2PanelEditCategories";
-            this.guna2PanelEditCategories.Size = new System.Drawing.Size(814, 140);
-            this.guna2PanelEditCategories.TabIndex = 13;
-            // 
-            // guna2ButtonEditCategories
-            // 
-            this.guna2ButtonEditCategories.AutoRoundedCorners = true;
-            this.guna2ButtonEditCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonEditCategories.BorderRadius = 22;
-            this.guna2ButtonEditCategories.BorderThickness = 2;
-            this.guna2ButtonEditCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonEditCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonEditCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonEditCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonEditCategories.FillColor = System.Drawing.Color.Red;
-            this.guna2ButtonEditCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonEditCategories.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonEditCategories.Location = new System.Drawing.Point(623, 14);
-            this.guna2ButtonEditCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2ButtonEditCategories.Name = "guna2ButtonEditCategories";
-            this.guna2ButtonEditCategories.Size = new System.Drawing.Size(169, 46);
-            this.guna2ButtonEditCategories.TabIndex = 4;
-            this.guna2ButtonEditCategories.Text = "Edit";
-            // 
-            // guna2ButtonSaveChangesCategories
-            // 
-            this.guna2ButtonSaveChangesCategories.AutoRoundedCorners = true;
-            this.guna2ButtonSaveChangesCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonSaveChangesCategories.BorderRadius = 22;
-            this.guna2ButtonSaveChangesCategories.BorderThickness = 2;
-            this.guna2ButtonSaveChangesCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSaveChangesCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSaveChangesCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonSaveChangesCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonSaveChangesCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonSaveChangesCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonSaveChangesCategories.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonSaveChangesCategories.Location = new System.Drawing.Point(623, 80);
-            this.guna2ButtonSaveChangesCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2ButtonSaveChangesCategories.Name = "guna2ButtonSaveChangesCategories";
-            this.guna2ButtonSaveChangesCategories.Size = new System.Drawing.Size(169, 46);
-            this.guna2ButtonSaveChangesCategories.TabIndex = 11;
-            this.guna2ButtonSaveChangesCategories.Text = "Save Changes";
-            // 
-            // guna2TextBoxIDCategories
-            // 
-            this.guna2TextBoxIDCategories.AutoRoundedCorners = true;
-            this.guna2TextBoxIDCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2TextBoxIDCategories.BorderRadius = 19;
-            this.guna2TextBoxIDCategories.BorderThickness = 2;
-            this.guna2TextBoxIDCategories.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxIDCategories.DefaultText = "";
-            this.guna2TextBoxIDCategories.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxIDCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxIDCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxIDCategories.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxIDCategories.Enabled = false;
-            this.guna2TextBoxIDCategories.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxIDCategories.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxIDCategories.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxIDCategories.Location = new System.Drawing.Point(103, 14);
-            this.guna2TextBoxIDCategories.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBoxIDCategories.Name = "guna2TextBoxIDCategories";
-            this.guna2TextBoxIDCategories.PasswordChar = '\0';
-            this.guna2TextBoxIDCategories.PlaceholderText = "";
-            this.guna2TextBoxIDCategories.SelectedText = "";
-            this.guna2TextBoxIDCategories.Size = new System.Drawing.Size(417, 41);
-            this.guna2TextBoxIDCategories.TabIndex = 1;
-            // 
-            // labelIDCategories
-            // 
-            this.labelIDCategories.AutoSize = true;
-            this.labelIDCategories.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
-            this.labelIDCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelIDCategories.Location = new System.Drawing.Point(19, 27);
-            this.labelIDCategories.Name = "labelIDCategories";
-            this.labelIDCategories.Size = new System.Drawing.Size(31, 19);
-            this.labelIDCategories.TabIndex = 2;
-            this.labelIDCategories.Text = "ID:";
-            // 
-            // labelNameCategories
-            // 
-            this.labelNameCategories.AutoSize = true;
-            this.labelNameCategories.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
-            this.labelNameCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelNameCategories.Location = new System.Drawing.Point(19, 91);
-            this.labelNameCategories.Name = "labelNameCategories";
-            this.labelNameCategories.Size = new System.Drawing.Size(59, 19);
-            this.labelNameCategories.TabIndex = 3;
-            this.labelNameCategories.Text = "Name:";
-            // 
-            // guna2TextBoxNameCategories
-            // 
-            this.guna2TextBoxNameCategories.AutoRoundedCorners = true;
-            this.guna2TextBoxNameCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2TextBoxNameCategories.BorderRadius = 19;
-            this.guna2TextBoxNameCategories.BorderThickness = 2;
-            this.guna2TextBoxNameCategories.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxNameCategories.DefaultText = "";
-            this.guna2TextBoxNameCategories.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxNameCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxNameCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxNameCategories.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxNameCategories.Enabled = false;
-            this.guna2TextBoxNameCategories.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxNameCategories.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxNameCategories.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxNameCategories.Location = new System.Drawing.Point(103, 80);
-            this.guna2TextBoxNameCategories.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBoxNameCategories.Name = "guna2TextBoxNameCategories";
-            this.guna2TextBoxNameCategories.PasswordChar = '\0';
-            this.guna2TextBoxNameCategories.PlaceholderText = "";
-            this.guna2TextBoxNameCategories.SelectedText = "";
-            this.guna2TextBoxNameCategories.Size = new System.Drawing.Size(417, 41);
-            this.guna2TextBoxNameCategories.TabIndex = 7;
-            // 
-            // listViewCategories
-            // 
-            this.listViewCategories.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listViewCategories.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.listViewCategories.FullRowSelect = true;
-            this.listViewCategories.HideSelection = false;
-            this.listViewCategories.Location = new System.Drawing.Point(2, 0);
-            this.listViewCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listViewCategories.Name = "listViewCategories";
-            this.listViewCategories.Size = new System.Drawing.Size(812, 662);
-            this.listViewCategories.TabIndex = 12;
-            this.listViewCategories.UseCompatibleStateImageBehavior = false;
-            this.listViewCategories.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Display Name";
-            this.columnHeader1.Width = 142;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "User Name";
-            this.columnHeader2.Width = 113;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Phone Number";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 149;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Account Type";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 108;
-            // 
             // guna2PanelEditDrinksDesserts
             // 
             this.guna2PanelEditDrinksDesserts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
@@ -1442,6 +1325,114 @@ namespace CafeManagementSystem
             this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader8.Width = 108;
             // 
+            // guna2PanelDrinksDesserts
+            // 
+            this.guna2PanelDrinksDesserts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2PanelDrinksDesserts.BorderThickness = 2;
+            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ComboBoxCategoriesofDrinks);
+            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonNewCategories);
+            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2PictureBoxRefreshDrinks);
+            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonDeleteDrinks);
+            this.guna2PanelDrinksDesserts.Controls.Add(this.guna2ButtonAddDrinks);
+            this.guna2PanelDrinksDesserts.Location = new System.Drawing.Point(0, 0);
+            this.guna2PanelDrinksDesserts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PanelDrinksDesserts.Name = "guna2PanelDrinksDesserts";
+            this.guna2PanelDrinksDesserts.Size = new System.Drawing.Size(816, 70);
+            this.guna2PanelDrinksDesserts.TabIndex = 5;
+            // 
+            // guna2ComboBoxCategoriesofDrinks
+            // 
+            this.guna2ComboBoxCategoriesofDrinks.AutoRoundedCorners = true;
+            this.guna2ComboBoxCategoriesofDrinks.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxCategoriesofDrinks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ComboBoxCategoriesofDrinks.BorderRadius = 17;
+            this.guna2ComboBoxCategoriesofDrinks.BorderThickness = 2;
+            this.guna2ComboBoxCategoriesofDrinks.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxCategoriesofDrinks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxCategoriesofDrinks.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxCategoriesofDrinks.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxCategoriesofDrinks.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBoxCategoriesofDrinks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBoxCategoriesofDrinks.ItemHeight = 30;
+            this.guna2ComboBoxCategoriesofDrinks.Location = new System.Drawing.Point(6, 8);
+            this.guna2ComboBoxCategoriesofDrinks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ComboBoxCategoriesofDrinks.Name = "guna2ComboBoxCategoriesofDrinks";
+            this.guna2ComboBoxCategoriesofDrinks.Size = new System.Drawing.Size(288, 36);
+            this.guna2ComboBoxCategoriesofDrinks.TabIndex = 5;
+            // 
+            // guna2ButtonNewCategories
+            // 
+            this.guna2ButtonNewCategories.AutoRoundedCorners = true;
+            this.guna2ButtonNewCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonNewCategories.BorderRadius = 22;
+            this.guna2ButtonNewCategories.BorderThickness = 2;
+            this.guna2ButtonNewCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonNewCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonNewCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonNewCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonNewCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ButtonNewCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonNewCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonNewCategories.Location = new System.Drawing.Point(314, 12);
+            this.guna2ButtonNewCategories.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2ButtonNewCategories.Name = "guna2ButtonNewCategories";
+            this.guna2ButtonNewCategories.Size = new System.Drawing.Size(184, 46);
+            this.guna2ButtonNewCategories.TabIndex = 4;
+            this.guna2ButtonNewCategories.Text = "New Categories";
+            // 
+            // guna2PictureBoxRefreshDrinks
+            // 
+            this.guna2PictureBoxRefreshDrinks.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxRefreshDrinks.Image")));
+            this.guna2PictureBoxRefreshDrinks.ImageRotate = 0F;
+            this.guna2PictureBoxRefreshDrinks.Location = new System.Drawing.Point(766, 14);
+            this.guna2PictureBoxRefreshDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBoxRefreshDrinks.Name = "guna2PictureBoxRefreshDrinks";
+            this.guna2PictureBoxRefreshDrinks.Size = new System.Drawing.Size(39, 42);
+            this.guna2PictureBoxRefreshDrinks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxRefreshDrinks.TabIndex = 3;
+            this.guna2PictureBoxRefreshDrinks.TabStop = false;
+            this.guna2PictureBoxRefreshDrinks.UseTransparentBackground = true;
+            // 
+            // guna2ButtonDeleteDrinks
+            // 
+            this.guna2ButtonDeleteDrinks.AutoRoundedCorners = true;
+            this.guna2ButtonDeleteDrinks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ButtonDeleteDrinks.BorderRadius = 22;
+            this.guna2ButtonDeleteDrinks.BorderThickness = 2;
+            this.guna2ButtonDeleteDrinks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDeleteDrinks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonDeleteDrinks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonDeleteDrinks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonDeleteDrinks.FillColor = System.Drawing.Color.Red;
+            this.guna2ButtonDeleteDrinks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonDeleteDrinks.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonDeleteDrinks.Location = new System.Drawing.Point(636, 12);
+            this.guna2ButtonDeleteDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ButtonDeleteDrinks.Name = "guna2ButtonDeleteDrinks";
+            this.guna2ButtonDeleteDrinks.Size = new System.Drawing.Size(119, 46);
+            this.guna2ButtonDeleteDrinks.TabIndex = 2;
+            this.guna2ButtonDeleteDrinks.Text = "Delete";
+            // 
+            // guna2ButtonAddDrinks
+            // 
+            this.guna2ButtonAddDrinks.AutoRoundedCorners = true;
+            this.guna2ButtonAddDrinks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
+            this.guna2ButtonAddDrinks.BorderRadius = 22;
+            this.guna2ButtonAddDrinks.BorderThickness = 2;
+            this.guna2ButtonAddDrinks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAddDrinks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAddDrinks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonAddDrinks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonAddDrinks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonAddDrinks.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonAddDrinks.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonAddDrinks.Location = new System.Drawing.Point(507, 12);
+            this.guna2ButtonAddDrinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ButtonAddDrinks.Name = "guna2ButtonAddDrinks";
+            this.guna2ButtonAddDrinks.Size = new System.Drawing.Size(119, 46);
+            this.guna2ButtonAddDrinks.TabIndex = 1;
+            this.guna2ButtonAddDrinks.Text = "Add";
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1462,6 +1453,8 @@ namespace CafeManagementSystem
             this.guna2PanelEditInfoCustomer.PerformLayout();
             this.Categories.ResumeLayout(false);
             this.guna2PanelCategoriesEdit.ResumeLayout(false);
+            this.guna2PanelEditCategories.ResumeLayout(false);
+            this.guna2PanelEditCategories.PerformLayout();
             this.guna2PanelCategories.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshCategories)).EndInit();
             this.guna2TabControlAdmin.ResumeLayout(false);
@@ -1472,12 +1465,10 @@ namespace CafeManagementSystem
             this.guna2PanelDateFromTo.PerformLayout();
             this.Foods.ResumeLayout(false);
             this.guna2PanelDrinksDessertsEdit.ResumeLayout(false);
-            this.guna2PanelDrinksDesserts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshDrinks)).EndInit();
-            this.guna2PanelEditCategories.ResumeLayout(false);
-            this.guna2PanelEditCategories.PerformLayout();
             this.guna2PanelEditDrinksDesserts.ResumeLayout(false);
             this.guna2PanelEditDrinksDesserts.PerformLayout();
+            this.guna2PanelDrinksDesserts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshDrinks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1536,7 +1527,7 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxType;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPhone;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelEditInfoCustomer;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonEditAccount;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSaveChanges;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelEditCategories;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonEditCategories;
@@ -1546,10 +1537,8 @@ namespace CafeManagementSystem
         private System.Windows.Forms.Label labelNameCategories;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxNameCategories;
         private System.Windows.Forms.ListView listViewCategories;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnIDCategories;
+        private System.Windows.Forms.ColumnHeader columnName;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelEditDrinksDesserts;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonEditDrinks;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSaveChangesDrinks;

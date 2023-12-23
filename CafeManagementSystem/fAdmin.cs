@@ -20,6 +20,7 @@ namespace CafeManagementSystem
         {
             InitializeComponent();
             LoadAccountList(guna2TextBoxSearchAccounts.Text);
+            LoadCateList(guna2TextBoxSearchCategories.Text);
         }
      /*   void ShowAccount()
         {
@@ -58,11 +59,36 @@ namespace CafeManagementSystem
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
         }
+
+        void LoadCateList(string nearName)
+        {
+            List<Categories> listCate = CategoriesDAO.Instance.SearchCateByName(nearName);
+            listViewCategories.Items.Clear();
+            //  List<CafeManagementSystem.DTO.Account> listAccount = AccountDAO.Instance.GetListAccount();
+            foreach (CafeManagementSystem.DTO.Categories item in listCate)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.IdCategories.ToString());
+                lsvItem.SubItems.Add(item.NameCategories.ToString());
+               
+                //  lsvItem.SubItems.Add(item.PassWord.ToString());
+                // thêm vào list view bill
+                listViewCategories.Items.Add(lsvItem);
+            }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = culture;
+        }
         private void guna2TextBoxSearchAccounts_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 LoadAccountList(guna2TextBoxSearchAccounts.Text);
+            }
+        }
+        private void guna2TextBoxSearchCategories_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadCateList(guna2TextBoxSearchCategories.Text);
             }
         }
 
@@ -149,7 +175,76 @@ namespace CafeManagementSystem
             else
             {
                  AccountDAO.Instance.EditAccount(guna2TextBoxUserName.Text, guna2TextBoxName.Text,guna2TextBoxType.Text,guna2TextBoxPhone.Text);
+                guna2TextBoxName.Enabled = false;
+                guna2TextBoxPhone.Enabled = false;
+                guna2TextBoxType.Enabled = false;
+                guna2TextBoxUserName.Enabled = false;
+                guna2TextBoxPass.Enabled = false;
             }
+
+        }
+
+        private void listViewCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewCategories.SelectedItems.Count == 0)
+            {
+                guna2TextBoxIDCategories.Text = "";
+                guna2TextBoxNameCategories.Text = "";
+            }
+            else
+            {
+                ListViewItem item = listViewCategories.SelectedItems[0];
+                guna2TextBoxIDCategories.Text = item.SubItems[0].Text;
+                guna2TextBoxNameCategories.Text = item.SubItems[1].Text;
+                
+
+                guna2TextBoxIDCategories.Enabled = false;
+                guna2TextBoxNameCategories.Enabled = false;
+            }
+        }
+
+        private void guna2ButtonEditCategories_Click(object sender, EventArgs e)
+        {
+            
+            guna2TextBoxNameCategories.Enabled = true;
+           
+        }
+
+        private void guna2ButtonSaveChangesCategories_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBoxIDCategories.Enabled == true)
+            {
+                CategoriesDAO.Instance.AddCategories(guna2TextBoxIDCategories.Text,guna2TextBoxNameCategories.Text);
+                guna2TextBoxNameCategories.Text = "";
+                guna2TextBoxIDCategories.Text = "";
+            }
+            else
+            {
+                CategoriesDAO.Instance.EditCategories(guna2TextBoxIDCategories.Text,guna2TextBoxNameCategories.Text );
+                guna2TextBoxNameCategories.Enabled = false;
+            }
+        }
+
+        private void guna2ButtonDeleteCategories_Click(object sender, EventArgs e)
+        {
+            CategoriesDAO.Instance.DeleteCategories(guna2TextBoxIDCategories.Text);
+            guna2TextBoxIDCategories.Text = "";
+            guna2TextBoxNameCategories.Text = "";
+            LoadCateList(guna2TextBoxSearchCategories.Text);
+        }
+
+        private void guna2PictureBoxRefreshCategories_Click(object sender, EventArgs e)
+        {
+            LoadCateList(guna2TextBoxSearchCategories.Text);
+        }
+
+        private void guna2ButtonAddCategories_Click(object sender, EventArgs e)
+        {
+            guna2TextBoxNameCategories.Enabled = true;
+            guna2TextBoxIDCategories.Enabled = true;
+
+            guna2TextBoxNameCategories.Text = "";
+            guna2TextBoxIDCategories.Text = "";
         }
     }
 }
