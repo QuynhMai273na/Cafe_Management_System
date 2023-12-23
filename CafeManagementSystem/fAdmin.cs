@@ -21,6 +21,7 @@ namespace CafeManagementSystem
             InitializeComponent();
             LoadAccountList(guna2TextBoxSearchAccounts.Text);
             LoadCateList(guna2TextBoxSearchCategories.Text);
+            LoadFoodList(guna2TextBoxSearchFood.Text);
         }
      /*   void ShowAccount()
         {
@@ -41,7 +42,7 @@ namespace CafeManagementSystem
             Thread.CurrentThread.CurrentCulture = culture;
         }
      */
-     //nochange
+    
         void LoadAccountList(string nearName)
         {
             List<Account> listAcc = AccountDAO.Instance.SearchAccountByName(nearName);
@@ -65,15 +66,31 @@ namespace CafeManagementSystem
         {
             List<Categories> listCate = CategoriesDAO.Instance.SearchCateByName(nearName);
             listViewCategories.Items.Clear();
-            //  List<CafeManagementSystem.DTO.Account> listAccount = AccountDAO.Instance.GetListAccount();
+            
             foreach (CafeManagementSystem.DTO.Categories item in listCate)
             {
                 ListViewItem lsvItem = new ListViewItem(item.IdCategories.ToString());
                 lsvItem.SubItems.Add(item.NameCategories.ToString());
                
-                //  lsvItem.SubItems.Add(item.PassWord.ToString());
-                // thêm vào list view bill
                 listViewCategories.Items.Add(lsvItem);
+            }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = culture;
+        }
+
+        void LoadFoodList(string nearName)
+        {
+            List<Food> listFood = FoodDAO.Instance.SearchFoodByName(nearName);
+            listViewDrinksDesserts.Items.Clear();
+            foreach (CafeManagementSystem.DTO.Food item in listFood)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.Name.ToString());
+                lsvItem.SubItems.Add(item.Id.ToString());
+                lsvItem.SubItems.Add(item.IdCategory.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString());
+
+                // thêm vào list view bill
+                listViewDrinksDesserts.Items.Add(lsvItem);
             }
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
@@ -93,6 +110,13 @@ namespace CafeManagementSystem
             }
         }
 
+        private void guna2TextBoxSearchFood_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadFoodList(guna2TextBoxSearchFood.Text);
+            }
+        }
         private void listViewAccount_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewAccount.SelectedItems.Count == 0)
@@ -246,6 +270,83 @@ namespace CafeManagementSystem
 
             guna2TextBoxNameCategories.Text = "";
             guna2TextBoxIDCategories.Text = "";
+        }
+
+        private void listViewDrinksDesserts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewDrinksDesserts.SelectedItems.Count == 0)
+            {
+                guna2TextBoxIDCategoriesItems.Text = "";
+                guna2TextBoxIDItems.Text = "";
+                guna2TextBoxFoodPrice.Text = "";
+                guna2TextBoxItemsName.Text = "";
+            }
+            else
+            {
+                ListViewItem item = listViewDrinksDesserts.SelectedItems[0];
+                guna2TextBoxItemsName.Text = item.SubItems[0].Text;
+                guna2TextBoxIDItems.Text = item.SubItems[1].Text;
+                guna2TextBoxIDCategoriesItems.Text = item.SubItems[2].Text;
+                guna2TextBoxFoodPrice.Text= item.SubItems[3].Text;
+
+                guna2TextBoxFoodPrice.Enabled=false;
+                guna2TextBoxIDCategoriesItems.Enabled = false;
+                guna2TextBoxIDItems.Enabled = false;
+                guna2TextBoxItemsName.Enabled = false;
+            }
+        }
+
+        private void guna2ButtonEditDrinks_Click(object sender, EventArgs e)
+        {
+            guna2TextBoxItemsName.Enabled = true;
+            guna2TextBoxFoodPrice.Enabled = true;
+        }
+
+        private void guna2ButtonAddDrinks_Click(object sender, EventArgs e)
+        {
+            guna2TextBoxFoodPrice.Enabled = true;
+            guna2TextBoxIDCategoriesItems.Enabled = true;
+            guna2TextBoxIDItems.Enabled = true;
+            guna2TextBoxItemsName.Enabled = true;
+
+            guna2TextBoxFoodPrice.Text = "";
+            guna2TextBoxIDCategoriesItems.Text = "";
+            guna2TextBoxIDItems.Text = "";
+            guna2TextBoxItemsName.Text = "";
+        }
+
+        private void guna2PictureBoxRefreshDrinks_Click(object sender, EventArgs e)
+        {
+            LoadFoodList(guna2TextBoxSearchFood.Text);
+        }
+
+        private void guna2ButtonDeleteDrinks_Click(object sender, EventArgs e)
+        {
+            FoodDAO.Instance.DeleteFood(guna2TextBoxIDItems.Text);
+            guna2TextBoxIDItems.Text = "";
+            guna2TextBoxItemsName.Text = "";
+            guna2TextBoxFoodPrice.Text = "";
+            guna2TextBoxIDCategoriesItems.Text = "";
+            LoadFoodList(guna2TextBoxSearchFood.Text);
+        }
+
+        private void guna2ButtonSaveChangesDrinks_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBoxIDCategoriesItems.Enabled == true)
+            {
+                FoodDAO.Instance.AddFood(guna2TextBoxIDItems.Text, guna2TextBoxItemsName.Text, guna2TextBoxIDCategoriesItems.Text,guna2TextBoxFoodPrice.Text) ;
+                guna2TextBoxIDItems.Text = "";
+                guna2TextBoxItemsName.Text = "";
+                guna2TextBoxFoodPrice.Text = "";
+                guna2TextBoxIDCategoriesItems.Text = "";
+            }
+            else
+            {
+                FoodDAO.Instance.EditFood(guna2TextBoxIDItems.Text,guna2TextBoxItemsName.Text, guna2TextBoxFoodPrice.Text);
+                guna2TextBoxNameCategories.Enabled = false;
+                guna2TextBoxItemsName.Enabled =false;
+                guna2TextBoxFoodPrice.Enabled = false;
+            }
         }
     }
 }

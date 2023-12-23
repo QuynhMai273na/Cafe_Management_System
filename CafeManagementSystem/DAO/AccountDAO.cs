@@ -125,5 +125,10 @@ namespace CafeManagementSystem.DAO
             string query = string.Format("update account set displayName = N'{0}', accountType = N'{1}', phoneNumber = N'{2}' where userName = N'{3}'",displayname,accounttype,phonenumber,username);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
         }
+        public void EditAccountInUserProfile(string username, string displayname, string phonenumber, string password)
+        {
+            string query = string.Format("update account set displayName = N'{0}', phoneNumber = N'{1}', passWord = N'{2}' where userName = N'{3}'", displayname, phonenumber,password, username);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
