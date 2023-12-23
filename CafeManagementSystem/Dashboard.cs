@@ -16,7 +16,7 @@ namespace CafeManagementSystem
 {
     public partial class Dashboard : Form
     {
-        float totalmoney = 0;
+        int totalmoney = 0;
         public Dashboard()
         {
             InitializeComponent();
@@ -24,12 +24,25 @@ namespace CafeManagementSystem
         }
 
         #region Methods
-        List<Food> SearchFoodByName(string nearName)
-        { 
+
+        void LoadFoodList(string nearName)
+        {
             List<Food> listFoods = FoodDAO.Instance.SearchFoodByName(nearName);
-            return listFoods;
+            if (listFoods.Count == 0)
+            {
+                fNotification noti = new fNotification();
+                noti.labelNote.Text = "This item is not available in the menu !";
+                noti.ShowDialog();
+            }
+            guna2ComboBoxResultSearch.DataSource = listFoods;
+            guna2ComboBoxResultSearch.DisplayMember = "Name";
         }
-        void LoadFoodList() { }
+        void LoadFoodListById(int id)
+        {
+            List<Food> list = FoodDAO.Instance.GetFoodById(id);
+            guna2ComboBoxResultSearch.DataSource = list;
+            guna2ComboBoxResultSearch.DisplayMember = "Name";
+        }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -57,7 +70,7 @@ namespace CafeManagementSystem
         }
         void ShowBill(int id)
         {
-            float sumPrice = 0;
+            int sumPrice = 0;
             // listViewBill
             listViewBill.Items.Clear();
             List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
@@ -81,24 +94,41 @@ namespace CafeManagementSystem
         void btn_Click(object sender, EventArgs e)
         {
             int idTable = ((sender as Button).Tag as Table).Id;
+            listViewBill.Tag = (sender as Button).Tag;
             ShowBill(idTable);
         }
 
         private void guna2NumericUpDownDiscount_ValueChanged(object sender, EventArgs e)
         {
-            float moneyAfterDis = totalmoney * (100 - ((float)Convert.ToDouble(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
+            float moneyAfterDis = (float)(totalmoney * (100 - Convert.ToInt16(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
             this.labelTotalBill.Text = "Total: \t" + moneyAfterDis.ToString("c");
         }
         private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) SearchFoodByName(guna2TextBoxSearch.Text);
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoadFoodList(guna2TextBoxSearch.Text);
+            }
         }
-        private void guna2ComboBoxResultSearch_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void guna2CircleButtonAddFood_Click(object sender, EventArgs e)
         {
-            LoadFoodList();
+            Table table = listViewBill.Tag as Table;
+            int idBill = BillDAO.Instance.GetUncheckBillIdByTableId(table.Id);
+
+            int idFood = (guna2ComboBoxResultSearch.SelectedItem as Food).Id;
+            int count = (int)guna2NumericUpDownNumberAdd.Value;
+            if (idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(table.Id);
+                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.getMaxIdBill(), idFood, count);
+            }
+            else
+            {
+                BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+            }
+            ShowBill(table.Id);
         }
-
-
 
         #endregion
 

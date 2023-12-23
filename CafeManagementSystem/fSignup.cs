@@ -37,7 +37,7 @@ namespace CafeManagementSystem
 
         public bool CheckAccount(string ac)// check username
         {
-            return Regex.IsMatch(ac, "^{6,24}$");
+            return Regex.IsMatch(ac, @"^.{6,24}$");
         }
         private void guna2ButtonSignUp_Click(object sender, EventArgs e)
         {

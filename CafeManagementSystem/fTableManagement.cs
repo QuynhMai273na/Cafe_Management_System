@@ -20,53 +20,6 @@ namespace CafeManagementSystem
         }
 
         #region Method 
-        void LoadTable()
-        {
-            List<Table> tableList = TableDAO.Instance.LoadTableList();
-            foreach (Table item in tableList)
-            {
-                Button btn = new Button() { Width = 80, Height = 80 };
-                btn.Text = item.Name + "\n" + item.NumPeople + "\n" + item.Location;
-                btn.Click += btn_Click;
-                btn.Tag = item;
-                switch (item.Status)
-                {
-                    case "Reserved":
-                        btn.BackColor = Color.Pink;
-                        break;
-                    case "Occupied":
-                        btn.BackColor = Color.Red;
-                        break;
-                    default:
-                        btn.BackColor = Color.Green;
-                        break;
-                }
-
-            }
-        }
-        void ShowBill(int id)
-        {
-            //lsvBill.Items.Clear();
-            List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-            foreach (CafeManagementSystem.DTO.Menu item in listbillInfo)
-            {
-                ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
-                lsvItem.SubItems.Add(item.Price.ToString());
-                lsvItem.SubItems.Add(item.Count.ToString());
-                lsvItem.SubItems.Add(item.TotalPrice.ToString());
-
-                // thêm vào list view bill
-                //lsvBill.Items.Add(lsvItem);
-            }
-        }
-        #endregion
-        #region Events
-        void btn_Click(object sender, EventArgs e)
-        {
-            int idTable =((sender as Button).Tag as Table).Id;
-            ShowBill(idTable);
-        }
-
         private void guna2ButtonDashBoard_Click(object sender, EventArgs e)
         {
             labelTableManage.Text = "Table Manager Overview";

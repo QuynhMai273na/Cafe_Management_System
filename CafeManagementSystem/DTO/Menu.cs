@@ -21,14 +21,14 @@ namespace CafeManagementSystem.DTO
             get { return count; }
             set { count = value; }
         }
-        private float price;
-        public float Price
+        private int price;
+        public int Price
         {
             get { return price; }
             set { price = value; }
         }
-        private float totalPrice;
-        public float TotalPrice
+        private int totalPrice;
+        public int TotalPrice
         {
             get { return totalPrice; }
             set { totalPrice = value; }
@@ -44,8 +44,8 @@ namespace CafeManagementSystem.DTO
         {
             this.FoodName = row["name"].ToString();
             this.Count = (int)row["count"];
-            this.Price = (float)Convert.ToDouble(row["price"].ToString());
-            this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());
+            this.Price = (int)row["price"];
+            this.TotalPrice = (int)row["totalPrice"];
         }
     }
 }

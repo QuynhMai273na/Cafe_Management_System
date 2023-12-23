@@ -86,9 +86,9 @@
             this.guna2ButtonPayMent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonPayMent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonPayMent.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonPayMent.Location = new System.Drawing.Point(854, 649);
+            this.guna2ButtonPayMent.Location = new System.Drawing.Point(867, 648);
             this.guna2ButtonPayMent.Name = "guna2ButtonPayMent";
-            this.guna2ButtonPayMent.Size = new System.Drawing.Size(105, 45);
+            this.guna2ButtonPayMent.Size = new System.Drawing.Size(100, 45);
             this.guna2ButtonPayMent.TabIndex = 22;
             this.guna2ButtonPayMent.Text = "Payment";
             // 
@@ -99,7 +99,7 @@
             this.guna2NumericUpDownDiscount.BorderRadius = 10;
             this.guna2NumericUpDownDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDownDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDownDiscount.Location = new System.Drawing.Point(597, 627);
+            this.guna2NumericUpDownDiscount.Location = new System.Drawing.Point(597, 631);
             this.guna2NumericUpDownDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2NumericUpDownDiscount.Name = "guna2NumericUpDownDiscount";
             this.guna2NumericUpDownDiscount.Size = new System.Drawing.Size(78, 23);
@@ -286,7 +286,7 @@
             this.guna2ButtonExportBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonExportBill.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonExportBill.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonExportBill.Location = new System.Drawing.Point(747, 649);
+            this.guna2ButtonExportBill.Location = new System.Drawing.Point(761, 648);
             this.guna2ButtonExportBill.Name = "guna2ButtonExportBill";
             this.guna2ButtonExportBill.Size = new System.Drawing.Size(100, 45);
             this.guna2ButtonExportBill.TabIndex = 32;
@@ -313,18 +313,19 @@
             this.guna2CircleButtonAddFood.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButtonAddFood.Image")));
             this.guna2CircleButtonAddFood.ImageOffset = new System.Drawing.Point(1, 0);
             this.guna2CircleButtonAddFood.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButtonAddFood.Location = new System.Drawing.Point(432, 48);
+            this.guna2CircleButtonAddFood.Location = new System.Drawing.Point(432, 46);
             this.guna2CircleButtonAddFood.Name = "guna2CircleButtonAddFood";
             this.guna2CircleButtonAddFood.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButtonAddFood.Size = new System.Drawing.Size(36, 36);
             this.guna2CircleButtonAddFood.TabIndex = 22;
+            this.guna2CircleButtonAddFood.Click += new System.EventHandler(this.guna2CircleButtonAddFood_Click);
             // 
             // guna2TextBoxShowBill
             // 
             this.guna2TextBoxShowBill.AutoRoundedCorners = true;
             this.guna2TextBoxShowBill.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxShowBill.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2TextBoxShowBill.BorderRadius = 12;
+            this.guna2TextBoxShowBill.BorderRadius = 14;
             this.guna2TextBoxShowBill.BorderThickness = 2;
             this.guna2TextBoxShowBill.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxShowBill.DefaultText = "Bill";
@@ -343,7 +344,7 @@
             this.guna2TextBoxShowBill.PasswordChar = '\0';
             this.guna2TextBoxShowBill.PlaceholderText = "";
             this.guna2TextBoxShowBill.SelectedText = "";
-            this.guna2TextBoxShowBill.Size = new System.Drawing.Size(468, 26);
+            this.guna2TextBoxShowBill.Size = new System.Drawing.Size(468, 30);
             this.guna2TextBoxShowBill.TabIndex = 21;
             this.guna2TextBoxShowBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -377,7 +378,6 @@
             this.guna2ComboBoxResultSearch.Name = "guna2ComboBoxResultSearch";
             this.guna2ComboBoxResultSearch.Size = new System.Drawing.Size(329, 36);
             this.guna2ComboBoxResultSearch.TabIndex = 27;
-            this.guna2ComboBoxResultSearch.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxResultSearch_SelectedIndexChanged);
             // 
             // guna2NumericUpDownNumberAdd
             // 
@@ -386,8 +386,13 @@
             this.guna2NumericUpDownNumberAdd.BorderRadius = 17;
             this.guna2NumericUpDownNumberAdd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDownNumberAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDownNumberAdd.Location = new System.Drawing.Point(335, 48);
+            this.guna2NumericUpDownNumberAdd.Location = new System.Drawing.Point(335, 46);
             this.guna2NumericUpDownNumberAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDownNumberAdd.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.guna2NumericUpDownNumberAdd.Name = "guna2NumericUpDownNumberAdd";
             this.guna2NumericUpDownNumberAdd.Size = new System.Drawing.Size(90, 36);
             this.guna2NumericUpDownNumberAdd.TabIndex = 26;
