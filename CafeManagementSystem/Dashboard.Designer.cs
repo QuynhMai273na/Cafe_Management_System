@@ -506,6 +506,7 @@
             this.Controls.Add(this.labelTotalBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownDiscount)).EndInit();
             this.guna2PanelCustomerInfo.ResumeLayout(false);

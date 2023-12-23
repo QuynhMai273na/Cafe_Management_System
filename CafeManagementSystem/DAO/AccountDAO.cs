@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CafeManagementSystem.DTO;
 
 namespace CafeManagementSystem.DAO
 {
@@ -56,6 +58,72 @@ namespace CafeManagementSystem.DAO
             }
             return "";
         }
+        public Account GetAccountByUserName(string userName)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Account where userName='" + userName + "'");
+            foreach (DataRow item in data.Rows)
+            {
+               
+                Account account = new Account(item);
+                return account;
+            }
+            return null;
+        }
+        public List<Account> GetListAccount()
+        {
+            List<Account> listAcc = new List<Account>();
+            string query = "SELECT * FROM dbo.Account ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                listAcc.Add(acc);
+            }
+            return listAcc;
+        }
+        static string RemoveDiacritics(string input)
+        {
+            string normalizedString = input.Normalize(NormalizationForm.FormD);
+            StringBuilder stringBuilder = new StringBuilder();
 
+            foreach (char c in normalizedString)
+            {
+                UnicodeCategory unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(c);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+        }
+        public List<Account> SearchAccountByName(string nearName)
+        {
+            List<Account> list = new List<Account>();
+            nearName = RemoveDiacritics(nearName);
+            string query = string.Format("SELECT * FROM Account WHERE displayName COLLATE SQL_Latin1_General_CP1253_CI_AI LIKE N'%{0}%' ", nearName);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                list.Add(acc);
+            }
+            return list;
+        }
+        public void DeleteAccount(string user)
+        {
+            string query = string.Format("Delete FROM Account WHERE userName =  N'{0}' ", user);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void AddAccount (string username, string displayname, string password, string accounttype, string phonenumber)
+        {
+            string query = string.Format("Insert into account (userName,displayName,passWord,accountType,phoneNumber) values (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')", username, displayname, password, accounttype, phonenumber);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void EditAccount(string username, string displayname,string accounttype, string phonenumber)
+        {
+            string query = string.Format("update account set displayName = N'{0}', accountType = N'{1}', phoneNumber = N'{2}' where userName = N'{3}'",displayname,accounttype,phonenumber,username);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
