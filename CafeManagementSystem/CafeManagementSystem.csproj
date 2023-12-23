@@ -109,13 +109,6 @@
     <Compile Include="fSignup.Designer.cs">
       <DependentUpon>fSignup.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>ModelEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TableFood.cs">
-      <DependentUpon>ModelEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,18 +143,9 @@
     <EmbeddedResource Include="fSignup.resx">
       <DependentUpon>fSignup.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelEntity.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelEntity.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelEntity.edmx.diagram">
-      <DependentUpon>ModelEntity.edmx</DependentUpon>
-    </None>
-
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
