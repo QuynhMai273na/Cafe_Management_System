@@ -1,4 +1,5 @@
 ﻿using CafeManagementSystem.DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -43,10 +44,11 @@ namespace CafeManagementSystem.DAO
             }
             catch { return 1; }
         }
-        public void CheckOut(int id)
+        public void CheckOut(int id, Guna2TextBox textBox)
         {
-            string query = "UPDATE dbo.Bill SET status = 1 WHERE id = " + id; ;
-            DataProvider.Instance.ExecuteNonQuery(query);
+            string query1 = "UPDATE dbo.Bill SET status = 1, datePayment = GETDATE() WHERE id = " + id; ;
+            DataProvider.Instance.ExecuteNonQuery(query1);
+            
         }
     }
 }

@@ -17,6 +17,7 @@ namespace CafeManagementSystem
     public partial class Dashboard : Form
     {
         int totalmoney = 0;
+        float moneyAfterDis;
         public Dashboard()
         {
             InitializeComponent();
@@ -73,7 +74,6 @@ namespace CafeManagementSystem
         void ShowBill(int id)
         {
             int sumPrice = 0;
-            // listViewBill
             listViewBill.Items.Clear();
             List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
             foreach (CafeManagementSystem.DTO.Menu item in listbillInfo)
@@ -94,16 +94,11 @@ namespace CafeManagementSystem
         }
         int ApplyDiscountForCustomerMember (string level)
         {
-            if (level == "Diamond")
-            {
-                return 15;
-            }
+            if (level == "Diamond") return 15;
             else if (level == "Gold") return 10;
             else if (level == "Silver") return 5;
             else if (level == "Member") return 3;
             else return 0;
-
-
         }
         void LoadMemberCustomer(string customerPhone) { 
             List<Customer> customerList = CustomerDAO.Instance.GetCustomerByPhone(customerPhone);
@@ -129,7 +124,7 @@ namespace CafeManagementSystem
 
         private void guna2NumericUpDownDiscount_ValueChanged(object sender, EventArgs e)
         {
-            float moneyAfterDis = (float)(totalmoney * (100 - Convert.ToInt16(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
+            moneyAfterDis = (float)(totalmoney * (100 - Convert.ToInt16(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
             this.labelTotalBill.Text = "Total: \t" + moneyAfterDis.ToString("c");
         }
         private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
@@ -198,11 +193,23 @@ namespace CafeManagementSystem
                 notice.ShowDialog();
                 if (notice.pay == true)
                 {
-                    BillDAO.Instance.CheckOut(idBill);
+
+                    if (guna2TextBoxCustomerPhone.Text != "" && CheckMember(guna2TextBoxCustomerPhone.Text)==true)
+                    {
+                        string query = "UPDATE dbo.Bill SET customer = @customer WHERE id = @id";
+                        DataProvider.Instance.ExecuteNonQuery(query, new object[] { guna2TextBoxCustomerPhone.Text, idBill });
+
+                    }
+                    DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateBill @idBill , @totalmoney , @discount , @note", new object[] { idBill , moneyAfterDis , guna2NumericUpDownDiscount.Value , textBoxWriteNote.Text});
                     ShowBill(table.Id);
+                    guna2TextBoxCustomerName.Text = "";
+                    guna2TextBoxCustomerLevel.Text = "";
+                    guna2NumericUpDownDiscount.Value = 0;
+                    guna2TextBoxCustomerPhone.Text = "";
                 }
             }
             LoadTable();
+
 
         }
 
