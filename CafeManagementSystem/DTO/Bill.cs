@@ -51,7 +51,11 @@ namespace CafeManagementSystem.DTO
         {
             this.Id = (int)row["id"];
             this.IdTable = (int)row["idTable"];
-            this.Customer = (string)row["customer"];
+            
+            if(Customer!=null)
+            {
+                this.Customer = (string)row["customer"];
+            }
             var datePaymentTemp = row["datePayment"];
             if (datePaymentTemp.ToString() != "")
             {
