@@ -44,5 +44,16 @@ namespace CafeManagementSystem.DAO
             }
             return listTable;
         }
+        public string getTableNamebyID(string id)
+        {
+            string query = string.Format("select name from tablefood where id={0}", id);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Table table = new Table(item);
+                return table.Name;
+            }
+            return "";
+        }
     }
 }

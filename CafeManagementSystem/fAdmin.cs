@@ -22,6 +22,7 @@ namespace CafeManagementSystem
             LoadAccountList(guna2TextBoxSearchAccounts.Text);
             LoadCateList(guna2TextBoxSearchCategories.Text);
             LoadFoodList(guna2TextBoxSearchFood.Text);
+            LoadBillList();
         }
      /*   void ShowAccount()
         {
@@ -91,6 +92,27 @@ namespace CafeManagementSystem
 
                 // thêm vào list view bill
                 listViewDrinksDesserts.Items.Add(lsvItem);
+            }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = culture;
+        }
+        //Load Bill List
+        void LoadBillList()
+        {
+            List<Bill> listBill = BillDAO.Instance.GetListBill();
+            listViewReceipts.Items.Clear();
+            foreach (CafeManagementSystem.DTO.Bill item in listBill)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.Id.ToString());
+               // string tableName=TableDAO.Instance.getTableNamebyID(item.IdTable.ToString());
+                lsvItem.SubItems.Add(item.IdTable.ToString());
+                lsvItem.SubItems.Add(item.DatePayment.ToString());
+                lsvItem.SubItems.Add(item.Customer.ToString());
+                lsvItem.SubItems.Add(item.Discount.ToString());
+                lsvItem.SubItems.Add(item.TotalMoney.ToString());
+
+                // thêm vào list view bill
+                listViewReceipts.Items.Add(lsvItem);
             }
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;

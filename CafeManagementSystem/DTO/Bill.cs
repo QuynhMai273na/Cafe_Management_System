@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CafeManagementSystem.DAO;
 
 namespace CafeManagementSystem.DTO
 {
@@ -39,29 +40,57 @@ namespace CafeManagementSystem.DTO
             get { return status; }
             set { status = value; }
         }
-        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status)
+        private float totalMoney;
+        public float TotalMoney
+        {
+            get { return totalMoney; }
+            set { totalMoney = value; }
+        }
+
+        private string note;
+        public string Note
+        {
+            get { return note; }
+            set { note = value; }
+        }
+        private int discount;
+        public int Discount
+        {
+            get { return discount; }
+            set { discount = value; }
+        }
+        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status,float totalmoney, string note, int discount)
         {
             this.Id = id;
             this.IdTable = idTable;
             this.Customer = customer;
             this.DatePayment = datePayment;
             this.Status = status;
+            this.TotalMoney = totalmoney;
+            this.Note= note;
+            this.Discount = discount;
         }
         public Bill(DataRow row)
         {
             this.Id = (int)row["id"];
             this.IdTable = (int)row["idTable"];
-            
-            if(Customer!=null)
+
+            if (Customer != null)
             {
                 this.Customer = (string)row["customer"];
             }
+            else this.customer = "";
             var datePaymentTemp = row["datePayment"];
             if (datePaymentTemp.ToString() != "")
             {
                 this.DatePayment = (DateTime?)datePayment;
             }
             this.Status = (int)row["status"];
+            
+            this.Note = row["note"].ToString();
+            this.discount = (int)row["discount"];
+            if (totalMoney == null) this.totalMoney = 0;
+            else this.totalMoney = (float)row["totalMoney"];
         }
     }
 }

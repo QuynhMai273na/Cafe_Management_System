@@ -3,6 +3,7 @@ using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,49 @@ namespace CafeManagementSystem.DAO
             string query1 = "UPDATE dbo.Bill SET status = 1, datePayment = GETDATE() WHERE id = " + id; ;
             DataProvider.Instance.ExecuteNonQuery(query1);
             
+        }
+/*
+        static string RemoveDiacritics(string input)
+        {
+            string normalizedString = input.Normalize(NormalizationForm.FormD);
+            StringBuilder stringBuilder = new StringBuilder();
+
+            foreach (char c in normalizedString)
+            {
+                UnicodeCategory unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(c);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+        }
+        public List<Bill> SearchBillByID(string id)
+        {
+            List<Bill> list = new List<Bill>();
+            id = RemoveDiacritics(id);
+            string query = string.Format("SELECT * FROM Bill WHERE id COLLATE SQL_Latin1_General_CP1253_CI_AI LIKE N'%{0}%' ", id);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Bill bill = new Bill(item); 
+                list.Add(bill);
+            }
+            return list;
+        }
+        */
+        public List<Bill> GetListBill()
+        {
+            List<Bill> listBill = new List<Bill>();
+            string query = "select * from bill";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Bill bill  = new Bill(item);
+                listBill.Add(bill);
+            }
+            return listBill;
         }
     }
 }
