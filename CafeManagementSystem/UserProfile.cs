@@ -28,11 +28,11 @@ namespace CafeManagementSystem
         }
         void LoadInfo(Account acc)
         {
-            guna2TextBoxUserNameProfile.Text = loginAccount.DisplayName.ToString();
-            labelusernameprofile.Text="@"+loginAccount.UserName.ToString();
-            labelTypeAccount.Text="Type Account: "+loginAccount.AccountType.ToString();
-            guna2TextBoxDisplayName.Text=loginAccount.DisplayName.ToString();
-            guna2TextBoxUpdatePhoneNumber.Text = loginAccount.PhoneNumber.ToString();
+            guna2TextBoxUserNameProfile.Text = acc.DisplayName.ToString();
+            labelusernameprofile.Text="@"+acc.UserName.ToString();
+            labelTypeAccount.Text="Type Account: "+acc.AccountType.ToString();
+            guna2TextBoxDisplayName.Text=acc.DisplayName.ToString();
+            guna2TextBoxUpdatePhoneNumber.Text = acc.PhoneNumber.ToString();
         }
 
         private void guna2ButtonChangeInfo_Click(object sender, EventArgs e)
@@ -58,6 +58,8 @@ namespace CafeManagementSystem
                 guna2TextBoxNewPW.Text = "";
                 guna2TextBoxReEnterNewPW.Text = "";
                 guna2TextBoxPWSetting.Text = "";
+                Account newAcc=AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+                LoadInfo(newAcc);
             }
         }
     }

@@ -49,7 +49,7 @@ namespace CafeManagementSystem
         {
             labelTableManageCustomer.Text = "User's Profile";
             guna2PictureBoxTableIconCustomer.Image = Properties.Resources._6;
-            container(new CustomerProfile());
+            container(new CustomerProfile(loginAccount));
         }
         private Account loginAccount;
         public Account LoginAccount
