@@ -40,8 +40,8 @@ namespace CafeManagementSystem.DTO
             get { return status; }
             set { status = value; }
         }
-        private float totalMoney;
-        public float TotalMoney
+        private int totalMoney;
+        public int TotalMoney
         {
             get { return totalMoney; }
             set { totalMoney = value; }
@@ -59,7 +59,7 @@ namespace CafeManagementSystem.DTO
             get { return discount; }
             set { discount = value; }
         }
-        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status,float totalmoney, string note, int discount)
+        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status,int totalmoney, string note, int discount)
         {
             this.Id = id;
             this.IdTable = idTable;
@@ -75,7 +75,7 @@ namespace CafeManagementSystem.DTO
             this.Id = (int)row["id"];
             this.IdTable = (int)row["idTable"];
 
-            if (Customer != null)
+           if (Customer != null)
             {
                 this.Customer = (string)row["customer"];
             }
@@ -89,8 +89,7 @@ namespace CafeManagementSystem.DTO
             
             this.Note = row["note"].ToString();
             this.discount = (int)row["discount"];
-            if (totalMoney == null) this.totalMoney = 0;
-            else this.totalMoney = (float)row["totalMoney"];
+            this.totalMoney = (int)row["totalMoney"];
         }
     }
 }

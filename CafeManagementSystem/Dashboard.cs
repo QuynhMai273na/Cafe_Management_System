@@ -17,7 +17,7 @@ namespace CafeManagementSystem
     public partial class Dashboard : Form
     {
         int totalmoney = 0;
-        float moneyAfterDis;
+        int moneyAfterDis;
         public Dashboard()
         {
             InitializeComponent();
@@ -124,8 +124,9 @@ namespace CafeManagementSystem
 
         private void guna2NumericUpDownDiscount_ValueChanged(object sender, EventArgs e)
         {
-            moneyAfterDis = (float)(totalmoney * (100 - Convert.ToInt16(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
+            moneyAfterDis = (int)(totalmoney * (100 - Convert.ToInt16(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
             this.labelTotalBill.Text = "Total: \t" + moneyAfterDis.ToString("c");
+            
         }
         private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
@@ -184,6 +185,7 @@ namespace CafeManagementSystem
         }
         private void guna2ButtonPayMent_Click(object sender, EventArgs e)
         {
+
             Table table = listViewBill.Tag as Table;
             int idBill = BillDAO.Instance.GetUncheckBillIdByTableId(table.Id);
             if (idBill != -1)
@@ -193,14 +195,14 @@ namespace CafeManagementSystem
                 notice.ShowDialog();
                 if (notice.pay == true)
                 {
-
+                    totalmoney = moneyAfterDis;
                     if (guna2TextBoxCustomerPhone.Text != "" && CheckMember(guna2TextBoxCustomerPhone.Text)==true)
                     {
                         string query = "UPDATE dbo.Bill SET customer = @customer WHERE id = @id";
                         DataProvider.Instance.ExecuteNonQuery(query, new object[] { guna2TextBoxCustomerPhone.Text, idBill });
 
                     }
-                    DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateBill @idBill , @totalmoney , @discount , @note", new object[] { idBill , moneyAfterDis , guna2NumericUpDownDiscount.Value , textBoxWriteNote.Text});
+                    DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateBill @idBill , @totalmoney , @discount , @note", new object[] { idBill , totalmoney , guna2NumericUpDownDiscount.Value , textBoxWriteNote.Text});
                     ShowBill(table.Id);
                     guna2TextBoxCustomerName.Text = "";
                     guna2TextBoxCustomerLevel.Text = "";

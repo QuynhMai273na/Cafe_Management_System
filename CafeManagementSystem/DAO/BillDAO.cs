@@ -85,7 +85,7 @@ namespace CafeManagementSystem.DAO
         public List<Bill> GetListBill()
         {
             List<Bill> listBill = new List<Bill>();
-            string query = "select * from bill";
+            string query = "select * from bill where status=1";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
