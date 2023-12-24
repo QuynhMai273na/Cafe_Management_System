@@ -77,6 +77,8 @@ namespace CafeManagementSystem.DAO
         }
         public void DeleteCategories(string id)
         {
+            string queryDelFood = string.Format("Delete from food where idCategory ={0} ", id);
+            DataProvider.Instance.ExecuteQuery(queryDelFood);
             string query = string.Format("Delete FROM category WHERE id =  {0}", id);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
         }

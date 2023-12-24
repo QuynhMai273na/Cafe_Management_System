@@ -55,6 +55,7 @@ namespace CafeManagementSystem
                 fNotification noti = new fNotification();
                 noti.labelNote.Text = "Successfully update information.";
                 noti.ShowDialog();
+              
                 guna2TextBoxNewPW.Text = "";
                 guna2TextBoxReEnterNewPW.Text = "";
                 guna2TextBoxPWSetting.Text = "";

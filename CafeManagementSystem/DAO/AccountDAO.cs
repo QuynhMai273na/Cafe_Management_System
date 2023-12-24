@@ -112,13 +112,17 @@ namespace CafeManagementSystem.DAO
         }
         public void DeleteAccount(string user)
         {
+            string queryDelCus = string.Format("Delete from customer where phoneNumber= N'{0}'", GetAccountByUserName(user).PhoneNumber.ToString());
             string query = string.Format("Delete FROM Account WHERE userName =  N'{0}' ", user);
+            DataProvider.Instance.ExecuteQuery(queryDelCus);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
         }
         public void AddAccount (string username, string displayname, string password, string accounttype, string phonenumber)
         {
             string query = string.Format("Insert into account (userName,displayName,passWord,accountType,phoneNumber) values (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')", username, displayname, password, accounttype, phonenumber);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            string queryCreateCustomer = string.Format("insert into Customer (phoneNumber,name, dateOfBirth, level) values(N'{0}',N'{1}',GETDATE(),'Bronze')", phonenumber, displayname);
+            DataProvider.Instance.ExecuteQuery(queryCreateCustomer);
         }
         public void EditAccount(string username, string displayname,string accounttype, string phonenumber)
         {

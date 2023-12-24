@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
+
 
 namespace CafeManagementSystem.DAO
 {
@@ -33,5 +35,17 @@ namespace CafeManagementSystem.DAO
             }
             return list;
         }
+        public Customer GetOneCustomerByPhone (string phone)
+        {
+            string query = string.Format("Select * from Customer where phoneNumber = N'{0}'", phone);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Customer cus = new Customer(item);
+                return cus;
+            }
+            return null;
+        }
+        
     }
 }
