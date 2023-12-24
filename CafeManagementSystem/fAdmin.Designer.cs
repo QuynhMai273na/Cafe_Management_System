@@ -78,7 +78,6 @@ namespace CafeManagementSystem
             this.guna2PanelReceipts = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBoxRefreshReceipts = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonDeleteReceipts = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonAddReceipts = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBoxSearchReceipts = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PanelDateFromTo = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ButtonCheckBill = new Guna.UI2.WinForms.Guna2Button();
@@ -105,11 +104,18 @@ namespace CafeManagementSystem
             this.columnIDCateOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnPriceOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2PanelDrinksDesserts = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBoxSearchFood = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ButtonNewCategories = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBoxRefreshDrinks = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonDeleteDrinks = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAddDrinks = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBoxSearchFood = new Guna.UI2.WinForms.Guna2TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnIDBill = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnCustomer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDiscount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnTable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Accounts.SuspendLayout();
             this.guna2PanelAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshAccounts)).BeginInit();
@@ -122,6 +128,7 @@ namespace CafeManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshCategories)).BeginInit();
             this.guna2TabControlAdmin.SuspendLayout();
             this.Receipts.SuspendLayout();
+            this.guna2PanelReceiptsEdit.SuspendLayout();
             this.guna2PanelReceipts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshReceipts)).BeginInit();
             this.guna2PanelDateFromTo.SuspendLayout();
@@ -870,6 +877,7 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelReceiptsEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelReceiptsEdit.BorderThickness = 2;
+            this.guna2PanelReceiptsEdit.Controls.Add(this.listView1);
             this.guna2PanelReceiptsEdit.Location = new System.Drawing.Point(-1, 120);
             this.guna2PanelReceiptsEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelReceiptsEdit.Name = "guna2PanelReceiptsEdit";
@@ -882,7 +890,6 @@ namespace CafeManagementSystem
             this.guna2PanelReceipts.BorderThickness = 2;
             this.guna2PanelReceipts.Controls.Add(this.guna2PictureBoxRefreshReceipts);
             this.guna2PanelReceipts.Controls.Add(this.guna2ButtonDeleteReceipts);
-            this.guna2PanelReceipts.Controls.Add(this.guna2ButtonAddReceipts);
             this.guna2PanelReceipts.Controls.Add(this.guna2TextBoxSearchReceipts);
             this.guna2PanelReceipts.Location = new System.Drawing.Point(-1, -1);
             this.guna2PanelReceipts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -922,26 +929,6 @@ namespace CafeManagementSystem
             this.guna2ButtonDeleteReceipts.Size = new System.Drawing.Size(119, 46);
             this.guna2ButtonDeleteReceipts.TabIndex = 2;
             this.guna2ButtonDeleteReceipts.Text = "Delete";
-            // 
-            // guna2ButtonAddReceipts
-            // 
-            this.guna2ButtonAddReceipts.AutoRoundedCorners = true;
-            this.guna2ButtonAddReceipts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonAddReceipts.BorderRadius = 22;
-            this.guna2ButtonAddReceipts.BorderThickness = 2;
-            this.guna2ButtonAddReceipts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonAddReceipts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonAddReceipts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonAddReceipts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonAddReceipts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonAddReceipts.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonAddReceipts.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAddReceipts.Location = new System.Drawing.Point(507, 11);
-            this.guna2ButtonAddReceipts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2ButtonAddReceipts.Name = "guna2ButtonAddReceipts";
-            this.guna2ButtonAddReceipts.Size = new System.Drawing.Size(119, 46);
-            this.guna2ButtonAddReceipts.TabIndex = 1;
-            this.guna2ButtonAddReceipts.Text = "Add";
             // 
             // guna2TextBoxSearchReceipts
             // 
@@ -1343,6 +1330,32 @@ namespace CafeManagementSystem
             this.guna2PanelDrinksDesserts.Size = new System.Drawing.Size(816, 70);
             this.guna2PanelDrinksDesserts.TabIndex = 5;
             // 
+            // guna2TextBoxSearchFood
+            // 
+            this.guna2TextBoxSearchFood.AutoRoundedCorners = true;
+            this.guna2TextBoxSearchFood.BorderRadius = 19;
+            this.guna2TextBoxSearchFood.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxSearchFood.DefaultText = "";
+            this.guna2TextBoxSearchFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxSearchFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxSearchFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxSearchFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxSearchFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxSearchFood.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxSearchFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxSearchFood.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearchFood.IconLeft")));
+            this.guna2TextBoxSearchFood.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.guna2TextBoxSearchFood.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.guna2TextBoxSearchFood.Location = new System.Drawing.Point(6, 14);
+            this.guna2TextBoxSearchFood.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBoxSearchFood.Name = "guna2TextBoxSearchFood";
+            this.guna2TextBoxSearchFood.PasswordChar = '\0';
+            this.guna2TextBoxSearchFood.PlaceholderText = "Searching";
+            this.guna2TextBoxSearchFood.SelectedText = "";
+            this.guna2TextBoxSearchFood.Size = new System.Drawing.Size(258, 41);
+            this.guna2TextBoxSearchFood.TabIndex = 14;
+            this.guna2TextBoxSearchFood.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxSearchFood_KeyDown);
+            // 
             // guna2ButtonNewCategories
             // 
             this.guna2ButtonNewCategories.AutoRoundedCorners = true;
@@ -1419,31 +1432,57 @@ namespace CafeManagementSystem
             this.guna2ButtonAddDrinks.Text = "Add";
             this.guna2ButtonAddDrinks.Click += new System.EventHandler(this.guna2ButtonAddDrinks_Click);
             // 
-            // guna2TextBoxSearchFood
+            // listView1
             // 
-            this.guna2TextBoxSearchFood.AutoRoundedCorners = true;
-            this.guna2TextBoxSearchFood.BorderRadius = 19;
-            this.guna2TextBoxSearchFood.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxSearchFood.DefaultText = "";
-            this.guna2TextBoxSearchFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxSearchFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxSearchFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxSearchFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxSearchFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxSearchFood.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxSearchFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxSearchFood.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxSearchFood.IconLeft")));
-            this.guna2TextBoxSearchFood.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBoxSearchFood.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBoxSearchFood.Location = new System.Drawing.Point(6, 14);
-            this.guna2TextBoxSearchFood.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2TextBoxSearchFood.Name = "guna2TextBoxSearchFood";
-            this.guna2TextBoxSearchFood.PasswordChar = '\0';
-            this.guna2TextBoxSearchFood.PlaceholderText = "Searching";
-            this.guna2TextBoxSearchFood.SelectedText = "";
-            this.guna2TextBoxSearchFood.Size = new System.Drawing.Size(258, 41);
-            this.guna2TextBoxSearchFood.TabIndex = 14;
-            this.guna2TextBoxSearchFood.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxSearchFood_KeyDown);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnIDBill,
+            this.columnTable,
+            this.columnDate,
+            this.columnCustomer,
+            this.columnDiscount,
+            this.columnTotal});
+            this.listView1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(0, 1);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(814, 741);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnIDBill
+            // 
+            this.columnIDBill.Text = "ID";
+            this.columnIDBill.Width = 125;
+            // 
+            // columnDate
+            // 
+            this.columnDate.Text = "Date";
+            this.columnDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnDate.Width = 159;
+            // 
+            // columnCustomer
+            // 
+            this.columnCustomer.Text = "Customer";
+            this.columnCustomer.Width = 136;
+            // 
+            // columnDiscount
+            // 
+            this.columnDiscount.Text = "Discount";
+            this.columnDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnDiscount.Width = 158;
+            // 
+            // columnTotal
+            // 
+            this.columnTotal.Text = "Total";
+            this.columnTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnTotal.Width = 164;
+            // 
+            // columnTable
+            // 
+            this.columnTable.Text = "Table";
+            this.columnTable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fAdmin
             // 
@@ -1471,6 +1510,7 @@ namespace CafeManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshCategories)).EndInit();
             this.guna2TabControlAdmin.ResumeLayout(false);
             this.Receipts.ResumeLayout(false);
+            this.guna2PanelReceiptsEdit.ResumeLayout(false);
             this.guna2PanelReceipts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshReceipts)).EndInit();
             this.guna2PanelDateFromTo.ResumeLayout(false);
@@ -1506,7 +1546,6 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2Panel guna2PanelReceipts;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxRefreshReceipts;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDeleteReceipts;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonAddReceipts;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearchReceipts;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelDateFromTo;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonCheckBill;
@@ -1567,5 +1606,12 @@ namespace CafeManagementSystem
         private System.Windows.Forms.ColumnHeader columnIDCateOfFood;
         private System.Windows.Forms.ColumnHeader columnPriceOfFood;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearchFood;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnIDBill;
+        private System.Windows.Forms.ColumnHeader columnDate;
+        private System.Windows.Forms.ColumnHeader columnCustomer;
+        private System.Windows.Forms.ColumnHeader columnDiscount;
+        private System.Windows.Forms.ColumnHeader columnTotal;
+        private System.Windows.Forms.ColumnHeader columnTable;
     }
 }
