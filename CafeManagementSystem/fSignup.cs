@@ -106,9 +106,8 @@ namespace CafeManagementSystem
             {
                 string query = "INSERT INTO Account (userName, displayName, passWord, phoneNumber) VALUES ( '" + userame + "' ,'" + displayName + "' ,'" + password + "' ,'" + phoneNumber + "' )";
                 DataProvider.Instance.Modify(query);
-                string queryCreateCustomer = string.Format("insert into Customer (phoneNumber,name, dateOfBirth, level) values(N'{0}',N'{1}',GETDATE(),'Bronze')",phoneNumber,displayName);
+                string queryCreateCustomer = string.Format("insert into Customer (phoneNumber,name, dateOfBirth, level) values(N'{0}',N'{1}',GETDATE(),'Member')",phoneNumber,displayName);
                 DataProvider.Instance.ExecuteQuery(queryCreateCustomer);
-                //MessageBox.Show("Welcome to SAIDONESE coffee !!!");
                 fNotification noti = new fNotification();
                 noti.labelNote.Text = "Welcome to SAIGONESE coffee !!!";
                 noti.ShowDialog();

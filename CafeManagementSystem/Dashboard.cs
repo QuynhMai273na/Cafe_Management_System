@@ -38,13 +38,6 @@ namespace CafeManagementSystem
             guna2ComboBoxResultSearch.DataSource = listFoods;
             guna2ComboBoxResultSearch.DisplayMember = "Name";
         }
-        //void LoadFoodListById(int id)
-        //{
-        //    List<Food> list = FoodDAO.Instance.GetFoodById(id);
-        //    guna2ComboBoxResultSearch.DataSource = list;
-        //    guna2ComboBoxResultSearch.DisplayMember = "Name";
-        //}
-        
         void LoadTable()
         {
             flowLayoutPanelTable.Controls.Clear();
@@ -107,10 +100,6 @@ namespace CafeManagementSystem
             guna2TextBoxCustomerName.Text = customerList[0].Name;
             guna2TextBoxCustomerLevel.Text = customerList[0].Level;
             guna2NumericUpDownDiscount.Value = ApplyDiscountForCustomerMember(guna2TextBoxCustomerLevel.Text);
-            if (customerList[0].DateOfBirth.Date ==DateTime.Now.Date)
-            {
-                guna2NumericUpDownDiscount.Value = 25;
-            }
         }
         bool CheckMember(string customerPhone)
         {

@@ -72,7 +72,7 @@ namespace CafeManagementSystem.DTO
             set { dateCheckin = value; }
         }
 
-        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status, float totalMoney, int discount, string note, DateTime dateCheckin)
+        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status, int totalMoney, int discount, string note, DateTime dateCheckin)
 
         {
             this.Id = id;
