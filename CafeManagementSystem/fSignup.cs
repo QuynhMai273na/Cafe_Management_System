@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using CafeManagementSystem.DAO;
+using System.Security.Cryptography;
 
 namespace CafeManagementSystem
 {
@@ -104,9 +105,10 @@ namespace CafeManagementSystem
             }
             try
             {
+                password=hasPassWord(password);
                 string query = "INSERT INTO Account (userName, displayName, passWord, phoneNumber) VALUES ( '" + userame + "' ,'" + displayName + "' ,'" + password + "' ,'" + phoneNumber + "' )";
                 DataProvider.Instance.Modify(query);
-                string queryCreateCustomer = string.Format("insert into Customer (phoneNumber,name, dateOfBirth, level) values(N'{0}',N'{1}',GETDATE(),'Bronze')",phoneNumber,displayName);
+                string queryCreateCustomer = string.Format("insert into Customer (phoneNumber,name, dateOfBirth, level) values(N'{0}',N'{1}',GETDATE(),'Member')",phoneNumber,displayName);
                 DataProvider.Instance.ExecuteQuery(queryCreateCustomer);
                 //MessageBox.Show("Welcome to SAIDONESE coffee !!!");
                 fNotification noti = new fNotification();
@@ -124,6 +126,18 @@ namespace CafeManagementSystem
                 noti.labelNote.Text = "This username has been used.\n Please try with another one !";
                 noti.ShowDialog();
             }
+        }
+
+        public string hasPassWord(string password)
+        {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            string hasPass = "";
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
+            return hasPass;
         }
         private void MemberExist_Click(object sender, EventArgs e)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using CafeManagementSystem.DTO;
@@ -24,8 +25,19 @@ namespace CafeManagementSystem.DAO
         private AccountDAO() { }
         public bool Login(string username, string password)
         {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            string hasPass = "";
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
+            //var list = hasData.ToString();
+            //list.Reverse();
+            
+
             string query = "USP_Login @userName , @password";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username , password});
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username , /*password*/hasPass});
             /*Them vao sql để fix lỗi log in chữ hoa chữ thường
              ALTER PROCEDURE USP_Login @userName NVARCHAR(100), @passWord NVARCHAR(100)
             AS
@@ -39,7 +51,19 @@ namespace CafeManagementSystem.DAO
              */
             //kiểm tra xem biến "result" có chứa dữ liệu không.
             //Nếu số hàng (rows) trong "result" > 0, tức là có ít nhất một hàng dữ liệu, thì trả về true. Ngược lại thì trả về false.
+            
             return result.Rows.Count > 0;
+        }
+        public string hasPassWord(string password)
+        {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            string hasPass = "";
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
+            return hasPass;
         }
         public bool CheckExist(string str)
         {
@@ -119,6 +143,7 @@ namespace CafeManagementSystem.DAO
         }
         public void AddAccount (string username, string displayname, string password, string accounttype, string phonenumber)
         {
+            password = hasPassWord(password);
             string query = string.Format("Insert into account (userName,displayName,passWord,accountType,phoneNumber) values (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')", username, displayname, password, accounttype, phonenumber);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             string queryCreateCustomer = string.Format("insert into Customer (phoneNumber,name, dateOfBirth, level) values(N'{0}',N'{1}',GETDATE(),'Bronze')", phonenumber, displayname);
@@ -131,6 +156,7 @@ namespace CafeManagementSystem.DAO
         }
         public void EditAccountInUserProfile(string username, string displayname, string phonenumber, string password)
         {
+            password=hasPassWord(password);
             string query = string.Format("update account set displayName = N'{0}', phoneNumber = N'{1}', passWord = N'{2}' where userName = N'{3}'", displayname, phonenumber,password, username);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
         }
