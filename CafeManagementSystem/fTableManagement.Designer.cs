@@ -36,7 +36,6 @@ namespace CafeManagementSystem
             this.labelKindAccount = new System.Windows.Forms.Label();
             this.labelAccountName = new System.Windows.Forms.Label();
             this.guna2PictureBoxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBoxMenu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonUserProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDashBoard = new Guna.UI2.WinForms.Guna2Button();
@@ -50,12 +49,14 @@ namespace CafeManagementSystem
             this.guna2DragControlManager = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowFormManager = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2PanelContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBoxBackGround = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).BeginInit();
             this.guna2PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIcon)).BeginInit();
+            this.guna2PanelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxBackGround)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PanelLeft
@@ -63,7 +64,6 @@ namespace CafeManagementSystem
             this.guna2PanelLeft.Controls.Add(this.labelKindAccount);
             this.guna2PanelLeft.Controls.Add(this.labelAccountName);
             this.guna2PanelLeft.Controls.Add(this.guna2PictureBoxAvatar);
-            this.guna2PanelLeft.Controls.Add(this.guna2PictureBoxMenu);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonUserProfile);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonAdmin);
             this.guna2PanelLeft.Controls.Add(this.guna2ButtonDashBoard);
@@ -112,19 +112,6 @@ namespace CafeManagementSystem
             this.guna2PictureBoxAvatar.TabStop = false;
             this.guna2PictureBoxAvatar.UseTransparentBackground = true;
             // 
-            // guna2PictureBoxMenu
-            // 
-            this.guna2PictureBoxMenu.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxMenu.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxMenu.Image")));
-            this.guna2PictureBoxMenu.ImageRotate = 0F;
-            this.guna2PictureBoxMenu.Location = new System.Drawing.Point(185, -4);
-            this.guna2PictureBoxMenu.Name = "guna2PictureBoxMenu";
-            this.guna2PictureBoxMenu.Size = new System.Drawing.Size(50, 48);
-            this.guna2PictureBoxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxMenu.TabIndex = 5;
-            this.guna2PictureBoxMenu.TabStop = false;
-            this.guna2PictureBoxMenu.UseTransparentBackground = true;
-            // 
             // guna2ButtonUserProfile
             // 
             this.guna2ButtonUserProfile.BackColor = System.Drawing.Color.Transparent;
@@ -142,6 +129,7 @@ namespace CafeManagementSystem
             this.guna2ButtonUserProfile.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.guna2ButtonUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonUserProfile.Image")));
             this.guna2ButtonUserProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonUserProfile.ImageOffset = new System.Drawing.Point(-8, 0);
             this.guna2ButtonUserProfile.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ButtonUserProfile.Location = new System.Drawing.Point(0, 224);
             this.guna2ButtonUserProfile.Name = "guna2ButtonUserProfile";
@@ -149,7 +137,7 @@ namespace CafeManagementSystem
             this.guna2ButtonUserProfile.TabIndex = 3;
             this.guna2ButtonUserProfile.Text = "User\'s Profile";
             this.guna2ButtonUserProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonUserProfile.TextOffset = new System.Drawing.Point(5, 0);
             this.guna2ButtonUserProfile.UseTransparentBackground = true;
             this.guna2ButtonUserProfile.Click += new System.EventHandler(this.guna2ButtonUserProfile_Click);
             // 
@@ -170,7 +158,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.guna2ButtonAdmin.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonAdmin.Image")));
             this.guna2ButtonAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonAdmin.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2ButtonAdmin.ImageOffset = new System.Drawing.Point(-13, 0);
             this.guna2ButtonAdmin.ImageSize = new System.Drawing.Size(60, 60);
             this.guna2ButtonAdmin.Location = new System.Drawing.Point(0, 172);
             this.guna2ButtonAdmin.Name = "guna2ButtonAdmin";
@@ -178,6 +166,7 @@ namespace CafeManagementSystem
             this.guna2ButtonAdmin.TabIndex = 2;
             this.guna2ButtonAdmin.Text = "Admin";
             this.guna2ButtonAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonAdmin.TextOffset = new System.Drawing.Point(-5, 0);
             this.guna2ButtonAdmin.UseTransparentBackground = true;
             this.guna2ButtonAdmin.Click += new System.EventHandler(this.guna2ButtonAdmin_Click);
             // 
@@ -198,6 +187,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDashBoard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.guna2ButtonDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonDashBoard.Image")));
             this.guna2ButtonDashBoard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonDashBoard.ImageOffset = new System.Drawing.Point(-8, 0);
             this.guna2ButtonDashBoard.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ButtonDashBoard.Location = new System.Drawing.Point(0, 120);
             this.guna2ButtonDashBoard.Name = "guna2ButtonDashBoard";
@@ -205,7 +195,7 @@ namespace CafeManagementSystem
             this.guna2ButtonDashBoard.TabIndex = 1;
             this.guna2ButtonDashBoard.Text = "OverView";
             this.guna2ButtonDashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonDashBoard.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonDashBoard.TextOffset = new System.Drawing.Point(5, 0);
             this.guna2ButtonDashBoard.UseTransparentBackground = true;
             this.guna2ButtonDashBoard.Click += new System.EventHandler(this.guna2ButtonDashBoard_Click);
             // 
@@ -216,7 +206,7 @@ namespace CafeManagementSystem
             this.guna2PictureBoxLogo.ImageRotate = 0F;
             this.guna2PictureBoxLogo.Location = new System.Drawing.Point(65, 7);
             this.guna2PictureBoxLogo.Name = "guna2PictureBoxLogo";
-            this.guna2PictureBoxLogo.Size = new System.Drawing.Size(97, 92);
+            this.guna2PictureBoxLogo.Size = new System.Drawing.Size(98, 92);
             this.guna2PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBoxLogo.TabIndex = 0;
             this.guna2PictureBoxLogo.TabStop = false;
@@ -300,11 +290,23 @@ namespace CafeManagementSystem
             // 
             // guna2PanelContainer
             // 
+            this.guna2PanelContainer.Controls.Add(this.guna2PictureBoxBackGround);
             this.guna2PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2PanelContainer.Location = new System.Drawing.Point(233, 53);
             this.guna2PanelContainer.Name = "guna2PanelContainer";
             this.guna2PanelContainer.Size = new System.Drawing.Size(975, 701);
             this.guna2PanelContainer.TabIndex = 2;
+            // 
+            // guna2PictureBoxBackGround
+            // 
+            this.guna2PictureBoxBackGround.Image = global::CafeManagementSystem.Properties.Resources.backgroundDashboard;
+            this.guna2PictureBoxBackGround.ImageRotate = 0F;
+            this.guna2PictureBoxBackGround.Location = new System.Drawing.Point(0, 1);
+            this.guna2PictureBoxBackGround.Name = "guna2PictureBoxBackGround";
+            this.guna2PictureBoxBackGround.Size = new System.Drawing.Size(975, 700);
+            this.guna2PictureBoxBackGround.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxBackGround.TabIndex = 0;
+            this.guna2PictureBoxBackGround.TabStop = false;
             // 
             // fTableManagement
             // 
@@ -323,11 +325,12 @@ namespace CafeManagementSystem
             this.guna2PanelLeft.ResumeLayout(false);
             this.guna2PanelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogo)).EndInit();
             this.guna2PanelTop.ResumeLayout(false);
             this.guna2PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIcon)).EndInit();
+            this.guna2PanelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxBackGround)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,7 +352,6 @@ namespace CafeManagementSystem
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDashBoard;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonUserProfile;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdmin;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxMenu;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxAvatar;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowFormManager;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelContainer;
@@ -357,5 +359,6 @@ namespace CafeManagementSystem
         private System.Windows.Forms.Label labelAccountName;
         private System.Windows.Forms.Label labelTableManage;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxTableIcon;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxBackGround;
     }
 }

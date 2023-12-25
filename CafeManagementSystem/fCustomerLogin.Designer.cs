@@ -34,7 +34,6 @@
             this.labelKindCustomer = new System.Windows.Forms.Label();
             this.labelAccountNameCustomer = new System.Windows.Forms.Label();
             this.guna2PictureBoxAvatarCustomer = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBoxMenuCustomer = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonCustomerProfile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonCustomerDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControlCustomer = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -47,16 +46,19 @@
             this.guna2PictureBoxLogoCustomer = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowFormCustomer = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2PanelLeftCustomer = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBoxBackGroundCus = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PanelContainerCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatarCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenuCustomer)).BeginInit();
             this.guna2PanelTopCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIconCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogoCustomer)).BeginInit();
             this.guna2PanelLeftCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxBackGroundCus)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PanelContainerCustomer
             // 
+            this.guna2PanelContainerCustomer.Controls.Add(this.guna2PictureBoxBackGroundCus);
             this.guna2PanelContainerCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2PanelContainerCustomer.Location = new System.Drawing.Point(233, 53);
             this.guna2PanelContainerCustomer.Name = "guna2PanelContainerCustomer";
@@ -99,19 +101,6 @@
             this.guna2PictureBoxAvatarCustomer.TabStop = false;
             this.guna2PictureBoxAvatarCustomer.UseTransparentBackground = true;
             // 
-            // guna2PictureBoxMenuCustomer
-            // 
-            this.guna2PictureBoxMenuCustomer.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBoxMenuCustomer.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxMenuCustomer.Image")));
-            this.guna2PictureBoxMenuCustomer.ImageRotate = 0F;
-            this.guna2PictureBoxMenuCustomer.Location = new System.Drawing.Point(185, -4);
-            this.guna2PictureBoxMenuCustomer.Name = "guna2PictureBoxMenuCustomer";
-            this.guna2PictureBoxMenuCustomer.Size = new System.Drawing.Size(50, 48);
-            this.guna2PictureBoxMenuCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBoxMenuCustomer.TabIndex = 5;
-            this.guna2PictureBoxMenuCustomer.TabStop = false;
-            this.guna2PictureBoxMenuCustomer.UseTransparentBackground = true;
-            // 
             // guna2ButtonCustomerProfile
             // 
             this.guna2ButtonCustomerProfile.BackColor = System.Drawing.Color.Transparent;
@@ -136,7 +125,7 @@
             this.guna2ButtonCustomerProfile.TabIndex = 3;
             this.guna2ButtonCustomerProfile.Text = "User\'s Profile";
             this.guna2ButtonCustomerProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonCustomerProfile.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonCustomerProfile.TextOffset = new System.Drawing.Point(5, 0);
             this.guna2ButtonCustomerProfile.UseTransparentBackground = true;
             this.guna2ButtonCustomerProfile.Click += new System.EventHandler(this.guna2ButtonCustomerProfile_Click);
             // 
@@ -164,7 +153,7 @@
             this.guna2ButtonCustomerDashBoard.TabIndex = 1;
             this.guna2ButtonCustomerDashBoard.Text = "OverView";
             this.guna2ButtonCustomerDashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonCustomerDashBoard.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2ButtonCustomerDashBoard.TextOffset = new System.Drawing.Point(5, 0);
             this.guna2ButtonCustomerDashBoard.UseTransparentBackground = true;
             this.guna2ButtonCustomerDashBoard.Click += new System.EventHandler(this.guna2ButtonDashBoardCustomer_Click);
             // 
@@ -262,7 +251,6 @@
             this.guna2PanelLeftCustomer.Controls.Add(this.labelKindCustomer);
             this.guna2PanelLeftCustomer.Controls.Add(this.labelAccountNameCustomer);
             this.guna2PanelLeftCustomer.Controls.Add(this.guna2PictureBoxAvatarCustomer);
-            this.guna2PanelLeftCustomer.Controls.Add(this.guna2PictureBoxMenuCustomer);
             this.guna2PanelLeftCustomer.Controls.Add(this.guna2ButtonCustomerProfile);
             this.guna2PanelLeftCustomer.Controls.Add(this.guna2ButtonCustomerDashBoard);
             this.guna2PanelLeftCustomer.Controls.Add(this.guna2PictureBoxLogoCustomer);
@@ -273,6 +261,17 @@
             this.guna2PanelLeftCustomer.Name = "guna2PanelLeftCustomer";
             this.guna2PanelLeftCustomer.Size = new System.Drawing.Size(233, 754);
             this.guna2PanelLeftCustomer.TabIndex = 3;
+            // 
+            // guna2PictureBoxBackGroundCus
+            // 
+            this.guna2PictureBoxBackGroundCus.Image = global::CafeManagementSystem.Properties.Resources.backgroundDashboard;
+            this.guna2PictureBoxBackGroundCus.ImageRotate = 0F;
+            this.guna2PictureBoxBackGroundCus.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBoxBackGroundCus.Name = "guna2PictureBoxBackGroundCus";
+            this.guna2PictureBoxBackGroundCus.Size = new System.Drawing.Size(975, 701);
+            this.guna2PictureBoxBackGroundCus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBoxBackGroundCus.TabIndex = 0;
+            this.guna2PictureBoxBackGroundCus.TabStop = false;
             // 
             // fCustomerLogin
             // 
@@ -287,14 +286,15 @@
             this.Name = "fCustomerLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fCustomerLogin";
+            this.guna2PanelContainerCustomer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxAvatarCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxMenuCustomer)).EndInit();
             this.guna2PanelTopCustomer.ResumeLayout(false);
             this.guna2PanelTopCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxTableIconCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxLogoCustomer)).EndInit();
             this.guna2PanelLeftCustomer.ResumeLayout(false);
             this.guna2PanelLeftCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxBackGroundCus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,7 +305,6 @@
         private System.Windows.Forms.Label labelKindCustomer;
         private System.Windows.Forms.Label labelAccountNameCustomer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxAvatarCustomer;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxMenuCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonCustomerProfile;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonCustomerDashBoard;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControlCustomer;
@@ -318,5 +317,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxLogoCustomer;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowFormCustomer;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelLeftCustomer;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBoxBackGroundCus;
     }
 }
