@@ -56,6 +56,7 @@
             this.guna2PanelHistoryBillsCustomer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelHistoryBillsShowCustomer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelShowHistoryBillsCustomer = new Guna.UI2.WinForms.Guna2Panel();
+            this.dataGridViewBillOfCus = new System.Windows.Forms.DataGridView();
             this.labelToHistoryBillsCustomer = new System.Windows.Forms.Label();
             this.labelFromHistoryBillsCustomer = new System.Windows.Forms.Label();
             this.guna2ButtonHistoryBillsCustomer = new Guna.UI2.WinForms.Guna2Button();
@@ -66,6 +67,8 @@
             this.guna2PanelUpdateInfoCustomer.SuspendLayout();
             this.guna2PanelHistoryBillsCustomer.SuspendLayout();
             this.guna2PanelHistoryBillsShowCustomer.SuspendLayout();
+            this.guna2PanelShowHistoryBillsCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBillOfCus)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBoxUserAvatarCustomer
@@ -523,11 +526,22 @@
             // 
             this.guna2PanelShowHistoryBillsCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelShowHistoryBillsCustomer.BorderThickness = 2;
+            this.guna2PanelShowHistoryBillsCustomer.Controls.Add(this.dataGridViewBillOfCus);
             this.guna2PanelShowHistoryBillsCustomer.Location = new System.Drawing.Point(1, 61);
             this.guna2PanelShowHistoryBillsCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelShowHistoryBillsCustomer.Name = "guna2PanelShowHistoryBillsCustomer";
             this.guna2PanelShowHistoryBillsCustomer.Size = new System.Drawing.Size(485, 532);
             this.guna2PanelShowHistoryBillsCustomer.TabIndex = 7;
+            // 
+            // dataGridViewBillOfCus
+            // 
+            this.dataGridViewBillOfCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBillOfCus.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewBillOfCus.Name = "dataGridViewBillOfCus";
+            this.dataGridViewBillOfCus.RowHeadersWidth = 62;
+            this.dataGridViewBillOfCus.RowTemplate.Height = 28;
+            this.dataGridViewBillOfCus.Size = new System.Drawing.Size(479, 526);
+            this.dataGridViewBillOfCus.TabIndex = 0;
             // 
             // labelToHistoryBillsCustomer
             // 
@@ -570,6 +584,7 @@
             this.guna2ButtonHistoryBillsCustomer.Size = new System.Drawing.Size(120, 50);
             this.guna2ButtonHistoryBillsCustomer.TabIndex = 2;
             this.guna2ButtonHistoryBillsCustomer.Text = "Show Bills";
+            this.guna2ButtonHistoryBillsCustomer.Click += new System.EventHandler(this.guna2ButtonHistoryBillsCustomer_Click);
             // 
             // guna2DateTimePickerHistoryBillsCustomer2
             // 
@@ -623,6 +638,8 @@
             this.guna2PanelHistoryBillsCustomer.ResumeLayout(false);
             this.guna2PanelHistoryBillsShowCustomer.ResumeLayout(false);
             this.guna2PanelHistoryBillsShowCustomer.PerformLayout();
+            this.guna2PanelShowHistoryBillsCustomer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBillOfCus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,5 +678,6 @@
         private System.Windows.Forms.Label labelToHistoryBillsCustomer;
         private System.Windows.Forms.Label labelFromHistoryBillsCustomer;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelShowHistoryBillsCustomer;
+        private System.Windows.Forms.DataGridView dataGridViewBillOfCus;
     }
 }

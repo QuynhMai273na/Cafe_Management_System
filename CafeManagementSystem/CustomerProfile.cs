@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeManagementSystem.DAO;
 using CafeManagementSystem.DTO;
+using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Suite;
 
 namespace CafeManagementSystem
@@ -25,6 +26,9 @@ namespace CafeManagementSystem
         {
             InitializeComponent();
             this.loginAccount = acc;
+            
+            LoadDateTimePickerBill();
+            LoadListBillByDateOfCustomer(guna2DateTimePickerHistoryBillsCustomer1.Value, guna2DateTimePickerHistoryBillsCustomer2.Value);
             LoadInfo(loginAccount);
         }
 
@@ -74,6 +78,25 @@ namespace CafeManagementSystem
                 LoadInfo(newAcc);
             }
             
+        }
+        void LoadDateTimePickerBill()
+        {
+            DateTime today = DateTime.Now;
+            guna2DateTimePickerHistoryBillsCustomer1.Value = new DateTime(today.Year, today.Month, 1);
+            guna2DateTimePickerHistoryBillsCustomer2.Value = guna2DateTimePickerHistoryBillsCustomer1.Value.AddMonths(1).AddDays(-1);
+        }
+
+        void LoadListBillByDateOfCustomer(DateTime dayFrom, DateTime dayTo)
+        {
+            dataGridViewBillOfCus.DataSource = BillDAO.Instance.GetBillListByDateOfCustomer(dayFrom, dayTo,loginAccount.PhoneNumber.ToString());
+
+        }
+
+     
+
+        private void guna2ButtonHistoryBillsCustomer_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDateOfCustomer(guna2DateTimePickerHistoryBillsCustomer1.Value, guna2DateTimePickerHistoryBillsCustomer2.Value);
         }
     }
 }

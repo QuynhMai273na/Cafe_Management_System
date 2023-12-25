@@ -57,5 +57,6 @@ namespace CafeManagementSystem
             get { return loginAccount; }
             set { loginAccount = value; }
         }
+        
     }
 }
