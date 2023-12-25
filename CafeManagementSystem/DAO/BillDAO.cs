@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace CafeManagementSystem.DAO
 {
@@ -26,8 +27,10 @@ namespace CafeManagementSystem.DAO
         //thành công bill id, thất bại -1
         public int GetUncheckBillIdByTableId(int id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE idTable = " + id + " AND status = 0");
-            if (data.Rows.Count > 0)
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE CONVERT(DATE, dateCheckin) = CONVERT(DATE, getdate()) and idTable = " + id + " AND status = 0");
+           if (data.Rows.Count > 0)
+
             {
                 Bill bill = new Bill(data.Rows[0]);
                 return bill.Id;
@@ -37,6 +40,8 @@ namespace CafeManagementSystem.DAO
         public void InsertBill(int id)
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
+            string query = "UPDATE dbo.Bill SET dateCheckin = getdate() WHERE id = " + id; ;
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int getMaxIdBill()
         {
@@ -49,40 +54,12 @@ namespace CafeManagementSystem.DAO
         public void CheckOut(int id, Guna2TextBox textBox)
         {
             string query1 = "UPDATE dbo.Bill SET status = 1, datePayment = GETDATE() WHERE id = " + id; ;
+
             DataProvider.Instance.ExecuteNonQuery(query1);
 
         }
-        /*
-                static string RemoveDiacritics(string input)
-                {
-                    string normalizedString = input.Normalize(NormalizationForm.FormD);
-                    StringBuilder stringBuilder = new StringBuilder();
+       
 
-                    foreach (char c in normalizedString)
-                    {
-                        UnicodeCategory unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
-                        if (unicodeCategory != UnicodeCategory.NonSpacingMark)
-                        {
-                            stringBuilder.Append(c);
-                        }
-                    }
-
-                    return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
-                }
-                public List<Bill> SearchBillByID(string id)
-                {
-                    List<Bill> list = new List<Bill>();
-                    id = RemoveDiacritics(id);
-                    string query = string.Format("SELECT * FROM Bill WHERE id COLLATE SQL_Latin1_General_CP1253_CI_AI LIKE N'%{0}%' ", id);
-                    DataTable data = DataProvider.Instance.ExecuteQuery(query);
-                    foreach (DataRow item in data.Rows)
-                    {
-                        Bill bill = new Bill(item); 
-                        list.Add(bill);
-                    }
-                    return list;
-                }
-                */
         public List<Bill> GetListBill()
         {
             List<Bill> listBill = new List<Bill>();
@@ -102,6 +79,7 @@ namespace CafeManagementSystem.DAO
             //return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @dayFrom,@dayTo",new object[] { df, dt });
             string query = string.Format("exec USP_GetListBillByDate N{0},N{1}", df, dt);
             return DataProvider.Instance.ExecuteQuery(query);
+
         }
 
         public DataTable GetBillListByDateOfCustomer(DateTime dayFrom, DateTime dayTo, string phone)

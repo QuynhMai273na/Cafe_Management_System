@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,8 +41,10 @@ namespace CafeManagementSystem.DTO
             get { return status; }
             set { status = value; }
         }
+
         private int totalMoney;
         public int TotalMoney
+
         {
             get { return totalMoney; }
             set { totalMoney = value; }
@@ -53,29 +56,46 @@ namespace CafeManagementSystem.DTO
             get { return note; }
             set { note = value; }
         }
+
         private int discount;
         public int Discount
         {
             get { return discount; }
             set { discount = value; }
         }
-        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status,int totalmoney, string note, int discount)
+      //  public Bill(int id, int idTable, string customer, DateTime? datePayment, int status,int totalmoney, string note, int discount)
+
+        private DateTime dateCheckin;
+        public DateTime DateCheckin
+        {
+            get { return dateCheckin; }
+            set { dateCheckin = value; }
+        }
+
+        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status, float totalMoney, int discount, string note, DateTime dateCheckin)
+
         {
             this.Id = id;
             this.IdTable = idTable;
             this.Customer = customer;
             this.DatePayment = datePayment;
             this.Status = status;
-            this.TotalMoney = totalmoney;
-            this.Note= note;
+
+            this.TotalMoney = totalMoney;
             this.Discount = discount;
+            this.note = note;
+            this.dateCheckin = dateCheckin;
+
         }
         public Bill(DataRow row)
         {
             this.Id = (int)row["id"];
             this.IdTable = (int)row["idTable"];
 
-           if (Customer != null)
+
+
+            if (customer != null)
+
             {
                 this.Customer = (string)row["customer"];
             }
@@ -86,9 +106,19 @@ namespace CafeManagementSystem.DTO
                 this.DatePayment = (DateTime?)row["datePayment"];
             }
             this.Status = (int)row["status"];
-            this.Note = row["note"].ToString();
+
+           
             this.discount = (int)row["discount"];
             this.totalMoney = (int)row["totalMoney"];
+
+           
+           
+            if (note != null)
+            {
+                this.Note = row["note"].ToString();
+            }
+            this.DateCheckin = (DateTime)row["dateCheckin"];
+
         }
     }
 }

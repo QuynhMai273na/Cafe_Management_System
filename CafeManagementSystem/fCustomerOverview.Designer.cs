@@ -46,7 +46,7 @@
             this.labelNoteBillCustomer = new System.Windows.Forms.Label();
             this.guna2ButtonOrderCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.labelTotalBillCustomer = new System.Windows.Forms.Label();
-            this.guna2DateTimePickerOrderTableCustomer = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2ButtonCancelCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.panelAddFoodCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDownNumberAddCustomer)).BeginInit();
             this.guna2PanelNoteBillCustomer.SuspendLayout();
@@ -208,6 +208,7 @@
             this.guna2TextBoxSearchCustomer.Size = new System.Drawing.Size(468, 36);
             this.guna2TextBoxSearchCustomer.TabIndex = 23;
             this.guna2TextBoxSearchCustomer.TextOffset = new System.Drawing.Point(5, 0);
+            this.guna2TextBoxSearchCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxSearchCustomer_KeyDown);
             // 
             // guna2CircleButtonAddFoodCustomer
             // 
@@ -226,6 +227,7 @@
             this.guna2CircleButtonAddFoodCustomer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButtonAddFoodCustomer.Size = new System.Drawing.Size(36, 36);
             this.guna2CircleButtonAddFoodCustomer.TabIndex = 22;
+            this.guna2CircleButtonAddFoodCustomer.Click += new System.EventHandler(this.guna2CircleButtonAddFood_Click);
             // 
             // guna2PanelNoteBillCustomer
             // 
@@ -279,6 +281,7 @@
             this.guna2ButtonOrderCustomer.Size = new System.Drawing.Size(105, 45);
             this.guna2ButtonOrderCustomer.TabIndex = 39;
             this.guna2ButtonOrderCustomer.Text = "Order";
+            this.guna2ButtonOrderCustomer.Click += new System.EventHandler(this.guna2ButtonOrderCustomer_Click);
             // 
             // labelTotalBillCustomer
             // 
@@ -291,21 +294,24 @@
             this.labelTotalBillCustomer.TabIndex = 38;
             this.labelTotalBillCustomer.Text = "Total:";
             // 
-            // guna2DateTimePickerOrderTableCustomer
+            // guna2ButtonCancelCustomer
             // 
-            this.guna2DateTimePickerOrderTableCustomer.Checked = true;
-            this.guna2DateTimePickerOrderTableCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2DateTimePickerOrderTableCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePickerOrderTableCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2DateTimePickerOrderTableCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePickerOrderTableCustomer.Location = new System.Drawing.Point(0, 0);
-            this.guna2DateTimePickerOrderTableCustomer.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePickerOrderTableCustomer.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePickerOrderTableCustomer.Name = "guna2DateTimePickerOrderTableCustomer";
-            this.guna2DateTimePickerOrderTableCustomer.Size = new System.Drawing.Size(500, 36);
-            this.guna2DateTimePickerOrderTableCustomer.TabIndex = 41;
-            this.guna2DateTimePickerOrderTableCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePickerOrderTableCustomer.Value = new System.DateTime(2023, 12, 23, 12, 55, 45, 93);
+            this.guna2ButtonCancelCustomer.AutoRoundedCorners = true;
+            this.guna2ButtonCancelCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonCancelCustomer.BorderRadius = 21;
+            this.guna2ButtonCancelCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonCancelCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonCancelCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonCancelCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonCancelCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.guna2ButtonCancelCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonCancelCustomer.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonCancelCustomer.Location = new System.Drawing.Point(746, 653);
+            this.guna2ButtonCancelCustomer.Name = "guna2ButtonCancelCustomer";
+            this.guna2ButtonCancelCustomer.Size = new System.Drawing.Size(105, 45);
+            this.guna2ButtonCancelCustomer.TabIndex = 42;
+            this.guna2ButtonCancelCustomer.Text = "Cancel";
+            this.guna2ButtonCancelCustomer.Click += new System.EventHandler(this.guna2ButtonCancelCustomer_Click);
             // 
             // fCustomerOverview
             // 
@@ -313,7 +319,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(975, 701);
-            this.Controls.Add(this.guna2DateTimePickerOrderTableCustomer);
+            this.Controls.Add(this.guna2ButtonCancelCustomer);
             this.Controls.Add(this.guna2PanelNoteBillCustomer);
             this.Controls.Add(this.guna2ButtonOrderCustomer);
             this.Controls.Add(this.labelTotalBillCustomer);
@@ -352,6 +358,6 @@
         private System.Windows.Forms.Label labelNoteBillCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonOrderCustomer;
         private System.Windows.Forms.Label labelTotalBillCustomer;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePickerOrderTableCustomer;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonCancelCustomer;
     }
 }

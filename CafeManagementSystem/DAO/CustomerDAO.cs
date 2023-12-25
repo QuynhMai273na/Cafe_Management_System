@@ -35,6 +35,7 @@ namespace CafeManagementSystem.DAO
             }
             return list;
         }
+
         public Customer GetOneCustomerByPhone (string phone)
         {
             string query = string.Format("Select * from Customer where phoneNumber = N'{0}'", phone);
@@ -47,5 +48,20 @@ namespace CafeManagementSystem.DAO
             return null;
         }
         
+
+        public int GetPointsOfCus(string phoneNumber)
+        {
+            List<Customer> list = new List<Customer>();
+            string query = "SELECT * FROM Customer WHERE phoneNumber = " + phoneNumber;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            Customer customer = new Customer(data.Rows[0]);
+            foreach (DataRow item in data.Rows)
+            {
+                Customer Customer = new Customer(item);
+                list.Add(Customer);
+            }
+            return list[0].Points;
+        }
+
     }
 }
