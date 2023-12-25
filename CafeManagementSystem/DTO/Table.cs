@@ -51,6 +51,7 @@ namespace CafeManagementSystem.DTO
         {
             this.id = (int)row["id"];
             this.name = row["name"].ToString();
+            this.numPeople = (int)row["numPeople"];
             this.status = row["status"].ToString();
             this.location = row["location"].ToString();
         }

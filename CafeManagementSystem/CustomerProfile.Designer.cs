@@ -56,6 +56,7 @@
             this.guna2PanelHistoryBillsCustomer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelHistoryBillsShowCustomer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PanelShowHistoryBillsCustomer = new Guna.UI2.WinForms.Guna2Panel();
+            this.dataGridViewBillOfCus = new System.Windows.Forms.DataGridView();
             this.labelToHistoryBillsCustomer = new System.Windows.Forms.Label();
             this.labelFromHistoryBillsCustomer = new System.Windows.Forms.Label();
             this.guna2ButtonHistoryBillsCustomer = new Guna.UI2.WinForms.Guna2Button();
@@ -66,15 +67,18 @@
             this.guna2PanelUpdateInfoCustomer.SuspendLayout();
             this.guna2PanelHistoryBillsCustomer.SuspendLayout();
             this.guna2PanelHistoryBillsShowCustomer.SuspendLayout();
+            this.guna2PanelShowHistoryBillsCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBillOfCus)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBoxUserAvatarCustomer
             // 
             this.guna2PictureBoxUserAvatarCustomer.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBoxUserAvatarCustomer.Image")));
             this.guna2PictureBoxUserAvatarCustomer.ImageRotate = 0F;
-            this.guna2PictureBoxUserAvatarCustomer.Location = new System.Drawing.Point(13, 28);
+            this.guna2PictureBoxUserAvatarCustomer.Location = new System.Drawing.Point(15, 35);
+            this.guna2PictureBoxUserAvatarCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PictureBoxUserAvatarCustomer.Name = "guna2PictureBoxUserAvatarCustomer";
-            this.guna2PictureBoxUserAvatarCustomer.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBoxUserAvatarCustomer.Size = new System.Drawing.Size(90, 100);
             this.guna2PictureBoxUserAvatarCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBoxUserAvatarCustomer.TabIndex = 0;
             this.guna2PictureBoxUserAvatarCustomer.TabStop = false;
@@ -82,7 +86,7 @@
             // guna2TextBoxReEnterNewPWCustomer
             // 
             this.guna2TextBoxReEnterNewPWCustomer.AutoRoundedCorners = true;
-            this.guna2TextBoxReEnterNewPWCustomer.BorderRadius = 14;
+            this.guna2TextBoxReEnterNewPWCustomer.BorderRadius = 18;
             this.guna2TextBoxReEnterNewPWCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxReEnterNewPWCustomer.DefaultText = "";
             this.guna2TextBoxReEnterNewPWCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -92,19 +96,19 @@
             this.guna2TextBoxReEnterNewPWCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxReEnterNewPWCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxReEnterNewPWCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxReEnterNewPWCustomer.Location = new System.Drawing.Point(270, 265);
-            this.guna2TextBoxReEnterNewPWCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxReEnterNewPWCustomer.Location = new System.Drawing.Point(304, 331);
+            this.guna2TextBoxReEnterNewPWCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxReEnterNewPWCustomer.Name = "guna2TextBoxReEnterNewPWCustomer";
             this.guna2TextBoxReEnterNewPWCustomer.PasswordChar = '\0';
             this.guna2TextBoxReEnterNewPWCustomer.PlaceholderText = "";
             this.guna2TextBoxReEnterNewPWCustomer.SelectedText = "";
-            this.guna2TextBoxReEnterNewPWCustomer.Size = new System.Drawing.Size(245, 31);
+            this.guna2TextBoxReEnterNewPWCustomer.Size = new System.Drawing.Size(276, 39);
             this.guna2TextBoxReEnterNewPWCustomer.TabIndex = 16;
             // 
             // guna2TextBoxNewPWCustomer
             // 
             this.guna2TextBoxNewPWCustomer.AutoRoundedCorners = true;
-            this.guna2TextBoxNewPWCustomer.BorderRadius = 14;
+            this.guna2TextBoxNewPWCustomer.BorderRadius = 18;
             this.guna2TextBoxNewPWCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxNewPWCustomer.DefaultText = "";
             this.guna2TextBoxNewPWCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -114,19 +118,19 @@
             this.guna2TextBoxNewPWCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxNewPWCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxNewPWCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxNewPWCustomer.Location = new System.Drawing.Point(270, 211);
-            this.guna2TextBoxNewPWCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxNewPWCustomer.Location = new System.Drawing.Point(304, 264);
+            this.guna2TextBoxNewPWCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxNewPWCustomer.Name = "guna2TextBoxNewPWCustomer";
             this.guna2TextBoxNewPWCustomer.PasswordChar = '\0';
             this.guna2TextBoxNewPWCustomer.PlaceholderText = "";
             this.guna2TextBoxNewPWCustomer.SelectedText = "";
-            this.guna2TextBoxNewPWCustomer.Size = new System.Drawing.Size(245, 31);
+            this.guna2TextBoxNewPWCustomer.Size = new System.Drawing.Size(276, 39);
             this.guna2TextBoxNewPWCustomer.TabIndex = 15;
             // 
             // guna2TextBoxPWSettingCustomer
             // 
             this.guna2TextBoxPWSettingCustomer.AutoRoundedCorners = true;
-            this.guna2TextBoxPWSettingCustomer.BorderRadius = 14;
+            this.guna2TextBoxPWSettingCustomer.BorderRadius = 18;
             this.guna2TextBoxPWSettingCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxPWSettingCustomer.DefaultText = "";
             this.guna2TextBoxPWSettingCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -136,19 +140,19 @@
             this.guna2TextBoxPWSettingCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxPWSettingCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxPWSettingCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxPWSettingCustomer.Location = new System.Drawing.Point(270, 156);
-            this.guna2TextBoxPWSettingCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxPWSettingCustomer.Location = new System.Drawing.Point(304, 195);
+            this.guna2TextBoxPWSettingCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxPWSettingCustomer.Name = "guna2TextBoxPWSettingCustomer";
             this.guna2TextBoxPWSettingCustomer.PasswordChar = '\0';
             this.guna2TextBoxPWSettingCustomer.PlaceholderText = "";
             this.guna2TextBoxPWSettingCustomer.SelectedText = "";
-            this.guna2TextBoxPWSettingCustomer.Size = new System.Drawing.Size(245, 31);
+            this.guna2TextBoxPWSettingCustomer.Size = new System.Drawing.Size(276, 39);
             this.guna2TextBoxPWSettingCustomer.TabIndex = 14;
             // 
             // guna2TextBoxUpdateDOBCustomer
             // 
             this.guna2TextBoxUpdateDOBCustomer.AutoRoundedCorners = true;
-            this.guna2TextBoxUpdateDOBCustomer.BorderRadius = 14;
+            this.guna2TextBoxUpdateDOBCustomer.BorderRadius = 18;
             this.guna2TextBoxUpdateDOBCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxUpdateDOBCustomer.DefaultText = "";
             this.guna2TextBoxUpdateDOBCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -158,19 +162,19 @@
             this.guna2TextBoxUpdateDOBCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxUpdateDOBCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxUpdateDOBCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxUpdateDOBCustomer.Location = new System.Drawing.Point(270, 102);
-            this.guna2TextBoxUpdateDOBCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxUpdateDOBCustomer.Location = new System.Drawing.Point(304, 128);
+            this.guna2TextBoxUpdateDOBCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxUpdateDOBCustomer.Name = "guna2TextBoxUpdateDOBCustomer";
             this.guna2TextBoxUpdateDOBCustomer.PasswordChar = '\0';
             this.guna2TextBoxUpdateDOBCustomer.PlaceholderText = "";
             this.guna2TextBoxUpdateDOBCustomer.SelectedText = "";
-            this.guna2TextBoxUpdateDOBCustomer.Size = new System.Drawing.Size(245, 31);
+            this.guna2TextBoxUpdateDOBCustomer.Size = new System.Drawing.Size(276, 39);
             this.guna2TextBoxUpdateDOBCustomer.TabIndex = 13;
             // 
             // guna2TextBoxDisplayNameCustomer
             // 
             this.guna2TextBoxDisplayNameCustomer.AutoRoundedCorners = true;
-            this.guna2TextBoxDisplayNameCustomer.BorderRadius = 14;
+            this.guna2TextBoxDisplayNameCustomer.BorderRadius = 18;
             this.guna2TextBoxDisplayNameCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxDisplayNameCustomer.DefaultText = "";
             this.guna2TextBoxDisplayNameCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -180,13 +184,13 @@
             this.guna2TextBoxDisplayNameCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDisplayNameCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxDisplayNameCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxDisplayNameCustomer.Location = new System.Drawing.Point(270, 46);
-            this.guna2TextBoxDisplayNameCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxDisplayNameCustomer.Location = new System.Drawing.Point(304, 58);
+            this.guna2TextBoxDisplayNameCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxDisplayNameCustomer.Name = "guna2TextBoxDisplayNameCustomer";
             this.guna2TextBoxDisplayNameCustomer.PasswordChar = '\0';
             this.guna2TextBoxDisplayNameCustomer.PlaceholderText = "";
             this.guna2TextBoxDisplayNameCustomer.SelectedText = "";
-            this.guna2TextBoxDisplayNameCustomer.Size = new System.Drawing.Size(245, 31);
+            this.guna2TextBoxDisplayNameCustomer.Size = new System.Drawing.Size(276, 39);
             this.guna2TextBoxDisplayNameCustomer.TabIndex = 9;
             // 
             // labelUpdateDOBCustomer
@@ -194,9 +198,9 @@
             this.labelUpdateDOBCustomer.AutoSize = true;
             this.labelUpdateDOBCustomer.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdateDOBCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelUpdateDOBCustomer.Location = new System.Drawing.Point(18, 105);
+            this.labelUpdateDOBCustomer.Location = new System.Drawing.Point(20, 131);
             this.labelUpdateDOBCustomer.Name = "labelUpdateDOBCustomer";
-            this.labelUpdateDOBCustomer.Size = new System.Drawing.Size(117, 19);
+            this.labelUpdateDOBCustomer.Size = new System.Drawing.Size(144, 24);
             this.labelUpdateDOBCustomer.TabIndex = 9;
             this.labelUpdateDOBCustomer.Text = "Day Of Birth: ";
             // 
@@ -205,9 +209,9 @@
             this.labelReEnterNewPWCustomer.AutoSize = true;
             this.labelReEnterNewPWCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.labelReEnterNewPWCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelReEnterNewPWCustomer.Location = new System.Drawing.Point(17, 272);
+            this.labelReEnterNewPWCustomer.Location = new System.Drawing.Point(19, 340);
             this.labelReEnterNewPWCustomer.Name = "labelReEnterNewPWCustomer";
-            this.labelReEnterNewPWCustomer.Size = new System.Drawing.Size(207, 19);
+            this.labelReEnterNewPWCustomer.Size = new System.Drawing.Size(245, 24);
             this.labelReEnterNewPWCustomer.TabIndex = 12;
             this.labelReEnterNewPWCustomer.Text = "Re-Enter New Password:";
             // 
@@ -216,9 +220,9 @@
             this.labelNewPWCustomer.AutoSize = true;
             this.labelNewPWCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.labelNewPWCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelNewPWCustomer.Location = new System.Drawing.Point(17, 216);
+            this.labelNewPWCustomer.Location = new System.Drawing.Point(19, 270);
             this.labelNewPWCustomer.Name = "labelNewPWCustomer";
-            this.labelNewPWCustomer.Size = new System.Drawing.Size(132, 19);
+            this.labelNewPWCustomer.Size = new System.Drawing.Size(156, 24);
             this.labelNewPWCustomer.TabIndex = 11;
             this.labelNewPWCustomer.Text = "New Password:";
             // 
@@ -227,9 +231,9 @@
             this.labelPWSettingCustomer.AutoSize = true;
             this.labelPWSettingCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.labelPWSettingCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelPWSettingCustomer.Location = new System.Drawing.Point(17, 158);
+            this.labelPWSettingCustomer.Location = new System.Drawing.Point(19, 198);
             this.labelPWSettingCustomer.Name = "labelPWSettingCustomer";
-            this.labelPWSettingCustomer.Size = new System.Drawing.Size(93, 19);
+            this.labelPWSettingCustomer.Size = new System.Drawing.Size(110, 24);
             this.labelPWSettingCustomer.TabIndex = 10;
             this.labelPWSettingCustomer.Text = "Password:";
             // 
@@ -238,9 +242,9 @@
             this.labelDisplayNameCustomer.AutoSize = true;
             this.labelDisplayNameCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.labelDisplayNameCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelDisplayNameCustomer.Location = new System.Drawing.Point(17, 52);
+            this.labelDisplayNameCustomer.Location = new System.Drawing.Point(19, 65);
             this.labelDisplayNameCustomer.Name = "labelDisplayNameCustomer";
-            this.labelDisplayNameCustomer.Size = new System.Drawing.Size(126, 19);
+            this.labelDisplayNameCustomer.Size = new System.Drawing.Size(151, 24);
             this.labelDisplayNameCustomer.TabIndex = 9;
             this.labelDisplayNameCustomer.Text = "Display Name: ";
             // 
@@ -252,17 +256,18 @@
             this.guna2TextBoxPhoneCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxPhoneCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxPhoneCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxPhoneCustomer.Enabled = false;
             this.guna2TextBoxPhoneCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxPhoneCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxPhoneCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxPhoneCustomer.Location = new System.Drawing.Point(594, 54);
-            this.guna2TextBoxPhoneCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxPhoneCustomer.Location = new System.Drawing.Point(668, 68);
+            this.guna2TextBoxPhoneCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxPhoneCustomer.Name = "guna2TextBoxPhoneCustomer";
             this.guna2TextBoxPhoneCustomer.PasswordChar = '\0';
             this.guna2TextBoxPhoneCustomer.PlaceholderText = "";
             this.guna2TextBoxPhoneCustomer.ReadOnly = true;
             this.guna2TextBoxPhoneCustomer.SelectedText = "";
-            this.guna2TextBoxPhoneCustomer.Size = new System.Drawing.Size(355, 31);
+            this.guna2TextBoxPhoneCustomer.Size = new System.Drawing.Size(399, 39);
             this.guna2TextBoxPhoneCustomer.TabIndex = 6;
             // 
             // guna2TextBoxDOBCustomer
@@ -273,17 +278,18 @@
             this.guna2TextBoxDOBCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxDOBCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxDOBCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxDOBCustomer.Enabled = false;
             this.guna2TextBoxDOBCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDOBCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxDOBCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxDOBCustomer.Location = new System.Drawing.Point(594, 7);
-            this.guna2TextBoxDOBCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxDOBCustomer.Location = new System.Drawing.Point(668, 9);
+            this.guna2TextBoxDOBCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxDOBCustomer.Name = "guna2TextBoxDOBCustomer";
             this.guna2TextBoxDOBCustomer.PasswordChar = '\0';
             this.guna2TextBoxDOBCustomer.PlaceholderText = "";
             this.guna2TextBoxDOBCustomer.ReadOnly = true;
             this.guna2TextBoxDOBCustomer.SelectedText = "";
-            this.guna2TextBoxDOBCustomer.Size = new System.Drawing.Size(355, 31);
+            this.guna2TextBoxDOBCustomer.Size = new System.Drawing.Size(399, 39);
             this.guna2TextBoxDOBCustomer.TabIndex = 5;
             // 
             // labelPhoneNumberCustomer
@@ -291,9 +297,9 @@
             this.labelPhoneNumberCustomer.AutoSize = true;
             this.labelPhoneNumberCustomer.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
             this.labelPhoneNumberCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelPhoneNumberCustomer.Location = new System.Drawing.Point(457, 60);
+            this.labelPhoneNumberCustomer.Location = new System.Drawing.Point(514, 75);
             this.labelPhoneNumberCustomer.Name = "labelPhoneNumberCustomer";
-            this.labelPhoneNumberCustomer.Size = new System.Drawing.Size(118, 18);
+            this.labelPhoneNumberCustomer.Size = new System.Drawing.Size(132, 19);
             this.labelPhoneNumberCustomer.TabIndex = 4;
             this.labelPhoneNumberCustomer.Text = "Phone Number:";
             // 
@@ -302,9 +308,9 @@
             this.labelBirthDayCustomer.AutoSize = true;
             this.labelBirthDayCustomer.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
             this.labelBirthDayCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelBirthDayCustomer.Location = new System.Drawing.Point(457, 14);
+            this.labelBirthDayCustomer.Location = new System.Drawing.Point(514, 18);
             this.labelBirthDayCustomer.Name = "labelBirthDayCustomer";
-            this.labelBirthDayCustomer.Size = new System.Drawing.Size(102, 18);
+            this.labelBirthDayCustomer.Size = new System.Drawing.Size(117, 19);
             this.labelBirthDayCustomer.TabIndex = 3;
             this.labelBirthDayCustomer.Text = "Day Of Birth: ";
             // 
@@ -312,9 +318,9 @@
             // 
             this.labelusernameprofileCustomer.AutoSize = true;
             this.labelusernameprofileCustomer.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelusernameprofileCustomer.Location = new System.Drawing.Point(116, 88);
+            this.labelusernameprofileCustomer.Location = new System.Drawing.Point(130, 110);
             this.labelusernameprofileCustomer.Name = "labelusernameprofileCustomer";
-            this.labelusernameprofileCustomer.Size = new System.Drawing.Size(89, 16);
+            this.labelusernameprofileCustomer.Size = new System.Drawing.Size(107, 19);
             this.labelusernameprofileCustomer.TabIndex = 2;
             this.labelusernameprofileCustomer.Text = "@peterpaker";
             // 
@@ -322,7 +328,7 @@
             // 
             this.guna2ButtonChangeInfoCustomer.AutoRoundedCorners = true;
             this.guna2ButtonChangeInfoCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonChangeInfoCustomer.BorderRadius = 21;
+            this.guna2ButtonChangeInfoCustomer.BorderRadius = 27;
             this.guna2ButtonChangeInfoCustomer.BorderThickness = 2;
             this.guna2ButtonChangeInfoCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonChangeInfoCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -331,11 +337,13 @@
             this.guna2ButtonChangeInfoCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonChangeInfoCustomer.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonChangeInfoCustomer.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonChangeInfoCustomer.Location = new System.Drawing.Point(344, 317);
+            this.guna2ButtonChangeInfoCustomer.Location = new System.Drawing.Point(387, 396);
+            this.guna2ButtonChangeInfoCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ButtonChangeInfoCustomer.Name = "guna2ButtonChangeInfoCustomer";
-            this.guna2ButtonChangeInfoCustomer.Size = new System.Drawing.Size(171, 45);
+            this.guna2ButtonChangeInfoCustomer.Size = new System.Drawing.Size(192, 56);
             this.guna2ButtonChangeInfoCustomer.TabIndex = 1;
             this.guna2ButtonChangeInfoCustomer.Text = "Save Changes";
+            this.guna2ButtonChangeInfoCustomer.Click += new System.EventHandler(this.guna2ButtonChangeInfoCustomer_Click);
             // 
             // guna2TextBoxAccountLevelCustomer
             // 
@@ -345,17 +353,18 @@
             this.guna2TextBoxAccountLevelCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxAccountLevelCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxAccountLevelCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxAccountLevelCustomer.Enabled = false;
             this.guna2TextBoxAccountLevelCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxAccountLevelCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxAccountLevelCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxAccountLevelCustomer.Location = new System.Drawing.Point(594, 100);
-            this.guna2TextBoxAccountLevelCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxAccountLevelCustomer.Location = new System.Drawing.Point(668, 125);
+            this.guna2TextBoxAccountLevelCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxAccountLevelCustomer.Name = "guna2TextBoxAccountLevelCustomer";
             this.guna2TextBoxAccountLevelCustomer.PasswordChar = '\0';
             this.guna2TextBoxAccountLevelCustomer.PlaceholderText = "";
             this.guna2TextBoxAccountLevelCustomer.ReadOnly = true;
             this.guna2TextBoxAccountLevelCustomer.SelectedText = "";
-            this.guna2TextBoxAccountLevelCustomer.Size = new System.Drawing.Size(355, 31);
+            this.guna2TextBoxAccountLevelCustomer.Size = new System.Drawing.Size(399, 39);
             this.guna2TextBoxAccountLevelCustomer.TabIndex = 8;
             // 
             // guna2PanelTopUserCustomer
@@ -372,8 +381,9 @@
             this.guna2PanelTopUserCustomer.Controls.Add(this.guna2TextBoxUserNameProfileCustomer);
             this.guna2PanelTopUserCustomer.Controls.Add(this.guna2PictureBoxUserAvatarCustomer);
             this.guna2PanelTopUserCustomer.Location = new System.Drawing.Point(2, 0);
+            this.guna2PanelTopUserCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelTopUserCustomer.Name = "guna2PanelTopUserCustomer";
-            this.guna2PanelTopUserCustomer.Size = new System.Drawing.Size(971, 142);
+            this.guna2PanelTopUserCustomer.Size = new System.Drawing.Size(1092, 178);
             this.guna2PanelTopUserCustomer.TabIndex = 7;
             // 
             // labelAccountLevelCustomer
@@ -381,9 +391,9 @@
             this.labelAccountLevelCustomer.AutoSize = true;
             this.labelAccountLevelCustomer.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
             this.labelAccountLevelCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelAccountLevelCustomer.Location = new System.Drawing.Point(457, 107);
+            this.labelAccountLevelCustomer.Location = new System.Drawing.Point(514, 134);
             this.labelAccountLevelCustomer.Name = "labelAccountLevelCustomer";
-            this.labelAccountLevelCustomer.Size = new System.Drawing.Size(113, 18);
+            this.labelAccountLevelCustomer.Size = new System.Drawing.Size(126, 19);
             this.labelAccountLevelCustomer.TabIndex = 7;
             this.labelAccountLevelCustomer.Text = "Account Level:";
             // 
@@ -391,7 +401,7 @@
             // 
             this.guna2TextBoxUserNameProfileCustomer.AutoRoundedCorners = true;
             this.guna2TextBoxUserNameProfileCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2TextBoxUserNameProfileCustomer.BorderRadius = 23;
+            this.guna2TextBoxUserNameProfileCustomer.BorderRadius = 29;
             this.guna2TextBoxUserNameProfileCustomer.BorderThickness = 2;
             this.guna2TextBoxUserNameProfileCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxUserNameProfileCustomer.DefaultText = "Mr. Peter Paker";
@@ -399,17 +409,18 @@
             this.guna2TextBoxUserNameProfileCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxUserNameProfileCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxUserNameProfileCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxUserNameProfileCustomer.Enabled = false;
             this.guna2TextBoxUserNameProfileCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxUserNameProfileCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxUserNameProfileCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxUserNameProfileCustomer.Location = new System.Drawing.Point(106, 33);
-            this.guna2TextBoxUserNameProfileCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxUserNameProfileCustomer.Location = new System.Drawing.Point(119, 41);
+            this.guna2TextBoxUserNameProfileCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxUserNameProfileCustomer.Name = "guna2TextBoxUserNameProfileCustomer";
             this.guna2TextBoxUserNameProfileCustomer.PasswordChar = '\0';
             this.guna2TextBoxUserNameProfileCustomer.PlaceholderText = "";
             this.guna2TextBoxUserNameProfileCustomer.ReadOnly = true;
             this.guna2TextBoxUserNameProfileCustomer.SelectedText = "";
-            this.guna2TextBoxUserNameProfileCustomer.Size = new System.Drawing.Size(302, 48);
+            this.guna2TextBoxUserNameProfileCustomer.Size = new System.Drawing.Size(340, 60);
             this.guna2TextBoxUserNameProfileCustomer.TabIndex = 1;
             this.guna2TextBoxUserNameProfileCustomer.TextOffset = new System.Drawing.Point(5, 0);
             // 
@@ -427,13 +438,13 @@
             this.guna2TextBoxUpdateInfovsPWCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2TextBoxUpdateInfovsPWCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxUpdateInfovsPWCustomer.Location = new System.Drawing.Point(0, 1);
-            this.guna2TextBoxUpdateInfovsPWCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxUpdateInfovsPWCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxUpdateInfovsPWCustomer.Name = "guna2TextBoxUpdateInfovsPWCustomer";
             this.guna2TextBoxUpdateInfovsPWCustomer.PasswordChar = '\0';
             this.guna2TextBoxUpdateInfovsPWCustomer.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.guna2TextBoxUpdateInfovsPWCustomer.PlaceholderText = "";
             this.guna2TextBoxUpdateInfovsPWCustomer.SelectedText = "";
-            this.guna2TextBoxUpdateInfovsPWCustomer.Size = new System.Drawing.Size(538, 34);
+            this.guna2TextBoxUpdateInfovsPWCustomer.Size = new System.Drawing.Size(605, 42);
             this.guna2TextBoxUpdateInfovsPWCustomer.TabIndex = 0;
             this.guna2TextBoxUpdateInfovsPWCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -453,9 +464,10 @@
             this.guna2PanelUpdateInfoCustomer.Controls.Add(this.labelDisplayNameCustomer);
             this.guna2PanelUpdateInfoCustomer.Controls.Add(this.guna2ButtonChangeInfoCustomer);
             this.guna2PanelUpdateInfoCustomer.Controls.Add(this.guna2TextBoxUpdateInfovsPWCustomer);
-            this.guna2PanelUpdateInfoCustomer.Location = new System.Drawing.Point(2, 140);
+            this.guna2PanelUpdateInfoCustomer.Location = new System.Drawing.Point(2, 175);
+            this.guna2PanelUpdateInfoCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelUpdateInfoCustomer.Name = "guna2PanelUpdateInfoCustomer";
-            this.guna2PanelUpdateInfoCustomer.Size = new System.Drawing.Size(534, 559);
+            this.guna2PanelUpdateInfoCustomer.Size = new System.Drawing.Size(601, 699);
             this.guna2PanelUpdateInfoCustomer.TabIndex = 8;
             // 
             // guna2TextBoxHistoryBillsCustomer
@@ -473,13 +485,13 @@
             this.guna2TextBoxHistoryBillsCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
             this.guna2TextBoxHistoryBillsCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxHistoryBillsCustomer.Location = new System.Drawing.Point(-3, 1);
-            this.guna2TextBoxHistoryBillsCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBoxHistoryBillsCustomer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2TextBoxHistoryBillsCustomer.Name = "guna2TextBoxHistoryBillsCustomer";
             this.guna2TextBoxHistoryBillsCustomer.PasswordChar = '\0';
             this.guna2TextBoxHistoryBillsCustomer.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.guna2TextBoxHistoryBillsCustomer.PlaceholderText = "";
             this.guna2TextBoxHistoryBillsCustomer.SelectedText = "";
-            this.guna2TextBoxHistoryBillsCustomer.Size = new System.Drawing.Size(437, 34);
+            this.guna2TextBoxHistoryBillsCustomer.Size = new System.Drawing.Size(492, 42);
             this.guna2TextBoxHistoryBillsCustomer.TabIndex = 17;
             this.guna2TextBoxHistoryBillsCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -489,9 +501,10 @@
             this.guna2PanelHistoryBillsCustomer.BorderThickness = 2;
             this.guna2PanelHistoryBillsCustomer.Controls.Add(this.guna2PanelHistoryBillsShowCustomer);
             this.guna2PanelHistoryBillsCustomer.Controls.Add(this.guna2TextBoxHistoryBillsCustomer);
-            this.guna2PanelHistoryBillsCustomer.Location = new System.Drawing.Point(537, 140);
+            this.guna2PanelHistoryBillsCustomer.Location = new System.Drawing.Point(604, 175);
+            this.guna2PanelHistoryBillsCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelHistoryBillsCustomer.Name = "guna2PanelHistoryBillsCustomer";
-            this.guna2PanelHistoryBillsCustomer.Size = new System.Drawing.Size(436, 559);
+            this.guna2PanelHistoryBillsCustomer.Size = new System.Drawing.Size(490, 699);
             this.guna2PanelHistoryBillsCustomer.TabIndex = 18;
             // 
             // guna2PanelHistoryBillsShowCustomer
@@ -503,28 +516,41 @@
             this.guna2PanelHistoryBillsShowCustomer.Controls.Add(this.guna2ButtonHistoryBillsCustomer);
             this.guna2PanelHistoryBillsShowCustomer.Controls.Add(this.guna2DateTimePickerHistoryBillsCustomer2);
             this.guna2PanelHistoryBillsShowCustomer.Controls.Add(this.guna2DateTimePickerHistoryBillsCustomer1);
-            this.guna2PanelHistoryBillsShowCustomer.Location = new System.Drawing.Point(0, 34);
+            this.guna2PanelHistoryBillsShowCustomer.Location = new System.Drawing.Point(0, 42);
+            this.guna2PanelHistoryBillsShowCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelHistoryBillsShowCustomer.Name = "guna2PanelHistoryBillsShowCustomer";
-            this.guna2PanelHistoryBillsShowCustomer.Size = new System.Drawing.Size(439, 524);
+            this.guna2PanelHistoryBillsShowCustomer.Size = new System.Drawing.Size(494, 655);
             this.guna2PanelHistoryBillsShowCustomer.TabIndex = 18;
             // 
             // guna2PanelShowHistoryBillsCustomer
             // 
             this.guna2PanelShowHistoryBillsCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelShowHistoryBillsCustomer.BorderThickness = 2;
-            this.guna2PanelShowHistoryBillsCustomer.Location = new System.Drawing.Point(1, 49);
+            this.guna2PanelShowHistoryBillsCustomer.Controls.Add(this.dataGridViewBillOfCus);
+            this.guna2PanelShowHistoryBillsCustomer.Location = new System.Drawing.Point(1, 61);
+            this.guna2PanelShowHistoryBillsCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelShowHistoryBillsCustomer.Name = "guna2PanelShowHistoryBillsCustomer";
-            this.guna2PanelShowHistoryBillsCustomer.Size = new System.Drawing.Size(431, 426);
+            this.guna2PanelShowHistoryBillsCustomer.Size = new System.Drawing.Size(485, 532);
             this.guna2PanelShowHistoryBillsCustomer.TabIndex = 7;
+            // 
+            // dataGridViewBillOfCus
+            // 
+            this.dataGridViewBillOfCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBillOfCus.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewBillOfCus.Name = "dataGridViewBillOfCus";
+            this.dataGridViewBillOfCus.RowHeadersWidth = 62;
+            this.dataGridViewBillOfCus.RowTemplate.Height = 28;
+            this.dataGridViewBillOfCus.Size = new System.Drawing.Size(479, 526);
+            this.dataGridViewBillOfCus.TabIndex = 0;
             // 
             // labelToHistoryBillsCustomer
             // 
             this.labelToHistoryBillsCustomer.AutoSize = true;
             this.labelToHistoryBillsCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.labelToHistoryBillsCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelToHistoryBillsCustomer.Location = new System.Drawing.Point(231, 16);
+            this.labelToHistoryBillsCustomer.Location = new System.Drawing.Point(260, 20);
             this.labelToHistoryBillsCustomer.Name = "labelToHistoryBillsCustomer";
-            this.labelToHistoryBillsCustomer.Size = new System.Drawing.Size(28, 19);
+            this.labelToHistoryBillsCustomer.Size = new System.Drawing.Size(34, 24);
             this.labelToHistoryBillsCustomer.TabIndex = 6;
             this.labelToHistoryBillsCustomer.Text = "To";
             // 
@@ -533,9 +559,9 @@
             this.labelFromHistoryBillsCustomer.AutoSize = true;
             this.labelFromHistoryBillsCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.labelFromHistoryBillsCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelFromHistoryBillsCustomer.Location = new System.Drawing.Point(7, 17);
+            this.labelFromHistoryBillsCustomer.Location = new System.Drawing.Point(8, 21);
             this.labelFromHistoryBillsCustomer.Name = "labelFromHistoryBillsCustomer";
-            this.labelFromHistoryBillsCustomer.Size = new System.Drawing.Size(50, 19);
+            this.labelFromHistoryBillsCustomer.Size = new System.Drawing.Size(59, 24);
             this.labelFromHistoryBillsCustomer.TabIndex = 5;
             this.labelFromHistoryBillsCustomer.Text = "From";
             // 
@@ -543,7 +569,7 @@
             // 
             this.guna2ButtonHistoryBillsCustomer.AutoRoundedCorners = true;
             this.guna2ButtonHistoryBillsCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.guna2ButtonHistoryBillsCustomer.BorderRadius = 19;
+            this.guna2ButtonHistoryBillsCustomer.BorderRadius = 24;
             this.guna2ButtonHistoryBillsCustomer.BorderThickness = 2;
             this.guna2ButtonHistoryBillsCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonHistoryBillsCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -552,11 +578,13 @@
             this.guna2ButtonHistoryBillsCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonHistoryBillsCustomer.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonHistoryBillsCustomer.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonHistoryBillsCustomer.Location = new System.Drawing.Point(327, 479);
+            this.guna2ButtonHistoryBillsCustomer.Location = new System.Drawing.Point(368, 599);
+            this.guna2ButtonHistoryBillsCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ButtonHistoryBillsCustomer.Name = "guna2ButtonHistoryBillsCustomer";
-            this.guna2ButtonHistoryBillsCustomer.Size = new System.Drawing.Size(107, 40);
+            this.guna2ButtonHistoryBillsCustomer.Size = new System.Drawing.Size(120, 50);
             this.guna2ButtonHistoryBillsCustomer.TabIndex = 2;
             this.guna2ButtonHistoryBillsCustomer.Text = "Show Bills";
+            this.guna2ButtonHistoryBillsCustomer.Click += new System.EventHandler(this.guna2ButtonHistoryBillsCustomer_Click);
             // 
             // guna2DateTimePickerHistoryBillsCustomer2
             // 
@@ -564,11 +592,12 @@
             this.guna2DateTimePickerHistoryBillsCustomer2.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePickerHistoryBillsCustomer2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePickerHistoryBillsCustomer2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePickerHistoryBillsCustomer2.Location = new System.Drawing.Point(270, 7);
+            this.guna2DateTimePickerHistoryBillsCustomer2.Location = new System.Drawing.Point(304, 9);
+            this.guna2DateTimePickerHistoryBillsCustomer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2DateTimePickerHistoryBillsCustomer2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePickerHistoryBillsCustomer2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePickerHistoryBillsCustomer2.Name = "guna2DateTimePickerHistoryBillsCustomer2";
-            this.guna2DateTimePickerHistoryBillsCustomer2.Size = new System.Drawing.Size(156, 36);
+            this.guna2DateTimePickerHistoryBillsCustomer2.Size = new System.Drawing.Size(176, 45);
             this.guna2DateTimePickerHistoryBillsCustomer2.TabIndex = 1;
             this.guna2DateTimePickerHistoryBillsCustomer2.Value = new System.DateTime(2023, 12, 23, 13, 14, 2, 574);
             // 
@@ -578,24 +607,26 @@
             this.guna2DateTimePickerHistoryBillsCustomer1.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePickerHistoryBillsCustomer1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePickerHistoryBillsCustomer1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePickerHistoryBillsCustomer1.Location = new System.Drawing.Point(64, 8);
+            this.guna2DateTimePickerHistoryBillsCustomer1.Location = new System.Drawing.Point(72, 10);
+            this.guna2DateTimePickerHistoryBillsCustomer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2DateTimePickerHistoryBillsCustomer1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePickerHistoryBillsCustomer1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePickerHistoryBillsCustomer1.Name = "guna2DateTimePickerHistoryBillsCustomer1";
-            this.guna2DateTimePickerHistoryBillsCustomer1.Size = new System.Drawing.Size(156, 36);
+            this.guna2DateTimePickerHistoryBillsCustomer1.Size = new System.Drawing.Size(176, 45);
             this.guna2DateTimePickerHistoryBillsCustomer1.TabIndex = 0;
             this.guna2DateTimePickerHistoryBillsCustomer1.Value = new System.DateTime(2023, 12, 23, 13, 14, 2, 574);
             // 
             // CustomerProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(229)))));
-            this.ClientSize = new System.Drawing.Size(975, 701);
+            this.ClientSize = new System.Drawing.Size(1097, 876);
             this.Controls.Add(this.guna2PanelHistoryBillsCustomer);
             this.Controls.Add(this.guna2PanelTopUserCustomer);
             this.Controls.Add(this.guna2PanelUpdateInfoCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CustomerProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerProfile";
@@ -607,6 +638,8 @@
             this.guna2PanelHistoryBillsCustomer.ResumeLayout(false);
             this.guna2PanelHistoryBillsShowCustomer.ResumeLayout(false);
             this.guna2PanelHistoryBillsShowCustomer.PerformLayout();
+            this.guna2PanelShowHistoryBillsCustomer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBillOfCus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -645,5 +678,6 @@
         private System.Windows.Forms.Label labelToHistoryBillsCustomer;
         private System.Windows.Forms.Label labelFromHistoryBillsCustomer;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelShowHistoryBillsCustomer;
+        private System.Windows.Forms.DataGridView dataGridViewBillOfCus;
     }
 }
