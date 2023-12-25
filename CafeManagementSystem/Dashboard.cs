@@ -53,7 +53,7 @@ namespace CafeManagementSystem
             {
                 Button btn = new Button() { Width = 80, Height = 80, };
                 btn.Font = new System.Drawing.Font("Microsoft YaHei", 8, System.Drawing.FontStyle.Regular);
-                btn.Text = item.Name + "\n" + item.Location;
+                btn.Text = item.Name + "\n" + item.NumPeople+"people\n";
                 btn.Click += btn_Click;
                 btn.Tag = item;
                 switch (item.Status)
@@ -73,6 +73,7 @@ namespace CafeManagementSystem
         }
         void ShowBill(int id)
         {
+            
             int sumPrice = 0;
             listViewBill.Items.Clear();
             List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
@@ -90,6 +91,7 @@ namespace CafeManagementSystem
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
             this.labelTotalBill.Text = "Total: \t" + totalmoney.ToString("c");
+
     
         }
         int ApplyDiscountForCustomerMember (string level)
@@ -105,7 +107,10 @@ namespace CafeManagementSystem
             guna2TextBoxCustomerName.Text = customerList[0].Name;
             guna2TextBoxCustomerLevel.Text = customerList[0].Level;
             guna2NumericUpDownDiscount.Value = ApplyDiscountForCustomerMember(guna2TextBoxCustomerLevel.Text);
-
+            if (customerList[0].DateOfBirth.Date ==DateTime.Now.Date)
+            {
+                guna2NumericUpDownDiscount.Value = 25;
+            }
         }
         bool CheckMember(string customerPhone)
         {
@@ -198,9 +203,15 @@ namespace CafeManagementSystem
                     {
                         string query = "UPDATE dbo.Bill SET customer = @customer WHERE id = @id";
                         DataProvider.Instance.ExecuteNonQuery(query, new object[] { guna2TextBoxCustomerPhone.Text, idBill });
-
+                        int bonus = CustomerDAO.Instance.GetPointsOfCus(guna2TextBoxCustomerPhone.Text) + (int)moneyAfterDis % 1000;
+                    string query1 = "UPDATE dbo.customer SET points = @points WHERE phoneNumber = @phoneNumber";
+                    DataProvider.Instance.ExecuteNonQuery(query1, new object[] { bonus , guna2TextBoxCustomerPhone.Text });
                     }
+                    if (guna2NumericUpDownDiscount.Value == 0) moneyAfterDis = totalmoney;
                     DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateBill @idBill , @totalmoney , @discount , @note", new object[] { idBill , moneyAfterDis , guna2NumericUpDownDiscount.Value , textBoxWriteNote.Text});
+
+
+
                     ShowBill(table.Id);
                     guna2TextBoxCustomerName.Text = "";
                     guna2TextBoxCustomerLevel.Text = "";

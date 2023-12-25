@@ -33,10 +33,10 @@ namespace CafeManagementSystem.DAO
             }
             return listTable;
         }
-        public List<Table> LoadTableListByLocation(string location)
+        public List<Table> LoadTableListByOrderDate(string dateCheckin)
         {
             List<Table> listTable = new List<Table>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableListByLocation", new object[] {location});
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableListByDateCheckin @dateCheckin", new object[] {dateCheckin});
             foreach (DataRow item in data.Rows)
             {
                 Table table = new Table(item);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,20 +40,49 @@ namespace CafeManagementSystem.DTO
             get { return status; }
             set { status = value; }
         }
-        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status)
+        private float totalMoney;
+        public float TotalMoney
+        {
+            get { return totalMoney; }
+            set { totalMoney = value; }
+        }
+        private int discount;
+        public int Discount
+        {
+            get { return discount; }
+            set { discount = value; }
+        }
+        private string note;
+        public string Note
+        {
+            get { return note; }
+            set { note = value; }
+        }
+        private DateTime dateCheckin;
+        public DateTime DateCheckin
+        {
+            get { return dateCheckin; }
+            set { dateCheckin = value; }
+        }
+
+        public Bill(int id, int idTable, string customer, DateTime? datePayment, int status, float totalMoney, int discount, string note, DateTime dateCheckin)
         {
             this.Id = id;
             this.IdTable = idTable;
             this.Customer = customer;
             this.DatePayment = datePayment;
             this.Status = status;
+            this.TotalMoney = totalMoney;
+            this.Discount = discount;
+            this.note = note;
+            this.dateCheckin = dateCheckin;
         }
         public Bill(DataRow row)
         {
             this.Id = (int)row["id"];
             this.IdTable = (int)row["idTable"];
-            
-            if(Customer!=null)
+
+            if (customer != null)
             {
                 this.Customer = (string)row["customer"];
             }
@@ -62,6 +92,13 @@ namespace CafeManagementSystem.DTO
                 this.DatePayment = (DateTime?)datePayment;
             }
             this.Status = (int)row["status"];
+            this.TotalMoney = (float)Convert.ToDouble(row["totalMoney"]);
+            this.Discount = (int)row["discount"];
+            if (note != null)
+            {
+                this.Note = row["note"].ToString();
+            }
+            this.DateCheckin = (DateTime)row["dateCheckin"];
         }
     }
 }

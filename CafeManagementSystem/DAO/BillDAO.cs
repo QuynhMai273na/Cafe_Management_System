@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace CafeManagementSystem.DAO
 {
@@ -24,8 +25,8 @@ namespace CafeManagementSystem.DAO
         //thành công bill id, thất bại -1
         public int GetUncheckBillIdByTableId(int id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE idTable = " + id + " AND status = 0");
-            if(data.Rows.Count > 0)
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE CONVERT(DATE, dateCheckin) = CONVERT(DATE, getdate()) and idTable = " + id + " AND status = 0");
+           if (data.Rows.Count > 0)
             {
                 Bill bill = new Bill(data.Rows[0]);
                 return bill.Id;
@@ -35,6 +36,8 @@ namespace CafeManagementSystem.DAO
         public void InsertBill (int id)
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
+            string query = "UPDATE dbo.Bill SET dateCheckin = getdate() WHERE id = " + id; ;
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int getMaxIdBill()
         {
@@ -47,8 +50,7 @@ namespace CafeManagementSystem.DAO
         public void CheckOut(int id, Guna2TextBox textBox)
         {
             string query1 = "UPDATE dbo.Bill SET status = 1, datePayment = GETDATE() WHERE id = " + id; ;
-            DataProvider.Instance.ExecuteNonQuery(query1);
-            
+            DataProvider.Instance.ExecuteNonQuery(query1);            
         }
     }
 }

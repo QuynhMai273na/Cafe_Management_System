@@ -25,7 +25,7 @@ namespace CafeManagementSystem
         {
             labelTableManageCustomer.Text = "Overview";
             guna2PictureBoxTableIconCustomer.Image = Properties.Resources._4;
-            container(new fCustomerOverview());
+            container(new fCustomerOverview(loginAccount));
         }
 
         private void container(object _formcustomer)

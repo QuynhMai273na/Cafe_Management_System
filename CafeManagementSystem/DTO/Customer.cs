@@ -33,19 +33,28 @@ namespace CafeManagementSystem.DTO
             get { return level; }
             set { level = value; }
         }
-        public Customer(string phoneNumber, string name, DateTime dateOfBirth, string level) 
+        private int points;
+        public int Points
+        {
+            get { return points; }
+            set { points = value; }
+        }
+        public Customer(string phoneNumber, string name, DateTime dateOfBirth, string level, int points) 
         { 
             this.phoneNumber = phoneNumber;
             this.name = name;
             this.dateOfBirth = dateOfBirth;
             this.level = level;
+            this.points = points;
         }
         public Customer(DataRow row)
         {
-            this.phoneNumber = row["phoneNumber"].ToString();
-            this.name = row["name"].ToString();
-            this.dateOfBirth = (DateTime)row["dateOfBirth"];
-            this.level = row["level"].ToString();
+            this.PhoneNumber = row["phoneNumber"].ToString();
+            this.Name = row["name"].ToString();
+            this.DateOfBirth = (DateTime)row["dateOfBirth"];
+            this.Level = row["level"].ToString();
+            this.Points = (int)row["points"];
+            
         }
     }
 }
