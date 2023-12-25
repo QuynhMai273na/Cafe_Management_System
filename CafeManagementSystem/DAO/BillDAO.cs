@@ -85,7 +85,7 @@ namespace CafeManagementSystem.DAO
         public List<Bill> GetListBill()
         {
             List<Bill> listBill = new List<Bill>();
-            string query = "select * from bill where status=1";
+            string query = "select * from bill where status =1";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -93,6 +93,14 @@ namespace CafeManagementSystem.DAO
                 listBill.Add(bill);
             }
             return listBill;
+        }
+        public DataTable GetBillListByDate(DateTime dayFrom,DateTime dayTo)
+        {
+            string df ="'"+ dayFrom.Date.ToString("MM/dd/yyyy")+"'";
+            string dt ="'"+dayTo.Date.ToString("MM/dd/yyyy")+"'";
+            //return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @dayFrom,@dayTo",new object[] { df, dt });
+            string query = string.Format("exec USP_GetListBillByDate N{0},N{1}", df, dt);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

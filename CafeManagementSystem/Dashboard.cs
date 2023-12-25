@@ -17,7 +17,7 @@ namespace CafeManagementSystem
     public partial class Dashboard : Form
     {
         int totalmoney = 0;
-        int moneyAfterDis;
+        int moneyAfterDis=0;
         public Dashboard()
         {
             InitializeComponent();
@@ -195,7 +195,7 @@ namespace CafeManagementSystem
                 notice.ShowDialog();
                 if (notice.pay == true)
                 {
-                    totalmoney = moneyAfterDis;
+                    if (moneyAfterDis>0) totalmoney = moneyAfterDis;
                     if (guna2TextBoxCustomerPhone.Text != "" && CheckMember(guna2TextBoxCustomerPhone.Text)==true)
                     {
                         string query = "UPDATE dbo.Bill SET customer = @customer WHERE id = @id";

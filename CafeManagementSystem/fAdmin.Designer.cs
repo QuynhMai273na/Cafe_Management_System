@@ -75,13 +75,6 @@ namespace CafeManagementSystem
             this.guna2TabControlAdmin = new Guna.UI2.WinForms.Guna2TabControl();
             this.Receipts = new System.Windows.Forms.TabPage();
             this.guna2PanelReceiptsEdit = new Guna.UI2.WinForms.Guna2Panel();
-            this.listViewReceipts = new System.Windows.Forms.ListView();
-            this.columnIDBill = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnTable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnCustomer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnDiscount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2PanelDateFromTo = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ButtonCheckBill = new Guna.UI2.WinForms.Guna2Button();
             this.labelTo = new System.Windows.Forms.Label();
@@ -112,6 +105,14 @@ namespace CafeManagementSystem
             this.guna2PictureBoxRefreshDrinks = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ButtonDeleteDrinks = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAddDrinks = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridViewBill = new System.Windows.Forms.DataGridView();
+            this.columnIDBill = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnTable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnCustomer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDiscount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewReceipts = new System.Windows.Forms.ListView();
             this.Accounts.SuspendLayout();
             this.guna2PanelAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshAccounts)).BeginInit();
@@ -131,6 +132,7 @@ namespace CafeManagementSystem
             this.guna2PanelEditDrinksDesserts.SuspendLayout();
             this.guna2PanelDrinksDesserts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshDrinks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).BeginInit();
             this.SuspendLayout();
             // 
             // Accounts
@@ -870,64 +872,13 @@ namespace CafeManagementSystem
             // 
             this.guna2PanelReceiptsEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2PanelReceiptsEdit.BorderThickness = 2;
+            this.guna2PanelReceiptsEdit.Controls.Add(this.dataGridViewBill);
             this.guna2PanelReceiptsEdit.Controls.Add(this.listViewReceipts);
             this.guna2PanelReceiptsEdit.Location = new System.Drawing.Point(-1, 58);
             this.guna2PanelReceiptsEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PanelReceiptsEdit.Name = "guna2PanelReceiptsEdit";
             this.guna2PanelReceiptsEdit.Size = new System.Drawing.Size(817, 807);
             this.guna2PanelReceiptsEdit.TabIndex = 6;
-            // 
-            // listViewReceipts
-            // 
-            this.listViewReceipts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnIDBill,
-            this.columnTable,
-            this.columnDate,
-            this.columnCustomer,
-            this.columnDiscount,
-            this.columnTotal});
-            this.listViewReceipts.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.listViewReceipts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.listViewReceipts.HideSelection = false;
-            this.listViewReceipts.Location = new System.Drawing.Point(3, 1);
-            this.listViewReceipts.Name = "listViewReceipts";
-            this.listViewReceipts.Size = new System.Drawing.Size(811, 812);
-            this.listViewReceipts.TabIndex = 0;
-            this.listViewReceipts.UseCompatibleStateImageBehavior = false;
-            this.listViewReceipts.View = System.Windows.Forms.View.Details;
-            // 
-            // columnIDBill
-            // 
-            this.columnIDBill.Text = "ID";
-            this.columnIDBill.Width = 125;
-            // 
-            // columnTable
-            // 
-            this.columnTable.Text = "Table";
-            this.columnTable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // columnDate
-            // 
-            this.columnDate.Text = "Date";
-            this.columnDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnDate.Width = 159;
-            // 
-            // columnCustomer
-            // 
-            this.columnCustomer.Text = "Customer";
-            this.columnCustomer.Width = 136;
-            // 
-            // columnDiscount
-            // 
-            this.columnDiscount.Text = "Discount";
-            this.columnDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnDiscount.Width = 158;
-            // 
-            // columnTotal
-            // 
-            this.columnTotal.Text = "Total";
-            this.columnTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnTotal.Width = 164;
             // 
             // guna2PanelDateFromTo
             // 
@@ -961,6 +912,7 @@ namespace CafeManagementSystem
             this.guna2ButtonCheckBill.Size = new System.Drawing.Size(108, 44);
             this.guna2ButtonCheckBill.TabIndex = 3;
             this.guna2ButtonCheckBill.Text = "Check";
+            this.guna2ButtonCheckBill.Click += new System.EventHandler(this.guna2ButtonCheckBill_Click);
             // 
             // labelTo
             // 
@@ -999,13 +951,14 @@ namespace CafeManagementSystem
             this.guna2DateTimePickeTo.Name = "guna2DateTimePickeTo";
             this.guna2DateTimePickeTo.Size = new System.Drawing.Size(281, 38);
             this.guna2DateTimePickeTo.TabIndex = 2;
-            this.guna2DateTimePickeTo.Value = new System.DateTime(2023, 12, 23, 3, 5, 23, 896);
+            this.guna2DateTimePickeTo.Value = new System.DateTime(2024, 1, 31, 0, 0, 0, 0);
             // 
             // guna2DateTimePickerFrom
             // 
             this.guna2DateTimePickerFrom.AutoRoundedCorners = true;
             this.guna2DateTimePickerFrom.BorderRadius = 18;
             this.guna2DateTimePickerFrom.Checked = true;
+            this.guna2DateTimePickerFrom.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2DateTimePickerFrom.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePickerFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -1016,7 +969,7 @@ namespace CafeManagementSystem
             this.guna2DateTimePickerFrom.Name = "guna2DateTimePickerFrom";
             this.guna2DateTimePickerFrom.Size = new System.Drawing.Size(281, 38);
             this.guna2DateTimePickerFrom.TabIndex = 1;
-            this.guna2DateTimePickerFrom.Value = new System.DateTime(2023, 12, 23, 3, 5, 23, 896);
+            this.guna2DateTimePickerFrom.Value = new System.DateTime(2023, 12, 1, 0, 0, 0, 0);
             // 
             // Foods
             // 
@@ -1406,6 +1359,71 @@ namespace CafeManagementSystem
             this.guna2ButtonAddDrinks.Text = "Add";
             this.guna2ButtonAddDrinks.Click += new System.EventHandler(this.guna2ButtonAddDrinks_Click);
             // 
+            // dataGridViewBill
+            // 
+            this.dataGridViewBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewBill.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridViewBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBill.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridViewBill.Location = new System.Drawing.Point(3, 0);
+            this.dataGridViewBill.Name = "dataGridViewBill";
+            this.dataGridViewBill.RowHeadersWidth = 15;
+            this.dataGridViewBill.RowTemplate.Height = 28;
+            this.dataGridViewBill.Size = new System.Drawing.Size(811, 813);
+            this.dataGridViewBill.TabIndex = 1;
+            // 
+            // columnIDBill
+            // 
+            this.columnIDBill.Text = "ID";
+            this.columnIDBill.Width = 125;
+            // 
+            // columnTable
+            // 
+            this.columnTable.Text = "Table";
+            this.columnTable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnDate
+            // 
+            this.columnDate.Text = "Date";
+            this.columnDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnDate.Width = 159;
+            // 
+            // columnCustomer
+            // 
+            this.columnCustomer.Text = "Customer";
+            this.columnCustomer.Width = 136;
+            // 
+            // columnDiscount
+            // 
+            this.columnDiscount.Text = "Discount";
+            this.columnDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnDiscount.Width = 158;
+            // 
+            // columnTotal
+            // 
+            this.columnTotal.Text = "Total";
+            this.columnTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnTotal.Width = 164;
+            // 
+            // listViewReceipts
+            // 
+            this.listViewReceipts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnIDBill,
+            this.columnTable,
+            this.columnDate,
+            this.columnCustomer,
+            this.columnDiscount,
+            this.columnTotal});
+            this.listViewReceipts.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.listViewReceipts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
+            this.listViewReceipts.HideSelection = false;
+            this.listViewReceipts.Location = new System.Drawing.Point(3, 1);
+            this.listViewReceipts.Name = "listViewReceipts";
+            this.listViewReceipts.Size = new System.Drawing.Size(811, 812);
+            this.listViewReceipts.TabIndex = 0;
+            this.listViewReceipts.UseCompatibleStateImageBehavior = false;
+            this.listViewReceipts.View = System.Windows.Forms.View.Details;
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1441,6 +1459,7 @@ namespace CafeManagementSystem
             this.guna2PanelEditDrinksDesserts.PerformLayout();
             this.guna2PanelDrinksDesserts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBoxRefreshDrinks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1522,12 +1541,13 @@ namespace CafeManagementSystem
         private System.Windows.Forms.ColumnHeader columnIDCateOfFood;
         private System.Windows.Forms.ColumnHeader columnPriceOfFood;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearchFood;
+        private System.Windows.Forms.DataGridView dataGridViewBill;
         private System.Windows.Forms.ListView listViewReceipts;
         private System.Windows.Forms.ColumnHeader columnIDBill;
+        private System.Windows.Forms.ColumnHeader columnTable;
         private System.Windows.Forms.ColumnHeader columnDate;
         private System.Windows.Forms.ColumnHeader columnCustomer;
         private System.Windows.Forms.ColumnHeader columnDiscount;
         private System.Windows.Forms.ColumnHeader columnTotal;
-        private System.Windows.Forms.ColumnHeader columnTable;
     }
 }

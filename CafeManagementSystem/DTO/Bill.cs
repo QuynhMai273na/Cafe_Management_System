@@ -83,10 +83,9 @@ namespace CafeManagementSystem.DTO
             var datePaymentTemp = row["datePayment"];
             if (datePaymentTemp.ToString() != "")
             {
-                this.DatePayment = (DateTime?)datePayment;
+                this.DatePayment = (DateTime?)row["datePayment"];
             }
             this.Status = (int)row["status"];
-            
             this.Note = row["note"].ToString();
             this.discount = (int)row["discount"];
             this.totalMoney = (int)row["totalMoney"];

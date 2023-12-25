@@ -22,7 +22,8 @@ namespace CafeManagementSystem
             LoadAccountList(guna2TextBoxSearchAccounts.Text);
             LoadCateList(guna2TextBoxSearchCategories.Text);
             LoadFoodList(guna2TextBoxSearchFood.Text);
-            LoadBillList();
+            LoadDateTimePickerBill();
+            LoadListBillByDate(guna2DateTimePickerFrom.Value, guna2DateTimePickeTo.Value);
         }
      /*   void ShowAccount()
         {
@@ -104,7 +105,7 @@ namespace CafeManagementSystem
             foreach (CafeManagementSystem.DTO.Bill item in listBill)
             {
                 ListViewItem lsvItem = new ListViewItem(item.Id.ToString());
-               // string tableName=TableDAO.Instance.getTableNamebyID(item.IdTable.ToString());
+                //string tableName=TableDAO.Instance.getTableNamebyID(item.IdTable.ToString());
                 lsvItem.SubItems.Add(item.IdTable.ToString());
                 lsvItem.SubItems.Add(item.DatePayment.ToString());
                 lsvItem.SubItems.Add(item.Customer.ToString());
@@ -369,6 +370,22 @@ namespace CafeManagementSystem
                 guna2TextBoxItemsName.Enabled =false;
                 guna2TextBoxFoodPrice.Enabled = false;
             }
+        }
+        void LoadListBillByDate(DateTime dayFrom,DateTime dayTo)
+        {
+            dataGridViewBill.DataSource= BillDAO.Instance.GetBillListByDate(dayFrom,dayTo);
+
+        }
+
+        private void guna2ButtonCheckBill_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(guna2DateTimePickerFrom.Value, guna2DateTimePickeTo.Value);
+        }
+        void LoadDateTimePickerBill()
+        {
+            DateTime today = DateTime.Now;
+            guna2DateTimePickerFrom.Value = new DateTime(today.Year, today.Month, 1);
+            guna2DateTimePickeTo.Value = guna2DateTimePickerFrom.Value.AddMonths(1).AddDays(-1);
         }
     }
 }
