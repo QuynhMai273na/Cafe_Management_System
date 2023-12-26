@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,11 +46,21 @@ namespace CafeManagementSystem
             guna2TextBoxUpdateDOBCustomer.Text = cus.DateOfBirth.ToString("MM/dd/yyyy");
 
         }
-
+        public string hasPassWord(string password)
+        {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            string hasPass = "";
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
+            return hasPass;
+        }
         private void guna2ButtonChangeInfoCustomer_Click(object sender, EventArgs e)
         {
         
-            if (guna2TextBoxPWSettingCustomer.Text!=loginAccount.PassWord)
+            if (hasPassWord( guna2TextBoxPWSettingCustomer.Text)!=loginAccount.PassWord)
             {
                 fNotification noti = new fNotification();
                 noti.labelNote.Text = "The Password is not correct.";
@@ -63,8 +74,10 @@ namespace CafeManagementSystem
             }
             else
             {
+                string pass = guna2TextBoxNewPWCustomer.Text;
+                pass = hasPassWord(pass);
                 string query = string.Format("update Customer set dateOfBirth='{0}',name=N'{1}' where phoneNumber=N'{2}'", guna2TextBoxUpdateDOBCustomer.Text, guna2TextBoxDisplayNameCustomer.Text, guna2TextBoxPhoneCustomer.Text);
-                string query2 = string.Format("update account set displayName=N'{0}', passWord=N'{1}' where userName=N'{2}'", guna2TextBoxDisplayNameCustomer.Text, guna2TextBoxNewPWCustomer.Text, loginAccount.UserName.ToString());
+                string query2 = string.Format("update account set displayName=N'{0}', passWord=N'{1}' where userName=N'{2}'", guna2TextBoxDisplayNameCustomer.Text, pass, loginAccount.UserName.ToString());
                 DataProvider.Instance.ExecuteQuery(query2);
                 DataProvider.Instance.ExecuteQuery(query);
                 fNotification noti = new fNotification();
