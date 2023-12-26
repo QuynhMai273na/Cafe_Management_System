@@ -9,39 +9,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing.Printing;
+using System.Data.SqlClient;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
+using CafeManagementSystem.DAO;
+using CafeManagementSystem.DTO;
 
 namespace CafeManagementSystem
 {
     public partial class fExportBill : Form
     {
-        public fExportBill()
+        private List<DTO.Menu> listMenu;
+        public List<DTO.Menu> ListMenu
+        {
+            get { return listMenu; }
+            private set { listMenu = value; }
+        }
+
+        public fExportBill(List<DTO.Menu> menus, string phoneNumber, string nameCus, int idBill, int totalmoney, int moneyAfterDis, string discount)
         {
             InitializeComponent();
+            this.listMenu = menus;
+            this.guna2TextBoxPhoneNumber.Text = phoneNumber;
+            this.guna2TextBoxCusName.Text = nameCus;
+            this.guna2TextBoxDiscount.Text = discount.ToString();
+            this.guna2TextBoxIdBill.Text= idBill.ToString();
+            this. guna2TextBoxTotalMoney.Text = totalmoney.ToString();
+            this.guna2TextBoxFinalmoney.Text = moneyAfterDis.ToString();
+            this.guna2TextBoxDatePayment.Text = DateTime.Now.Date.ToShortDateString();
+            dataGridViewExport.DataSource = listMenu;
         }
-        private void GeneratePDF(object sender, EventArgs e)
+
+        private void buttonPrint_Click(object sender, EventArgs e)
         {
-            //Create PDF document. 
-            using (PdfDocument document = new PdfDocument())
-            {
-                //Add a page to the document.
-                PdfPage page = document.Pages.Add();
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(this.PrintDocument_PrintPage);
+            pd.Print();
 
-                //Create PDF graphics for a page.
-                PdfGraphics graphics = page.Graphics;
+        }
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bm, new System.Drawing.Rectangle(0, 0, this.Width, this.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
 
-                //Set the standard font.
-                PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-
-                //Draw the text.
-                graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-
-                //Save the document.
-                document.Save("Output.pdf");
-                
-
-                //Close the document. 
-                document.Close(true);
-            }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 
