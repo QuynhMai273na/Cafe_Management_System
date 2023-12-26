@@ -25,39 +25,18 @@ namespace CafeManagementSystem
             LoadDateTimePickerBill();
             LoadListBillByDate(guna2DateTimePickerFrom.Value, guna2DateTimePickeTo.Value);
         }
-        /*   void ShowAccount()
-           {
-               // listViewAccount
-               listViewAccount.Items.Clear();
-               List<CafeManagementSystem.DTO.Account> listAccount = AccountDAO.Instance.GetListAccount();
-               foreach (CafeManagementSystem.DTO.Account item in listAccount)
-               {
-                   ListViewItem lsvItem = new ListViewItem(item.DisplayName.ToString());
-                   lsvItem.SubItems.Add(item.UserName.ToString());
-                   lsvItem.SubItems.Add(item.PhoneNumber.ToString());
-                   lsvItem.SubItems.Add(item.AccountType.ToString());
-                 //  lsvItem.SubItems.Add(item.PassWord.ToString());
-                   // thêm vào list view bill
-                   listViewAccount.Items.Add(lsvItem);
-               }
-               CultureInfo culture = new CultureInfo("vi-VN");
-               Thread.CurrentThread.CurrentCulture = culture;
-           }
-        */
 
         void LoadAccountList(string nearName)
         {
             List<Account> listAcc = AccountDAO.Instance.SearchAccountByName(nearName);
             listViewAccount.Items.Clear();
-            //  List<CafeManagementSystem.DTO.Account> listAccount = AccountDAO.Instance.GetListAccount();
             foreach (CafeManagementSystem.DTO.Account item in listAcc)
             {
                 ListViewItem lsvItem = new ListViewItem(item.DisplayName.ToString());
                 lsvItem.SubItems.Add(item.UserName.ToString());
                 lsvItem.SubItems.Add(item.PhoneNumber.ToString());
                 lsvItem.SubItems.Add(item.AccountType.ToString());
-                //  lsvItem.SubItems.Add(item.PassWord.ToString());
-                // thêm vào list view bill
+           // thêm vào list view bill
                 listViewAccount.Items.Add(lsvItem);
             }
             CultureInfo culture = new CultureInfo("vi-VN");

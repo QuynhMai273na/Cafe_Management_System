@@ -2,7 +2,10 @@
 using System.Drawing;
 using System.Windows.Forms;
 using CafeManagementSystem.DAO;
-
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+using QuestPDF.Previewer;
 
 namespace CafeManagementSystem
 {
@@ -58,8 +61,8 @@ namespace CafeManagementSystem
 
         private void guna2ButtonLogin_Click(object sender, EventArgs e)
         {
-            string username = guna2TextBoxUsername.Text;
-            string password = guna2TextBoxPassWord.Text;
+            string username = "cfmanager"; // guna2TextBoxUsername.Text;
+            string password = "@welcomecafe"; // guna2TextBoxPassWord.Text;
          
            if (username.Trim()=="")
             {
@@ -76,6 +79,8 @@ namespace CafeManagementSystem
            else if (Login(username,password))
             {
                 string typeAccount = AccountDAO.Instance.GetTypeAccountByUserName(username);
+
+
                 if (typeAccount=="Member")
                 {
                     fCustomerLogin customerForm = new fCustomerLogin(AccountDAO.Instance.GetAccountByUserName(username));

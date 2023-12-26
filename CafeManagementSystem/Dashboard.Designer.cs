@@ -310,6 +310,7 @@
             this.guna2ButtonExportBill.Size = new System.Drawing.Size(100, 45);
             this.guna2ButtonExportBill.TabIndex = 32;
             this.guna2ButtonExportBill.Text = "Export Bill";
+            this.guna2ButtonExportBill.Click += new System.EventHandler(this.guna2ButtonExportBill_Click);
             // 
             // flowLayoutPanelTable
             // 
