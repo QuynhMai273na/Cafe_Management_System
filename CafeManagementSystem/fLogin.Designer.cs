@@ -40,7 +40,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelCreateNewAccount = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.labelForgotPW = new System.Windows.Forms.Label();
             this.guna2ButtonShutDown = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PanelBackGround = new Guna.UI2.WinForms.Guna2Panel();
             this.labelContactPhone = new System.Windows.Forms.Label();
@@ -121,7 +120,7 @@
             this.guna2ButtonLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
             this.guna2ButtonLogin.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.guna2ButtonLogin.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2ButtonLogin.Location = new System.Drawing.Point(714, 371);
+            this.guna2ButtonLogin.Location = new System.Drawing.Point(618, 357);
             this.guna2ButtonLogin.Name = "guna2ButtonLogin";
             this.guna2ButtonLogin.Size = new System.Drawing.Size(125, 37);
             this.guna2ButtonLogin.TabIndex = 4;
@@ -176,11 +175,11 @@
             // labelCreateNewAccount
             // 
             this.labelCreateNewAccount.AutoSize = true;
-            this.labelCreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.labelCreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCreateNewAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelCreateNewAccount.Location = new System.Drawing.Point(588, 454);
+            this.labelCreateNewAccount.Location = new System.Drawing.Point(578, 443);
             this.labelCreateNewAccount.Name = "labelCreateNewAccount";
-            this.labelCreateNewAccount.Size = new System.Drawing.Size(176, 13);
+            this.labelCreateNewAccount.Size = new System.Drawing.Size(207, 16);
             this.labelCreateNewAccount.TabIndex = 13;
             this.labelCreateNewAccount.Text = "Don\'t Have Account? Sign up";
             this.labelCreateNewAccount.Click += new System.EventHandler(this.labelCreateNewAccount_Click);
@@ -188,21 +187,10 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(543, 434);
+            this.guna2Panel3.Location = new System.Drawing.Point(543, 423);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(273, 1);
             this.guna2Panel3.TabIndex = 18;
-            // 
-            // labelForgotPW
-            // 
-            this.labelForgotPW.AutoSize = true;
-            this.labelForgotPW.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelForgotPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(118)))), ((int)(((byte)(84)))));
-            this.labelForgotPW.Location = new System.Drawing.Point(626, 338);
-            this.labelForgotPW.Name = "labelForgotPW";
-            this.labelForgotPW.Size = new System.Drawing.Size(108, 13);
-            this.labelForgotPW.TabIndex = 19;
-            this.labelForgotPW.Text = "Forgot Password?";
             // 
             // guna2ButtonShutDown
             // 
@@ -271,7 +259,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(900, 508);
-            this.Controls.Add(this.labelForgotPW);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2ButtonShutDown);
             this.Controls.Add(this.labelCreateNewAccount);
@@ -316,7 +303,6 @@
         private System.Windows.Forms.Label labelCreateNewAccount;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonShutDown;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label labelForgotPW;
     }
 }
 

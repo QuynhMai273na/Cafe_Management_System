@@ -14,9 +14,11 @@ namespace CafeManagementSystem
 {
     public partial class fTableManagement : Form
     {
+   
         public fTableManagement(Account acc)
         {
             InitializeComponent();
+         
             loginAccount = acc;
             changeProfile();
             ChangeAccount(acc.AccountType);
@@ -72,5 +74,8 @@ namespace CafeManagementSystem
             get { return loginAccount; }
             set { loginAccount = value; }
         }
+
+     
+
     }
 }

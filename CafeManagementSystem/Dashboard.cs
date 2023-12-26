@@ -17,7 +17,7 @@ namespace CafeManagementSystem
     public partial class Dashboard : Form
     {
         int totalmoney = 0;
-        int moneyAfterDis=0;
+        int moneyAfterDis = 0;
         public Dashboard()
         {
             InitializeComponent();
@@ -38,13 +38,6 @@ namespace CafeManagementSystem
             guna2ComboBoxResultSearch.DataSource = listFoods;
             guna2ComboBoxResultSearch.DisplayMember = "Name";
         }
-        //void LoadFoodListById(int id)
-        //{
-        //    List<Food> list = FoodDAO.Instance.GetFoodById(id);
-        //    guna2ComboBoxResultSearch.DataSource = list;
-        //    guna2ComboBoxResultSearch.DisplayMember = "Name";
-        //}
-        
         void LoadTable()
         {
             flowLayoutPanelTable.Controls.Clear();
@@ -53,7 +46,7 @@ namespace CafeManagementSystem
             {
                 Button btn = new Button() { Width = 80, Height = 80, };
                 btn.Font = new System.Drawing.Font("Microsoft YaHei", 8, System.Drawing.FontStyle.Regular);
-                btn.Text = item.Name + "\n" + item.NumPeople+"people\n";
+                btn.Text = item.Name + "\n" + item.NumPeople + "people\n";
                 btn.Click += btn_Click;
                 btn.Tag = item;
                 switch (item.Status)
@@ -73,7 +66,7 @@ namespace CafeManagementSystem
         }
         void ShowBill(int id)
         {
-            
+
             int sumPrice = 0;
             listViewBill.Items.Clear();
             List<CafeManagementSystem.DTO.Menu> listbillInfo = MenuDAO.Instance.GetListMenuByTable(id);
@@ -92,9 +85,9 @@ namespace CafeManagementSystem
             Thread.CurrentThread.CurrentCulture = culture;
             this.labelTotalBill.Text = "Total: \t" + totalmoney.ToString("c");
 
-    
+
         }
-        int ApplyDiscountForCustomerMember (string level)
+        int ApplyDiscountForCustomerMember(string level)
         {
             if (level == "Diamond") return 15;
             else if (level == "Gold") return 10;
@@ -102,15 +95,12 @@ namespace CafeManagementSystem
             else if (level == "Member") return 3;
             else return 0;
         }
-        void LoadMemberCustomer(string customerPhone) { 
+        void LoadMemberCustomer(string customerPhone)
+        {
             List<Customer> customerList = CustomerDAO.Instance.GetCustomerByPhone(customerPhone);
             guna2TextBoxCustomerName.Text = customerList[0].Name;
             guna2TextBoxCustomerLevel.Text = customerList[0].Level;
             guna2NumericUpDownDiscount.Value = ApplyDiscountForCustomerMember(guna2TextBoxCustomerLevel.Text);
-            if (customerList[0].DateOfBirth.Date ==DateTime.Now.Date)
-            {
-                guna2NumericUpDownDiscount.Value = 25;
-            }
         }
         bool CheckMember(string customerPhone)
         {
@@ -131,7 +121,7 @@ namespace CafeManagementSystem
         {
             moneyAfterDis = (int)(totalmoney * (100 - Convert.ToInt16(this.guna2NumericUpDownDiscount.Value.ToString()))) / 100;
             this.labelTotalBill.Text = "Total: \t" + moneyAfterDis.ToString("c");
-            
+
         }
         private void guna2TextBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
@@ -145,19 +135,24 @@ namespace CafeManagementSystem
         private void guna2CircleButtonAddFood_Click(object sender, EventArgs e)
         {
             Table table = listViewBill.Tag as Table;
-            int idBill = BillDAO.Instance.GetUncheckBillIdByTableId(table.Id);
 
-            int idFood = (guna2ComboBoxResultSearch.SelectedItem as Food).Id;
             int count = (int)guna2NumericUpDownNumberAdd.Value;
-            if (idBill == -1)
+            if (count != 0)
             {
-                BillDAO.Instance.InsertBill(table.Id);
-                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.getMaxIdBill(), idFood, count);
+                int idBill = BillDAO.Instance.GetUncheckBillIdByTableId(table.Id);
+
+                int idFood = (guna2ComboBoxResultSearch.SelectedItem as Food).Id;
+                if (idBill == -1)
+                {
+                    BillDAO.Instance.InsertBill(table.Id);
+                    BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.getMaxIdBill(), idFood, count);
+                }
+                else
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                }
             }
-            else
-            {
-                BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
-            }
+
             ShowBill(table.Id);
             LoadTable();
         }
@@ -179,7 +174,7 @@ namespace CafeManagementSystem
 
         private void guna2TextBoxCustomerPhone_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter) guna2ButtonCheckInfo.PerformClick();
+            if (e.KeyCode == Keys.Enter) guna2ButtonCheckInfo.PerformClick();
         }
         private void guna2TextBoxCustomerPhone_TextChanged(object sender, EventArgs e)
         {
@@ -196,25 +191,22 @@ namespace CafeManagementSystem
             if (idBill != -1)
             {
                 fNotifyPayment notice = new fNotifyPayment();
-                notice.labelNote.Text= String.Format("Do you really want to make payment for table {0} ?", table.Name);
+                notice.labelNote.Text = String.Format("Do you really want to make payment for table {0} ?", table.Name);
                 notice.ShowDialog();
                 if (notice.pay == true)
                 {
-                    
-                    if (guna2TextBoxCustomerPhone.Text != "" && CheckMember(guna2TextBoxCustomerPhone.Text)==true)
+
+                    if (guna2TextBoxCustomerPhone.Text != "" && CheckMember(guna2TextBoxCustomerPhone.Text) == true)
                     {
                         string query = "UPDATE dbo.Bill SET customer = @customer WHERE id = @id";
                         DataProvider.Instance.ExecuteNonQuery(query, new object[] { guna2TextBoxCustomerPhone.Text, idBill });
                         int bonus = CustomerDAO.Instance.GetPointsOfCus(guna2TextBoxCustomerPhone.Text) + (int)moneyAfterDis % 1000;
-                    string query1 = "UPDATE dbo.customer SET points = @points WHERE phoneNumber = @phoneNumber";
-                    DataProvider.Instance.ExecuteNonQuery(query1, new object[] { bonus , guna2TextBoxCustomerPhone.Text });
+                        string query1 = "UPDATE dbo.customer SET points = @points WHERE phoneNumber = @phoneNumber";
+                        DataProvider.Instance.ExecuteNonQuery(query1, new object[] { bonus, guna2TextBoxCustomerPhone.Text });
                     }
 
                     if (guna2NumericUpDownDiscount.Value == 0) moneyAfterDis = totalmoney;
-                    DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateBill @idBill , @totalmoney , @discount , @note", new object[] { idBill , moneyAfterDis , guna2NumericUpDownDiscount.Value , textBoxWriteNote.Text});
-
-
-
+                    DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateBill @idBill , @totalmoney , @discount , @note", new object[] { idBill, moneyAfterDis, guna2NumericUpDownDiscount.Value, textBoxWriteNote.Text });
 
                     ShowBill(table.Id);
                     guna2TextBoxCustomerName.Text = "";
@@ -224,12 +216,15 @@ namespace CafeManagementSystem
                 }
             }
             LoadTable();
-
-
         }
-
+        private void guna2ButtonExportBill_Click(object sender, EventArgs e)
+        {
+            if (guna2NumericUpDownDiscount.Value == 0) moneyAfterDis = totalmoney;
+            Table table = listViewBill.Tag as Table;
+            int idBill = BillDAO.Instance.GetUncheckBillIdByTableId(table.Id);
+            fExportBill billPdf = new fExportBill(MenuDAO.Instance.GetListMenuByTable(table.Id), guna2TextBoxCustomerPhone.Text, guna2TextBoxCustomerName.Text ,idBill, totalmoney, moneyAfterDis, guna2NumericUpDownDiscount.Value.ToString() );
+            billPdf.ShowDialog();
+        }
         #endregion
-
-
     }
 }
