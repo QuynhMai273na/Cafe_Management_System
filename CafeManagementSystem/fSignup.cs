@@ -127,7 +127,7 @@ namespace CafeManagementSystem
                 noti.ShowDialog();
             }
         }
-
+        //nochange
         public string hasPassWord(string password)
         {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
