@@ -28,7 +28,7 @@ namespace CafeManagementSystem.DAO
         public int GetUncheckBillIdByTableId(int id)
         {
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE CONVERT(DATE, dateCheckin) = CONVERT(DATE, getdate()) and idTable = " + id + " AND status = 0");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE idTable = " + id + " AND status = 0");
            if (data.Rows.Count > 0)
 
             {
