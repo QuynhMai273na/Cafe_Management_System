@@ -61,8 +61,8 @@ namespace CafeManagementSystem
 
         private void guna2ButtonLogin_Click(object sender, EventArgs e)
         {
-            string username = "cfmanager"; // guna2TextBoxUsername.Text;
-            string password = "@welcomecafe"; // guna2TextBoxPassWord.Text;
+            string username = guna2TextBoxUsername.Text;
+            string password = guna2TextBoxPassWord.Text;
          
            if (username.Trim()=="")
             {
